@@ -14,6 +14,12 @@ app.engine('handlebars',exphbs());
 //Establecer handlebars como el motor de render
 app.set('view engine','handlebars');
 
+//Arreglo de productos
+var productos = [];
+productos.push({
+    nombre: 'aaaa',
+    precio: '20',
+});
 
 //Ruta inicial
 app.get('/',function(req,res){
