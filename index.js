@@ -2,6 +2,32 @@
 var express = require('express');
 var exphbs = require('express-handlebars');
 
+var MongoClient = require('mongodb').MongoClient;
+var assert = require('assert');
+
+const url = 'mongodb://localhost:27017';
+const dbName = 'Taller2';
+
+const client = new MongoClient(url);
+
+client.connect(function(err) {
+    assert.equal(null, err);
+    console.log("Se conecto al server manin");
+  
+    const db = client.db(dbName);
+  
+    const productos = db.collection('productos');
+    
+    productos.find({}, {  sort: ['precio'] }).toArray(function(err, docs) {
+        assert.equal(err, null);
+        console.log("Se encontraron los siguientes Documentos:");
+        docs.forEach(function(prod){
+            console.log(prod.precio);
+        })
+      });
+
+    client.close();
+  });  
 
 //Crear app de express
 var app = express();
@@ -53,7 +79,7 @@ app.get('/tienda/:pestana', function(req, res) {
        
    });
 
-// Escuchar desde puerto 3000
+// Escuchar desde puerto 55000
 app.listen(5500, function(){
     console.log('Servidor en el puerto 3000')
 });
