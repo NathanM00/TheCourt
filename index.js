@@ -54,6 +54,6 @@ app.get('/tienda/:pestana', function(req, res) {
    });
 
 // Escuchar desde puerto 3000
-app.listen(3000, function(){
+app.listen(5500, function(){
     console.log('Servidor en el puerto 3000')
 });
