@@ -17,23 +17,20 @@ app.set('view engine','handlebars');
 //Arreglo de productos
 var productos = [];
 productos.push({
-    nombre: 'aaaa',
-    precio: '20',
+    titulo: 'aaaa',
+    precio: 20,
+    imagen: "../public/recursos/productosA1.jpeg",
+    descripcion: "Your kiddo won't be able to contain their excitement when you gift them this Boston Celtics Essential logo hoodie from Nike. The cold won't stand a chance when your young one has this warm hoodie on." 
 });
 
 //Ruta inicial
 app.get('/',function(req,res){
-
     res.sendFile(__dirname+'/public/index.html')
-
 });
 
 //Ruta a la tienda
 app.get('/tienda', function(req, res) {
-    var contexto = {
-       
-    };
-    res.render('tienda',contexto);
+    res.render('tienda');
 });
 
 //ruta dinamica

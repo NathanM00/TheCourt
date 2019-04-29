@@ -15,6 +15,10 @@ body{
 }
 .logo__oscuro{
     background-image: url("../recursos/logo1.svg");
+
+    &-tienda{
+        background-image: url("../recursos/logo3.svg");
+    }
 }
 .logo__claro{
     background-image: url("../recursos/logo2.svg");
@@ -122,6 +126,16 @@ body{
     height: 14%;
     justify-content: space-evenly;
 
+    &-tienda{
+        background: #141414;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        flex-basis: 14%;
+        height: 14%;
+        justify-content: space-evenly;
+    }
+
     &__logo{
         flex-basis: 20%;
         width: 20%;
@@ -178,6 +192,18 @@ body{
     &__item a:hover {
         color: #ae1620;
     }
+    
+    &__novedad{
+        width: 60px;
+        height: 60px;
+        padding-bottom: 0.5em;
+        margin: 0;
+    }
+
+    &__noPaddig{
+        padding-right: 0;
+    }
+
 }
 .contPrincipal{
     height: auto;
@@ -210,6 +236,13 @@ body{
         border-radius: 8px;
     }
 
+}
+.principal__tienda{
+    box-shadow: 14px 12px 11px -6px rgba(186,186,186,1);
+}
+.lateral__tienda{
+    box-shadow: 14px 12px 11px -6px rgba(186,186,186,1);
+    background: #141414;
 }
 .revista{
     width: 100%;
@@ -786,6 +819,12 @@ body{
             background-size: cover;
             background-position: center;
         }
+
+        &__tienda{
+            background-position: center;
+            background-size: contain;  
+        }
+
         &__articulo{
             background-position: center;
             background-size: contain;
