@@ -48,13 +48,13 @@ app.get('/',function(req,res){
 //Ruta a la tienda
 app.get('/tienda', function(req, res) {
 
-    const productos = db.collection('productos');
+    var productos = db.collection('productos');
     
     productos.find({}).toArray(function(err, docs) {
         assert.equal(err, null);
 
-        var     contexto = {
-            productos:docs
+        var contexto = {
+            productos:docs,
         };
 
         res.render('tienda',contexto);
@@ -64,24 +64,35 @@ app.get('/tienda', function(req, res) {
 });
 
 //ruta dinamica
-app.get('/tienda/:pestana', function(req, res) {
-    var contexto= null;
-   
-       productos.forEach(function(producto){
-           if(producto.numero == req.params.pestana){
-               contexto=producto;
-           }
-       });
-   
-       if(contexto == null){
-           res.send('Page not found: '+req.params.pestana);
-       }else{
-           res.render('pestana',contexto);
-       }
-   
-       console.log(req.params.pestana);
-       
-   });
+app.get('/tienda/:departamento?', function(request, response){
+    
+    console.log(request.query.precio);
+
+    var query = {};
+    if(request.params.departamento){
+        query.departamento = request.params.departamento;
+    }
+    if(request.query.precio){
+        query.precio = { $lte: request.query.precio };
+    }
+
+    var collection = db.collection('productos');
+
+    collection.find(query).toArray(function(err, docs) {
+        assert.equal(err, null);
+        
+        var contexto = {
+            productos: docs,
+            departamento: request.params.departamento,
+            precio: request.query.precio,
+            esCamiseta: request.params.departamento == "T-shirts",
+            esSaco: request.params.departamento == "Hoodies & Sweatshirts",
+            esJersey: request.params.departamento == "Jerseys",
+        };
+        response.render('tienda', contexto);
+    });
+    
+});
 
 // Escuchar desde puerto 5500
 app.listen(5500, function(){
