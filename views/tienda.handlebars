@@ -8,36 +8,30 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link rel="stylesheet" href="./styles/sass.css">
     <title>The Court Magazine</title>
-</head>
+  </head>
 
 <body class="fondo__claro">
 
     <header class="encabezado-tienda">
 
-        <a class="encabezado__logo logo__oscuro-tienda" href="index.html"></a>
+        <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
 
         <input type="" name="" id="" class="encabezado__search">
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro">Log in</a>
-            <a href=""><img src="../public/recursos/ carro.svg" class =""alt=""></a>
         </div>
+
+        <a class="logo__oscuro-carro encabezado__logo" style="height: 40%; flex-basis:8%; margin: 0;" href="#"></a>
 
         <div class="drop__down">
                 <button class="drop__boton">
                     <img src="./recursos/menu.svg" class="drop__menu">
                 </button>
-
-
                 
                 <div class="drop__content">
                      <a href="#" class="typo__oscuro">News</a>
                      <a href="#" class="typo__oscuro">Players</a>
-                     <a href="#" class="typo__oscuro">Scores</a>
-                     <a href="articulo.html" class="typo__oscuro">History</a>
-                     <a href="#" class="typo__oscuro">Teams</a>
-                     <a href="sub.html" class="typo__oscuro">Subscribe</a>
-                     <a href="#" class="typo__oscuro">Log In</a>
                 </div>
             </div>
             
@@ -51,9 +45,13 @@
 
         <section class="contPrincipal__principal principal__tienda">
 
-        </section>
+                <ul>
+                    {{#each productos}}
+                        <li>{{nombre}}</li>
+                    {{/each}}
+                </ul>
 
-      
+        </section>
 
     </div>
 
