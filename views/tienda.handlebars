@@ -39,15 +39,23 @@
 
     <div class="contPrincipal fondo__tienda">
 
-        <aside class="contPrincipal__lateral lateral__tienda">
+        <aside class="contPrincipal__lateral lateral__tienda" style="width: 20%;flex-basis: 20%;">
  
         </aside>
 
-        <section class="contPrincipal__principal principal__tienda">
+        <section class="contPrincipal__principal principal__tienda" style="width: 75%; flex-basis: 75%;">
 
-                <ul>
+            <div class="tienda__superior">
+
+            </div>
+                <ul class="tienda__productos">
                     {{#each productos}}
-                        <li>{{nombre}}</li>
+                        <li class="tienda__item">
+                            <img src="{{fotoPrincipal}}" class="item__fotoP" alt="">
+                             <p class="item__precio">${{precio}}</p>
+                            <h3 class="item__nombre">{{nombre}}</h3>
+                        </li>
+                       
                     {{/each}}
                 </ul>
 
@@ -55,11 +63,11 @@
 
     </div>
 
-    <footer class="pie footer__oscuro">
+    <footer class="pie footer__claro">
         <p class="pie__revista">© The Court Magazine Shop</p>
         <p class="pie__revista"> NMS </p>
 
-        <div class="pie__redes footer__oscuro__r">
+        <div class="pie__redes footer__claro__r">
         </div>
     </footer>
 
