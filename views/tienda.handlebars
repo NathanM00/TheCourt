@@ -16,25 +16,30 @@
 
         <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
 
-        <input type="" name="" id="" class="encabezado__search">
+        <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
-                    <a class="logo__oscuro-carro encabezado__logo"  href="#"></a>
+                <a class="logo__oscuro-carro encabezado__logo"  href="#"></a>
+                <span class="encabezado__contador"></span>
         </div>
-
-        <div class="drop__down">
-                <button class="drop__boton">
-                    <img src="./recursos/menu.svg" class="drop__menu">
-                </button>
-                
-                <div class="drop__content">
-                     <a href="#" class="typo__oscuro">News</a>
-                     <a href="#" class="typo__oscuro">Players</a>
-                </div>
-            </div>
             
     </header>
+        <header class="encabezado-tienda2">
+        <nav class="encabezado__pc">
+            <ul class="nav__lista nav__pad">
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Men</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Women</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Jerseys</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">T-shirts</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Sales</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
+             </ul>
+        </nav>
+        </header>
 
     <div class="contPrincipal fondo__tienda">
 
@@ -54,9 +59,9 @@
             <div class="tienda__dropdown">
                             <button class="tienda__dropbtn">Shop For</button>
                                 <div class="tienda__dropdown-content">
-                                    <a href="#">Mens</a>
-                                    <a href="#">Womens</a>
-                                    <a href="#">Kinds</a>
+                                    <a href="/tienda/Men">Mens</a>
+                                    <a href="/tienda/Women">Womens</a>
+                                    <a href="/tienda/Kids">Kinds</a>
                                 </div>
             </div>
             <div class="tienda__dropdown">
@@ -72,32 +77,28 @@
         <section class="contPrincipal__principal principal__tienda" >
 
             <div class="tienda__superior">
-                <input class="rangoprecio" type="range" name="" id="" min="30" max="150">
+                <input class="rangoprecio" type="range"  name="" id="" min="30" max="150">
                 <img src="./recursos/promo.png" alt="No carga esto">
             </div>
                 <ul class="tienda__productos">
                     {{#each productos}}
                         <li class="tienda__item">
-                            <img src="{{fotoPrincipal}}" class="item__fotoP" alt="">
-                             <p class="item__precio">${{precio}}</p>
-                            <h3 class="item__nombre">{{nombre}}</h3>
+                            <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;">
+                                <img src="{{fotoPrincipal}}" class="item__fotoP" alt="">
+                                <p class="item__precio">${{precio}}</p>
+                            </a>
+                            <button class="tienda__agregar"></button>
+                            <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;"></a> 
+                                <h3 class="item__nombre">{{nombre}}</h3>
+                            </a>
                         </li>
-                       
                     {{/each}}
                 </ul>
-
         </section>
 
     </div>
 
-    <script >      
-        var rango = document.querySelector('.rangoprecio');
-                function buscarPorPrecio(){
-                    console.log(rango.value);
-                    location.href = '/tienda/Jerseys?precio=' + rango.value;
-                }
-                rango.addEventListener('change', buscarPorPrecio);
-    </script>
+       <script src="./scripts/javas1.js"></script>-
 
 </body>
 
