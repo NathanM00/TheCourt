@@ -45,24 +45,6 @@ app.get('/',function(req,res){
     res.sendFile(__dirname+'/public/index.html')
 });
 
-//Ruta a la tienda
-app.get('/tienda', function(req, res) {
-
-    var productos = db.collection('productos');
-    
-    productos.find({}).toArray(function(err, docs) {
-        assert.equal(err, null);
-
-        var contexto = {
-            productos:docs,
-        };
-
-        res.render('tienda',contexto);
-
-      });
-
-});
-
 //ruta dinamica
 app.get('/tienda/:departamento?', function(request, response){
     

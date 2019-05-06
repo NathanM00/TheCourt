@@ -19,10 +19,9 @@
         <input type="" name="" id="" class="encabezado__search">
 
         <div class="encabezado__logs encabezado__pc">
-            <a href="#" class="typo__oscuro">Log in</a>
+            <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
+                    <a class="logo__oscuro-carro encabezado__logo"  href="#"></a>
         </div>
-
-        <a class="logo__oscuro-carro encabezado__logo" style="height: 40%; flex-basis:8%; margin: 0;" href="#"></a>
 
         <div class="drop__down">
                 <button class="drop__boton">
@@ -39,21 +38,42 @@
 
     <div class="contPrincipal fondo__tienda">
 
-        <aside class="contPrincipal__lateral lateral__tienda" style="width: 20%;flex-basis: 20%;">
- 
+        <aside class="contPrincipal__lateral lateral__tienda">
+            <div class="lateral__tienda-titular">
+                <img src="./recursos/filtros.svg" alt="no cargaaaa">
+                <p>Filters</p>
+            </div>
+            <div class="tienda__dropdown">
+                            <button class="tienda__dropbtn">Department</button>
+                                <div class="tienda__dropdown-content">
+                                    <a href="/tienda/Jerseys">Jerseys</a>
+                                    <a href="/tienda/T-shirts">T-Shirts</a>
+                                    <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                </div>
+            </div>
+            <div class="tienda__dropdown">
+                            <button class="tienda__dropbtn">Shop For</button>
+                                <div class="tienda__dropdown-content">
+                                    <a href="#">Mens</a>
+                                    <a href="#">Womens</a>
+                                    <a href="#">Kinds</a>
+                                </div>
+            </div>
+            <div class="tienda__dropdown">
+                            <button class="tienda__dropbtn">Price Range</button>
+                                <div class="tienda__dropdown-content">
+                                    <a href="#">$20 - $40</a>
+                                    <a href="#">$40 - $60</a>
+                                    <a href="#">Over $60</a>
+                                </div>
+            </div>
         </aside>
 
-        <section class="contPrincipal__principal principal__tienda" style="width: 75%; flex-basis: 75%;">
+        <section class="contPrincipal__principal principal__tienda" >
 
             <div class="tienda__superior">
-                    <ul>
-                        <li><a href="/tienda/Jerseys">Jerseys</a></li>
-                        <li><a href="/tienda/T-shirts">T-shirts</a></li>
-                        <li><a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a></li>
-
-                    </ul>
                 <input class="rangoprecio" type="range" name="" id="" min="30" max="150">
-
+                <img src="./recursos/promo.png" alt="No carga esto">
             </div>
                 <ul class="tienda__productos">
                     {{#each productos}}
@@ -70,15 +90,14 @@
 
     </div>
 
-    <footer class="pie footer__claro">
-        <p class="pie__revista">© The Court Magazine Shop</p>
-        <p class="pie__revista"> NMS </p>
-
-        <div class="pie__redes footer__claro__r">
-        </div>
-    </footer>
-
-    <script src="./scripts/javas1.js"></script>
+    <script >      
+        var rango = document.querySelector('.rangoprecio');
+                function buscarPorPrecio(){
+                    console.log(rango.value);
+                    location.href = '/tienda/Jerseys?precio=' + rango.value;
+                }
+                rango.addEventListener('change', buscarPorPrecio);
+    </script>
 
 </body>
 
