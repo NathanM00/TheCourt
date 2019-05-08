@@ -13,10 +13,15 @@ function paginaCargada(){
       }
   
       var carritoNum = document.querySelector('.encabezado__contador');
+      var carritoInd = document.querySelector('.encabezado__indicador');
+
       var listaCarrito = document.querySelector('.carrito-desplegado__lista');
   
       function actualizarCarrito(){
           carritoNum.innerHTML = listaProductos.length;
+          if(listaProductos.length>=1){
+            carritoInd.style.display=  "inline-block";
+          }
       }
   
       actualizarCarrito();

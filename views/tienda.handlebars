@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link rel="stylesheet" href="./styles/sass.css">
+    <link rel="stylesheet" href="../styles/sass.css">
     <title>The Court Magazine</title>
   </head>
 
@@ -20,8 +20,8 @@
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
-                <a class="logo__oscuro-carro encabezado__logo"  href="#"></a>
-                <span class="encabezado__contador"></span>
+           <a href="" style="margin:0;"> <div class="encabezado__carrito"></div></a>
+            <div class="encabezado__indicador"><span class="encabezado__contador"></span></div>
         </div>
             
     </header>
@@ -43,17 +43,50 @@
 
     <div class="contPrincipal fondo__tienda">
 
-        <aside class="contPrincipal__lateral lateral__tienda">
-            <div class="lateral__tienda-titular">
-                <img src="./recursos/filtros.svg" alt="no cargaaaa">
+        <aside class="contPrincipal__lateral tienda__lateral">
+            <div class="tienda__lateral-titular">
+                <img src="../recursos/filtros.svg" alt="no cargaaaa">
                 <p>Filters</p>
             </div>
             <div class="tienda__dropdown">
-                            <button class="tienda__dropbtn">Department</button>
-                                <div class="tienda__dropdown-content">
-                                    <a href="/tienda/Jerseys">Jerseys</a>
-                                    <a href="/tienda/T-shirts">T-Shirts</a>
-                                    <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                            <button class="tienda__dropbtn  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                             {{#if esDNone}}
+                                Department
+                            {{/if}}
+                                   
+                            {{#if esJersey}}
+                                Jerseys
+                            {{/if}}
+
+                            {{#if esTshirt}}
+                                T-Shirts
+                            {{/if}}
+
+                            {{#if esHoodie}}
+                                Hoodies & Sweatshirts
+                            {{/if}}
+                            </button>
+                                <div class="tienda__dropdown-content" >
+                                     {{#if esDNone}}
+                                        <a href="/tienda/Jerseys">Jerseys</a>
+                                        <a href="/tienda/T-shirts">T-Shirts</a>
+                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                     {{/if}}
+                                      {{#if esJersey}}
+                                        <a href="/tienda/T-shirts">T-Shirts</a>
+                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                        <a href="/tienda/">None</a>
+                                     {{/if}}
+                                    {{#if esTshirt}}
+                                        <a href="/tienda/Jerseys">Jerseys</a>
+                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                        <a href="/tienda/">None</a>
+                                     {{/if}}
+                                    {{#if esHoodie}}
+                                        <a href="/tienda/Jerseys">Jerseys</a>
+                                        <a href="/tienda/T-shirts">T-Shirts</a>
+                                        <a href="/tienda/">None</a>
+                                     {{/if}}
                                 </div>
             </div>
             <div class="tienda__dropdown">
@@ -61,7 +94,7 @@
                                 <div class="tienda__dropdown-content">
                                     <a href="/tienda/Men">Mens</a>
                                     <a href="/tienda/Women">Womens</a>
-                                    <a href="/tienda/Kids">Kinds</a>
+                                    <a href="/tienda/Kids">Kids</a>
                                 </div>
             </div>
             <div class="tienda__dropdown">
@@ -74,11 +107,11 @@
             </div>
         </aside>
 
-        <section class="contPrincipal__principal principal__tienda" >
+        <section class="contPrincipal__principal tienda__principal" >
 
             <div class="tienda__superior">
                 <input class="rangoprecio" type="range"  name="" id="" min="30" max="150">
-                <img src="./recursos/promo.png" alt="No carga esto">
+                <img src="../recursos/promo.png" alt="No carga esto">
             </div>
                 <ul class="tienda__productos">
                     {{#each productos}}
@@ -87,7 +120,7 @@
                                 <img src="{{fotoPrincipal}}" class="item__fotoP" alt="">
                                 <p class="item__precio">${{precio}}</p>
                             </a>
-                            <button class="tienda__agregar"></button>
+                            <button class="tienda__agregar">ADD TO CAR</button>
                             <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;"></a> 
                                 <h3 class="item__nombre">{{nombre}}</h3>
                             </a>
@@ -98,7 +131,7 @@
 
     </div>
 
-       <script src="./scripts/javas1.js"></script>-
+       <script src="./scripts/javas1.js"></script>
 
 </body>
 
