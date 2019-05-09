@@ -5,18 +5,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/sass.css">
+    <title>The Court Magazine</title>
+  </head>
 
-    <link rel="stylesheet" href="/styles/style.css">
-</head>
+<body class="fondo__claro">
 
-<body>
-    <span class="encabezado__contador"></span>
-    <h1 class="titulo">{{producto.nombre}}</h1>
-    <p class="precio">${{producto.precio}}</p>
-    <img src="{{producto.fotoPrincipal}}" alt="">
-    <p class="descripcion">{{producto.descripcion}}</p>
-    <button class="productoagregaraaa"></button>
+    <header class="encabezado-tienda">
+
+        <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
+
+        <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
+
+        <div class="encabezado__logs encabezado__pc">
+            <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
+           <a href="" style="margin:0;"> <div class="encabezado__carrito"></div></a>
+            <a href="" style="margin:0;"><div class="encabezado__indicador"><span class="encabezado__contador"></span></div></a>
+        </div>
+            
+    </header>
+        <header class="encabezado-tienda2">
+        <nav class="encabezado__pc">
+            <ul class="nav__lista nav__pad">
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Men</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Women</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Jerseys</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">T-shirts</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Sales</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
+             </ul>
+        </nav>
+        </header>
+
+    <div class="contPrincipal fondo__tienda">
+
+        <aside class="contPrincipal__lateral producto__lateral">
+                <p class="producto__nombre">{{producto.nombre}}</p>
+                <p class="producto__precio">${{producto.precio}}</p>
+        <div class="tienda__tamanos">
+                <h4 class="producto__tamano">Size</h4>
+        </div>
+         <div class="tienda__cantidad">
+                <h4 class="producto__cantidad">Quantity</h4>
+                <button class="tienda__agregar">ADD TO CAR</button>
+
+        </div>
+        </aside>
+
+        <section class="contPrincipal__principal producto__principal" >
+
+            <div class="producto__mitad">
+              <img class="producto__fotoP" src="../{{producto.fotoPrincipal}}" alt="">
+                          <div class="producto__miniaturas">
+                                <img class="producto__fotoM" src="../{{producto.miniaturas.[0]}}" alt="">
+                                <img class="producto__fotoM" src="../{{producto.miniaturas.[1]}}" alt="">
+                                <img class="producto__fotoM" src="../{{producto.miniaturas.[2]}}" alt="">
+                          </div>
+            </div>
+
+            <div class="producto__mitad">
+                
+                <div class="producto__desc">
+                    <h3>Description</h3>
+                    <p>{{producto.descripcion}}</p>
+                </div>
+
+                <div class="producto__details">
+                    <h3>Details</h3>
+                    <ul>
+                        <li><span>{{producto.detalles.[1]}}</span></li>
+                        <li><span>{{producto.detalles.[2]}}</span></li>
+                        <li><span>{{producto.detalles.[3]}}</span></li>
+                        <li><span>{{producto.detalles.[0]}}</span></li>
+                    </ul>
+                    
+                </div>
+
+            </div>
+
+        </section>
+
+    </div>
+
+       <script src="../../scripts/javas2.js"></script>
+
 </body>
 
 </html>

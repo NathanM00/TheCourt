@@ -45,9 +45,6 @@ app.get('/tienda/:departamento?', function(request, response){
     if(request.params.departamento){
         query.departamento = request.params.departamento;
     }
-    if(request.query.precio){
-        query.precio = { $lte: request.query.precio };
-    }
 
     var collection = db.collection('productos');
 
@@ -78,9 +75,6 @@ app.get('/tienda/:linea?', function(request, response){
     if(request.params.linea){
         query.linea = request.params.linea;
     }
-    if(request.query.precio){
-        query.precio = { $lte: request.query.precio };
-    }
 
     var collection = db.collection('productos');
 
@@ -94,8 +88,8 @@ app.get('/tienda/:linea?', function(request, response){
             esLNone: request.params.linea == null,
             esLAlguno: request.params.linea != null,
             esMen: request.params.linea == "Men",
-            esWomen: request.params.linea == "Womens",
-            esKid: request.params.linea == "kids",
+            esWomen: request.params.linea == "Women",
+            esKid: request.params.linea == "Kids",
         };
         response.render('tienda', contexto);
     });
@@ -116,7 +110,7 @@ app.get('/tienda/producto/:nombre', function(req, res){
         });
 });
 
-// Escuchar desde puerto 5500
-app.listen(5500, function(){
-    console.log('Servidor en el puerto 5500')
+// Escuchar desde puerto 3000
+app.listen(3000, function(){
+    console.log('Servidor en el puerto 3000')
 });

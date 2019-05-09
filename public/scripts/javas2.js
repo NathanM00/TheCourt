@@ -24,41 +24,21 @@ function paginaCargada(){
           }
       }
       
-      actualizarCarrito();
-
-      var botones = document.querySelectorAll('.tienda__agregar');
-      function recorrerBotones(boton){
-          function agregarAlCarrito(){
-              var padre = boton.parentNode;
-              var nombre = padre.querySelector('.item__nombre').innerText;
-              var precio = padre.querySelector('.item__precio').innerText;
-              var imagen = padre.querySelector('.item__fotoP').src;
-              var producto = {
-                  nombre: nombre,
-                  precio: precio,
-                  imagen: imagen,
-              };
-              
-              listaProductos.push(producto);
-              actualizarCarrito();
-              localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
-          }
-          boton.addEventListener('click', agregarAlCarrito);
-      }
-      botones.forEach(recorrerBotones);
+      actualizarCarrito();  
   
-  
-      var botonProductoDetalle = document.querySelector('.producto__agregar');
+      var botonProductoDetalle = document.querySelector('.tienda__agregar');
       function agregarAlCarritoDetalle(){
-          var nombre = document.querySelector('.item__nombre').innerText;
-          var precio = document.querySelector('.item__precio').innerText;
-          var imagen = document.querySelector('.item__fotoP').src;
+          console.log("aaa");
+          var nombre = document.querySelector('.producto__nombre').innerText;
+          var precio = document.querySelector('.producto__precio').innerText;
+          var imagen = document.querySelector('.producto__fotoP').src;
           var producto = {
               nombre: nombre,
               precio: precio,
               imagen: imagen,
           };
-          
+          actualizarCarrito();  
+
           listaProductos.push(producto);
           carritoNum.innerHTML = listaProductos.length;
           localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
