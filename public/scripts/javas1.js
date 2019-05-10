@@ -44,7 +44,7 @@ function paginaCargada(){
             </li>`
 
              total += producto.precio;
-             totalCarrito.innerHTML =  '<p class="pushbar__cartotalnum">'+total+'</p>'
+           //  totalCarrito.innerHTML =  '<p class="pushbar__cartotalnum">'+total+'</p>'
 
           });
 
