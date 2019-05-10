@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+        <link rel="stylesheet" href="../../styles/pushbar.css">
     <link rel="stylesheet" href="../styles/sass.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>The Court Magazine</title>
   </head>
 
@@ -17,11 +19,12 @@
         <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
 
         <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
+            <button class="encabezado__lupa" ><i class="fa fa-search"></i></button>
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
-           <a href="" style="margin:0;"> <div class="encabezado__carrito"></div></a>
-            <a href="" style="margin:0;"><div class="encabezado__indicador"><span class="encabezado__contador"></span></div></a>
+            <div data-pushbar-target="elCarro"  class="encabezado__carrito"></div>
+           <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span></div>
         </div>
             
     </header>
@@ -145,7 +148,7 @@
                                 <img src="{{fotoPrincipal}}" class="item__fotoP" alt="">
                                 <p class="item__precio">${{precio}}</p>
                             </a>
-                            <button class="tienda__agregar">ADD TO CAR</button>
+                            <button class="tienda__agregar">ADD TO CART</button>
                             <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;"></a> 
                                 <h3 class="item__nombre">{{nombre}}</h3>
                             </a>
@@ -153,10 +156,17 @@
                     {{/each}}
                 </ul>
         </section>
+  
+  </div>
 
     </div>
-
        <script src="../scripts/javas1.js"></script>
+       <script src="../scripts/pushbar.js"></script>
+       <script type="text/javascript">
+            var pushbar = new Pushbar({
+                    blur:true,
+                });
+            </script>
 
 </body>
 

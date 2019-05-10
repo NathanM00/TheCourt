@@ -6,7 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+           <link rel="stylesheet" href="../../styles/pushbar.css">
     <link rel="stylesheet" href="../../styles/sass.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>The Court Magazine</title>
   </head>
 
@@ -17,11 +19,12 @@
         <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
 
         <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
+            <button class="encabezado__lupa" ><i class="fa fa-search"></i></button>
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
-           <a href="" style="margin:0;"> <div class="encabezado__carrito"></div></a>
-            <a href="" style="margin:0;"><div class="encabezado__indicador"><span class="encabezado__contador"></span></div></a>
+            <div data-pushbar-target="elCarro" class="encabezado__carrito"></div>
+            <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span></div>
         </div>
             
     </header>
@@ -45,15 +48,20 @@
 
         <aside class="contPrincipal__lateral producto__lateral">
                 <p class="producto__nombre">{{producto.nombre}}</p>
-                <p class="producto__precio">${{producto.precio}}</p>
-        <div class="tienda__tamanos">
-                <h4 class="producto__tamano">Size</h4>
-        </div>
-         <div class="tienda__cantidad">
-                <h4 class="producto__cantidad">Quantity</h4>
-                <button class="tienda__agregar">ADD TO CAR</button>
+                <p class="producto__precio"><span class="typo__oscuro">Price:</span> ${{producto.precio}}</p>
+                <p class="producto__tamano">Size:</p>
+                <div class="producto__tamanos">
+                        <div class="producto__tallas"><p>S</p></div>
+                        <div class="producto__tallas"><p>M</p></div>
+                        <div class="producto__tallas"><p>L</p></div>
+                        <div class="producto__tallas"><p>XL</p></div>
+                </div>
+                <p class="producto__cantidad">Quantity:</p>
+                <div class="producto__cantidades">
+                        <div class="producto__numero"><p>1</p></div>                    
+                        <button class="producto__agregar">ADD TO CAR</button>
+                </div>
 
-        </div>
         </aside>
 
         <section class="contPrincipal__principal producto__principal" >
@@ -61,7 +69,7 @@
             <div class="producto__mitad">
               <img class="producto__fotoP" src="../{{producto.fotoPrincipal}}" alt="">
                           <div class="producto__miniaturas">
-                                <img class="producto__fotoM" src="../{{producto.miniaturas.[0]}}" alt="">
+                                <img class="producto__fotoM producto__fotoM-primera" src="../{{producto.miniaturas.[0]}}" alt="">
                                 <img class="producto__fotoM" src="../{{producto.miniaturas.[1]}}" alt="">
                                 <img class="producto__fotoM" src="../{{producto.miniaturas.[2]}}" alt="">
                           </div>
@@ -88,11 +96,17 @@
             </div>
 
         </section>
+ 
+  </div>
 
     </div>
-
-       <script src="../../scripts/javas2.js"></script>
-
+       <script src="../../scripts/javas1.js"></script>
+       <script src="../../scripts/pushbar.js"></script>
+     <script type="text/javascript">
+            var pushbar = new Pushbar({
+                    blur:true,
+                });
+            </script>
 </body>
 
 </html>

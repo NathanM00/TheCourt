@@ -130,6 +130,176 @@ body{
     display: block;
   }  
 }  
+.pushbar{
+    &__boton{
+
+        &Is{
+            text-align: right;
+        }
+        border: none;
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+    &__titular{
+        display: flex;
+        padding-left: 3em;
+        margin: 0.5em 1em;
+        border-bottom: 1px solid #838383;
+    }
+    &__titulo{
+        margin: 0 1em 0 0;
+        font-style: italic;
+        color: #ca0b18;
+    }
+    &__despacho{
+        display: flex;
+        flex-direction: column;
+        width: 90%;
+        height: 15%;
+        margin: 1em;
+        align-self: center;
+        text-align: center;
+        justify-content: space-evenly;
+    }
+    &__lista{
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        height: 99%;
+        width: 100%;
+        overflow: scroll;
+        & li {
+            height: 35%;
+            margin-bottom: 2em;
+        }
+    }
+    &__producto{
+        &-item{
+            width: 100%;
+            height: 100%;
+            display: flex;
+        }
+        &-img{
+            width: 30%;
+            flex-basis: 30%;
+            height: 70%;
+        }
+        &-resto{
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            width: 60%;
+            flex-basis: 60%;
+            margin-left:1em;
+            justify-content: space-between;
+        }
+        &-nombre{
+            width: 100%;
+            margin: 0;
+            font-size: 14px;
+        }
+        &-precio{
+            width: 100%;
+            margin: 0;
+            color: #ca0b18;
+            font-size: 14px;
+        }
+        &-variables{
+            width: 100%;
+            display:flex;
+            height: 30%;
+            & p{
+                font-size: 14px;
+                color: #3f3f3f;
+                margin: 0 0 0.5em 0 ;  
+            }
+        }
+        &-cuadro{
+            border: 1px solid #3f3f3f;
+            border-radius:5px;
+            height: 60%;
+            width: 80%;
+            text-align: center;
+            padding-top: 0.3em;
+        }
+        &-tamano{
+            width: 50%;
+            flex-basis: 50%;
+            height: 100%;
+        }
+        &-cantidad{
+            width: 50%;
+            flex-basis: 50%;
+            height: 100%;
+        }
+    }
+    &__pay{
+        background: #fec348;
+        background-image: url('../recursos/pay.svg');
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 100%;
+        flex-basis: 45%;
+        height: 45%;
+        color:white;
+        border: none;
+        border-radius: 5px;
+
+        &:hover {
+            background: #ffb922;
+            background-size: 50%;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-image: url('../recursos/pay.svg');
+        }
+    }
+    &__items{
+        height: 60%;
+        margin: 0 1em 0.5em 1em;
+        border-bottom: 1px solid #838383;
+        overflow: scroll;
+    }
+    &__checkout{
+        background: #ca0b18;
+        width: 100%;
+        flex-basis: 45%;
+        height: 45%;
+        font-size: 15px;
+        color:white;
+        border: none;
+        border-radius: 5px;
+
+        &:hover {
+            background: #ae1620;
+        }
+    }
+    &__cartotal{
+        display: inline-block;
+    }
+    &__total{
+        font-size: 20px;
+        height: 8%;
+        display: flex;
+        justify-content: space-evenly;
+        margin: 0 1em;
+        border-bottom: 1px solid #838383;
+    }
+    &__carrito{
+        background-image: url('../recursos/carro2.svg');
+        height: 40px;
+        display: inline-block;
+        width: 40px;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+    &__carro{
+        background: white;
+        width: 300px;
+        box-shadow: 10px 8px 19px 3px rgba(48, 48, 48, 1);
+    }
+}
 .item{
     &__fotoP{
         width: 100%;
@@ -210,7 +380,21 @@ body{
 
         &::placeholder {
             color: #3f3f3f;
+            padding-left: 2em;
         }
+    }
+    &__lupa{
+        border-radius:  0 100px 100px 0 ;
+        color: black;
+        border: 0;
+        font-size: 15px;
+        width: 7%;
+        flex-basis: 7%;
+        height: 30%;
+        align-self: center;
+        transition-duration: 0.4s;
+        cursor: pointer;
+        margin-left: -9em;
     }
 
     &__logo{
@@ -487,7 +671,16 @@ body{
         width: 70%; flex-basis: 70%;
         height: 95%;
     }
-
+    &__agregar{
+        background: #ca0b18;
+        width: 70%;
+        align-self: center;
+        height: 100%;
+        font-size: 15px;
+        color:white;
+        border: none;
+        border-radius: 5px;
+    }
     &__lateral{
         box-shadow: 10px 8px 19px -9px rgba(48, 48, 48, 0.808);
         background: #141414;
@@ -495,18 +688,17 @@ body{
         width: 25%;
         flex-basis: 25%;
         height: 95%;
-        align-items: center;
+
+        & p {
+            padding-left: 1em;
+        }
     }
-    &__agregar{
-        background: #ca0b18;
-        width: 30%;
-        align-self: flex-end;
-        height: 10%;
-        margin: 0 0 0 50%;
-        color:white;
-        border: none;
-        border-radius: 5px;
-    }  
+        &__cantidades{
+            display: flex;
+            height: 7%;
+            justify-content: space-evenly;
+        }
+
     &__details{
         width: 90%;
         & ul{
@@ -521,7 +713,21 @@ body{
     }
     &__desc{
         width: 90%;
-
+        border-bottom:1px solid #838383;
+    }
+    &__tamano{
+        font-size: 25px;
+        color: white;
+    }
+    &__tamanos{
+        display: flex;
+        height: 7%;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+    &__cantidad{
+        font-size: 25px;
+        color: white;
     }
     &__mitad{
         color: #3f3f3f;
@@ -540,6 +746,35 @@ body{
             font-size: 25px;
         }
     }
+    &__numero{
+        background: white;
+        width: 20%;
+        border-radius: 5px;
+        
+        & p{
+            padding: 0;
+            font-size: 20px;
+            margin: 0.5em 0 ;
+        }
+        text-align: center;
+    }
+    &__tallas{
+        background: white;
+        width: 20%;
+        border-radius: 5px;
+
+        & p{
+            padding: 0;
+            font-size: 20px;
+            margin: 0.5em 0 ;
+        }
+        text-align: center;
+
+        &:hover {
+            background: #ae1620;
+            color: white;
+        }
+    }
     &__miniaturas{
         width: 100%;
         flex-basis: 15%;
@@ -551,9 +786,23 @@ body{
     &__fotoP{
         width: 90%;
     }
+    &__nombre{
+        color: #FFFFFF;
+        font-size: 25px;
+    }
+    &__precio{
+        color: #ca0b18;
+        font-size: 25px;
+    }
     &__fotoM{
         width: 15%;
         margin: 0 0.5em;
+        border:  #3f3f3f;
+        border-radius: 3px;
+
+        &-primera{
+            border:1px solid;
+        }
     }
 }
 .revista{
