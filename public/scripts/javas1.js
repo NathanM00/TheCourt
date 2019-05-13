@@ -20,7 +20,7 @@ function paginaCargada(){
 
       function actualizarCarrito(){
         var suma = 0;
-
+        var valor = 0;
         carritoNum.innerHTML = listaProductos.length;
         totalItems.innerHTML = listaProductos.length;
         totalItemsCheck.innerHTML = listaProductos.length;
@@ -97,10 +97,9 @@ function paginaCargada(){
             for (let i = 1; i < producto.precio.length; i++) {
                 temp += producto.precio[i];
             }
-            suma += parseInt(temp);
+            suma += parseFloat(temp);
+             valor = suma.toFixed(2);
 
-
-            //Eliminar elemento del carrito
             eliminarNuevo.addEventListener('click', function () {
                 
               listaProductos.splice(index, 1);
@@ -112,9 +111,9 @@ function paginaCargada(){
       });
 
       if (totalCarrito != null) {
-        totalCarrito.innerHTML = "$" + suma;  
-        totalChekout.innerHTML = "$" + suma;  
-        parcialChekout.innerHTML = "$" + suma;
+        totalCarrito.innerHTML = "$" + valor;  
+        totalChekout.innerHTML = "$" + valor;  
+        parcialChekout.innerHTML = "$" + valor;
     }
 
       }

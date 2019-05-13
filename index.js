@@ -64,9 +64,11 @@ app.get('/tienda/:departamento?', function(request, response){
             esDAlguno: request.params.departamento != null,
             esLNone: request.query.linea == null,
             esLAlguno: request.query.linea != null,
-
             esRNone: request.query.rango == null,
             esRAlguno: request.query.rango != null,
+            esNone: request.query.rango == null && request.query.linea == null && request.params.departamento == null,
+            esAlguno: request.query.rango != null || request.query.linea != null || request.params.departamento != null,
+
             esMin: request.query.rango == "$20 - $40",
             esMed: request.query.rango == "$40 - $60",
             esMax: request.query.rango == "Over $60",
@@ -74,6 +76,7 @@ app.get('/tienda/:departamento?', function(request, response){
             esMen: request.query.linea == "Men",
             esWomen: request.query.linea == "Women",
             esKid: request.query.linea == "Kids",
+
             esTshirt: request.params.departamento == "T-shirts",
             esJersey: request.params.departamento == "Jerseys",
             esHoodie: request.params.departamento == "Hoodies & Sweatshirts",

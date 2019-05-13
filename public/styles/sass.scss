@@ -138,12 +138,14 @@ body{
             width: 50px;
             height: 50px;
             font-size: 20px;
+            background: none;
         }
         &-atras{
             border: none;
             width: 50px;
             height: 50px;
             font-size: 20px;
+            background: none;
         }
 
     }
@@ -188,6 +190,7 @@ body{
             border: none;
             width: 50px;
             height: 50px;
+            background: none;
             font-size: 20px;
         }
         &-img{
@@ -753,7 +756,7 @@ body{
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
         color: white;
-        background-color: #ae1620;
+        background-color: #3f3f3f;
       }
 
       &__dropdown:hover &__dropbtn-flecha {
@@ -779,6 +782,12 @@ body{
         color:white;
         border: none;
         border-radius: 5px;
+    }
+    &__datos{
+        display: none;
+    }
+    &__boton-atras{
+        display: none;
     }
     &__lateral{
         box-shadow: 10px 8px 19px -9px rgba(48, 48, 48, 0.808);
@@ -1576,8 +1585,8 @@ body{
 @media(max-width: 411px){
     .encabezado{
         &-tienda{
-                height: 8%;
-                flex-basis: 8%;
+                height:  70px;
+                flex-basis: 70px;
                 justify-content: space-evenly;
 
                 &2{
@@ -1632,7 +1641,8 @@ body{
                 }
         }
         &__dropbtn2 {
-            background-color: rgb(226, 226, 226);
+            
+            background-color: #fec44800;
             color: black;
             padding: 16px;
             width: 100%;
@@ -1656,7 +1666,8 @@ body{
             width: 30%;
             display: inline-block;
             margin: 1em 1em 1em 0;
-
+            border: 1px solid #838383;
+            border-radius: 5px;
             &2{
                 display: none;
             }
@@ -1694,7 +1705,7 @@ body{
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             color: white;
-            background-color: #ae1620;
+            background-color: #3f3f3f;
           }
           &__dropbtn3 {
             background-color: rgb(226, 226, 226);
@@ -1759,7 +1770,7 @@ body{
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             color: white;
-            background-color: #ae1620;
+            background-color: #3f3f3f;
           }
     
         &__lateral{
@@ -1809,11 +1820,76 @@ body{
             display: none;
             &2{
                 display: inline-block;
-                font-size: 1em;
+                font-size: 14.4px;
                 width: 40%;
                 margin-bottom: 0;
                 margin-left: 1em;
             }
+        }
+    }
+    .contPrincipal{
+        height: 100%;
+        flex-basis: 100%;
+    }
+    .producto{
+        &__nombre{
+            font-size: 19px;
+            color: #141414;
+        }
+        &__datos{
+            display: block;
+            border-bottom: 1px solid #838383;
+        }
+        &__lateral{
+            display: none;
+            box-shadow: none;
+        }
+        &__boton-atras{
+            display: inline-block;
+            align-self: flex-start;
+        }
+        &__principal{
+            height: 100%;
+            flex-basis: 100%;
+            justify-content: space-between;
+            flex-direction: column;
+            box-shadow: none;
+            overflow: scroll;
+        }
+        &__datos{
+            height: 200px;
+            flex-basis: 200px;
+        }
+        &__paddingTop{
+            padding-top: 12em;
+            height: 50%;
+            flex-basis: 50%;
+        }
+        &__tamano{
+            color: #3f3f3f;
+            font-size: 15px;
+        }
+        &__precio{
+            font-size: 15px;
+        }
+        &__mitad{
+            width: 90%;
+        }
+        &__fotoP{
+            width: 260px;
+            margin-top: 1em;
+        }
+        &__miniaturas{
+            height: 100px;
+        }
+        &__absoluto{
+            position: absolute;
+            height: 100%;
+            flex-basis: 100%;
+            justify-content: flex-start;
+        }
+        &__info{
+            display: none;
         }
     }
 }

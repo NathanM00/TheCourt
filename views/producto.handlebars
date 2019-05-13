@@ -33,14 +33,14 @@
         <nav class="encabezado__pc">
             <ul class="nav__lista nav__pad">
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Men</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Women</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Jerseys</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">T-shirts</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Hoodies</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Sales</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Men" class="typo__oscuro">Men</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Women" class="typo__oscuro">Women</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Kids" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Jerseys" class="typo__oscuro">Jerseys</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?rango=$20 - $40" class="typo__oscuro">Sales</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/T-shirts" class="typo__oscuro">T-Shirts</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?rango=Over $60" class="typo__oscuro">Heat</a></li>
              </ul>
         </nav>
         </header>
@@ -68,31 +68,62 @@
 
         <section class="contPrincipal__principal producto__principal" >
 
-            <div class="producto__mitad">
+            <div class="producto__mitad producto__absoluto">
+                <button class="producto__boton-atras"> <i class="fa fa-arrow-left"></i></button>
               <img class="producto__fotoP" src="../{{producto.fotoPrincipal}}" alt="">
                           <div class="producto__miniaturas">
                                 <img class="producto__fotoM producto__fotoM-primera" src="../{{producto.miniaturas.[0]}}" alt="">
                                 <img class="producto__fotoM" src="../{{producto.miniaturas.[1]}}" alt="">
                                 <img class="producto__fotoM" src="../{{producto.miniaturas.[2]}}" alt="">
                           </div>
+                 <div class="producto__datos">
+                    <p class="producto__nombre">{{producto.nombre}}</p>
+                    <p  class="producto__tamano">Price:</p>
+                    <p class="producto__precio"> ${{producto.precio}}</p>
+                    <p class="producto__tamano">Size:</p>
+                    <div class="producto__tamanos">
+                            <div class="producto__tallas"><p>S</p></div>
+                            <div class="producto__tallas"><p>M</p></div>
+                            <div class="producto__tallas"><p>L</p></div>
+                            <div class="producto__tallas"><p>XL</p></div>
+                    </div>
+                    <p class="producto__cantidad">Quantity:</p>
+                    <div class="producto__cantidades">
+                            <div class="producto__numero"><p>1</p></div>                    
+                            <button class="producto__agregar">ADD TO CAR</button>
+                    </div>
+                    <div class="producto__desc">
+                                <h3>Description</h3>
+                                <p>{{producto.descripcion}}</p>
+                            </div>
+
+                            <div class="producto__details">
+                                <h3>Details</h3>
+                                <ul>
+                                    <li><span>{{producto.detalles.[1]}}</span></li>
+                                    <li><span>{{producto.detalles.[2]}}</span></li>
+                                    <li><span>{{producto.detalles.[3]}}</span></li>
+                                    <li><span>{{producto.detalles.[0]}}</span></li>
+                                </ul>
+                    
+                </div>
+                </div>
             </div>
 
-            <div class="producto__mitad">
-                
-                <div class="producto__desc">
-                    <h3>Description</h3>
-                    <p>{{producto.descripcion}}</p>
-                </div>
+            <div class="producto__mitad producto__info">
+                    <div class="producto__desc">
+                        <h3>Description</h3>
+                        <p>{{producto.descripcion}}</p>
+                    </div>
 
-                <div class="producto__details">
-                    <h3>Details</h3>
-                    <ul>
-                        <li><span>{{producto.detalles.[1]}}</span></li>
-                        <li><span>{{producto.detalles.[2]}}</span></li>
-                        <li><span>{{producto.detalles.[3]}}</span></li>
-                        <li><span>{{producto.detalles.[0]}}</span></li>
-                    </ul>
-                    
+                    <div class="producto__details">
+                        <h3>Details</h3>
+                        <ul>
+                            <li><span>{{producto.detalles.[1]}}</span></li>
+                            <li><span>{{producto.detalles.[2]}}</span></li>
+                            <li><span>{{producto.detalles.[3]}}</span></li>
+                            <li><span>{{producto.detalles.[0]}}</span></li>
+                        </ul>
                 </div>
 
             </div>

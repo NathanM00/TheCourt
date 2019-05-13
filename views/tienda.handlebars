@@ -33,14 +33,14 @@
         <nav class="encabezado__pc">
             <ul class="nav__lista nav__pad">
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Men</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Women</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Jerseys</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">More</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Hoodies</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Sales</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Men" class="typo__oscuro">Men</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Women" class="typo__oscuro">Women</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Kids" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Jerseys" class="typo__oscuro">Jerseys</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?rango=$20 - $40" class="typo__oscuro">Sales</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/T-shirts" class="typo__oscuro">T-Shirts</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?rango=Over $60" class="typo__oscuro">Heat</a></li>
              </ul>
         </nav>
         </header>
@@ -169,8 +169,8 @@
                 <p class="tienda__cantidad">2019 Season</p>
                 <p class="tienda__cantidad" style="color: #838383";>{{productos.length}} ITEMS</p>
                 <div class="tienda__dropdown2">
-                        <button class="tienda__dropbtn2  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}"> 
-                             {{#if esDNone}}
+                        <button class="tienda__dropbtn2 "> 
+                             {{#if esNone}}
                                 Filters 
                             {{/if}} 
                             {{#if esJersey}}
