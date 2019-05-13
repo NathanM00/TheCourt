@@ -1,244 +1,432 @@
-[
-
-    {
-        "nombre": "Milwaukee Bucks Nike 2019 NBA Playoffs Bound Team Mantra Pullover Hoodie – Black",
-        "precio": 69.99,
-        "detalles": ["Material: 81% Cotton/19% Polyester.", "Midweight hoodie suitable for moderate temperatures.","Hood with drawstring"],
-        "descripcion": "Show the Milwaukee Bucks your support in the 2019 NBA Playoffs with this Team Mantra Pullover Hoodie from Nike. This sweet gear is sure to get you pumped up for the postseason tournament! It features bold graphics that put your Milwaukee Bucks fandom front and center, letting everyone know where your allegiance lies.",
-        "fotoPrincipal":"../recursos/productos/A1.jpeg",
-        "miniaturas": ["../recursos/productos/A1.jpeg","../recursos/productos/A2.jpeg","../recursos/productos/A3.jpeg"],
-        "linea":"Men",
-        "departamento":"Hoodies & Sweatshirts",
-        "rango":"Over $60"
-    } ,
-
-    {
-        "nombre": "Women's Portland Trail Blazers Nike Red Practice Performance T-Shirt",
-        "precio": 34.99,
-        "detalles": [ "Material: 65% Cotton/35% Polyester.","Slim Fit: Fits close to the body.", "Designed with a tighter fit in shoulders, chest and waist."],
-        "descripcion": "Gear up for an exciting NBA season and score some major Portland Trail Blazers style points when you rock this fabulous Nike Practice Dri-FIT T-Shirt. The authentic team graphics add some Portland Trail Blazers flair to this trendy, moisture-wicking top, ensuring you're the #1 fan in every room you enter.",
-        "fotoPrincipal":"../recursos/productos/B1.jpeg",
-        "miniaturas": ["../recursos/productos/B1.jpeg","../recursos/productos/B2.jpeg","../recursos/productos/B3.jpeg"],
-        "linea":"Women",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-
-    {
-        "nombre": "Orlando Magic Fanatics Branded Youth 2019 NBA Playoffs Bound Tip Off Dunk T-Shirt – Royal",
-        "precio": 21.99,
-        "detalles": [ "Material: 100% Cotton.", "Screen print graphics","Short sleeve.", "Machine wash, tumble dry low."],
-        "descripcion": "As a major Orlando Magic fan, your kiddo never misses out on the action. Help your young fan show their team support in the 2019 NBA Playoffs with this Orlando Magic Tip Off Dunk T-Shirt from Fanatics Branded. This gear features bold graphics that will put your youngster's fandom front and center.",
-        "fotoPrincipal":"../recursos/productos/C1.jpeg",
-        "miniaturas": ["../recursos/productos/C1.jpeg","../recursos/productos/C2.jpeg","../recursos/productos/C3.jpeg"],
-        "linea":"Kids",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-
-    {
-        "nombre": "Men's Los Angeles Lakers LeBron James Nike Gold 2018/19 Swingman Jersey - Icon Edition",
-        "precio": 109.9,
-        "detalles": [ "Material: 100% Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "Be the first to rep the Los Angeles Lakers' new iconic look with this LeBron James 2018/19 Swingman Jersey - Icon Edition from Nike. The new design will be unveiled by the Los Angeles Lakers soon. Stay tuned.",
-        "fotoPrincipal":"../recursos/productos/D1.jpeg",
-        "miniaturas": ["../recursos/productos/D1.jpeg","../recursos/productos/D2.jpeg","../recursos/productos/D3.jpeg"],
-        "linea":"Men",
-        "departamento":"Jerseys",
-        "rango":"Over $60"
-    } ,
-
-    {
-        "nombre": "Milwaukee Bucks Fanatics Branded Women's High Class Pullover Hoodie – Hunter Green",
-        "precio": 64.99,
-        "detalles": ["Material: 80% Cotton/20% Polyester.", "Midweight hoodie suitable for moderate temperatures.","Hood with drawstring."],
-        "descripcion": "Staying warm when the temperature starts to drop is one thing, but you're also looking for a way to celebrate your beloved Milwaukee Bucks at the same time. This exceptional High Class pullover hoodie is just the thing you've been yearning for. Not only will you easily fend off the chilly air in this bold top, but it's also decorated with top-of-the-line Milwaukee Bucks graphics to make your loyalty clear.",
-        "fotoPrincipal":"../recursos/productos/E1.jpeg",
-        "miniaturas": ["../recursos/productos/E1.jpeg","../recursos/productos/E2.jpeg","../recursos/productos/E3.jpeg"],
-        "linea":"Women",
-        "departamento":"Hoodies & Sweatshirts",
-        "rango":"Over $60"
-    } ,
-
-    {
-        "nombre": "Women's Golden State Warriors White More Chill Layered Pullover Funnel Neck Hoodie",
-        "precio": 59.99,
-        "detalles": ["Material: 95% Polyester/5% Spandex – Body; 60% Cotton/40% Polyester – Sleeve.", "Lightweight hoodie suitable for mild temperatures.","Funnel neck hoodie with drawstring."],
-        "descripcion": "Ensure you'll have the best Golden State Warriors-inspired outfit on game day by choosing this classic More Chill Layered pullover funnel neck hoodie. This will quickly become your new favorite way to pay homage to the Golden State Warriors!",
-        "fotoPrincipal":"../recursos/productos/F1.jpeg",
-        "miniaturas": ["../recursos/productos/F1.jpeg","../recursos/productos/F2.jpeg","../recursos/productos/F3.jpeg"],
-        "linea":"Women",
-        "departamento":"Hoodies & Sweatshirts",
-        "rango":"$40 - $60"
-    } , 
-    
-    {
-        "nombre": "Women's Golden State Warriors New Era Royal/Gold Contrast Insert V-Neck T-Shirt",
-        "precio": 34.99,
-        "detalles": ["Material: 100% Polyester.", "Screen print graphics","V-neck.", "Machine wash, tumble dry low."],
-        "descripcion": "Express your unmatched enthusiasm for the Golden State Warriors by rocking this Contrast Insert V-neck tee from New Era on game day. Its trendy design and eye-catching graphics will help you be the standout wherever you go!",
-        "fotoPrincipal":"../recursos/productos/G1.jpeg",
-        "miniaturas": ["../recursos/productos/G1.jpeg","../recursos/productos/G2.jpeg","../recursos/productos/G3.jpeg"],
-        "linea":"Women",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-     
-    {
-        "nombre": "Women's Philadelphia 76ers Nike Blue NBA Playoffs Mantra Legend Dri-FIT Cotton T-Shirt",
-        "precio": 34.99,
-        "detalles": ["Material: 100% Cotton.", "Screen print graphics","V-neck.", "Machine wash, tumble dry low."],
-        "descripcion": "Get pumped up and ready for the NBA Playoffs when you grab this Philadelphia 76ers Mantra Legend Dri-FIT Cotton T-Shirt from Nike. The bold Philadelphia 76ers graphics will ensure you're the sharpest dressed fan in the whole arena.",
-        "fotoPrincipal":"../recursos/productos/H1.jpeg",
-        "miniaturas": ["../recursos/productos/H1.jpeg","../recursos/productos/H2.jpeg","../recursos/productos/H3.jpeg"],
-        "linea":"Women",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-
-    {
-        "nombre": "Women's Portland Trail Blazers Damian Lillard Nike Black Swingman Jersey - Icon Edition",
-        "precio": 109.9,
-        "detalles": [ "Material: 100% Recycled Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "It'll be a slam dunk for your fandom when you get this Damian Lillard Portland Trail Blazers Icon Edition Swingman jersey from Nike. The Dri-FIT technology built into this jersey will wick moisture away from your body, so you'll stay comfortable.",
-        "fotoPrincipal":"../recursos/productos/I1.jpeg",
-        "miniaturas": ["../recursos/productos/I1.jpeg","../recursos/productos/I2.jpeg","../recursos/productos/I3.jpeg"],
-        "linea":"Women",
-        "departamento":"Jerseys",
-        "rango":"Over $60"
-    } ,
-
-    {
-        "nombre": "Women's Milwaukee Bucks Giannis Antetokounmpo Nike Green Swingman Jersey - Icon Edition",
-        "precio": 109.9,
-        "detalles": [ "Material: 100% Recycled Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "Represent your team's distinct on-court look with this Milwaukee Bucks Swingman jersey from Nike. It boasts Milwaukee Bucks graphics and classic trims along with Dri-FIT technology for added comfort.",
-        "fotoPrincipal":"../recursos/productos/J1.jpeg",
-        "miniaturas": ["../recursos/productos/J1.jpeg","../recursos/productos/J2.jpeg","../recursos/productos/J3.jpeg"],
-        "linea":"Women",
-        "departamento":"Jerseys",
-        "rango":"Over $60"
-    } ,
-
-    {
-        "nombre": "Men's Golden State Warriors Stephen Curry Nike Navy City Edition Swingman Jersey",
-        "precio": 109.9,
-        "detalles": [ "Material: 100% Recycled Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "Represent your team's distinct on-court look with this Golden State Warriors Stephen Curry Swingman jersey from Nike. It boasts Golden State Warriors graphics and classic trims along with Dri-FIT technology for added comfort. Also featured is NikeConnect technology, which unlocks exclusive content including highlights, special offers and more epic fan experiences on game day.",
-        "fotoPrincipal":"../recursos/productos/K1.jpeg",
-        "miniaturas": ["../recursos/productos/K1.jpeg","../recursos/productos/K2.jpeg","../recursos/productos/K3.jpeg"],
-        "linea":"Men",
-        "departamento":"Jerseys",
-        "rango":"Over $60"
-    } ,
-
-    {
-        "nombre": "Men's Chicago Bulls Scottie Pippen Mitchell & Ness Black 1997-98 Hardwood Classics Swingman Jersey",
-        "precio": 129.9,
-        "detalles": [ "Material: 100% Recycled Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "Sport a little throwback spirit in this Scottie Pippen Chicago Bulls 1997-98 Hardwood Classics Swingman jersey from Mitchell & Ness! There's no better way to prove your dedication than with this sweet look.",
-        "fotoPrincipal":"../recursos/productos/L1.jpeg",
-        "miniaturas": ["../recursos/productos/L1.jpeg","../recursos/productos/L2.jpeg","../recursos/productos/L3.jpeg"],
-        "linea":"Men",
-        "departamento":"Jerseys",
-        "rango":"Over $60"
-    } ,
-     
-    {
-        "nombre": "Portland Trail Blazers Mitchell & Ness Hardwood Classics Hometown T-Shirt - Red",
-        "precio": 34.99,
-        "detalles": ["Material: 100% Cotton.", "Screen print graphics","V-neck.", "Machine wash, tumble dry low."],
-        "descripcion": "You're an avid Portland Trail Blazers fan and love to flaunt it. Show the Portland Trail Blazers your support by grabbing this Hometown T-Shirt from Mitchell & Ness. It features bold Portland Trail Blazers graphics, so no one will be able to question where your allegiance lies every time you rock this sweet gear.",
-        "fotoPrincipal":"../recursos/productos/M1.jpeg",
-        "miniaturas": ["../recursos/productos/M1.jpeg","../recursos/productos/M2.jpeg","../recursos/productos/M3.jpeg"],
-        "linea":"Men",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-     
-    {
-        "nombre": "Milwaukee Bucks Mitchell & Ness Hardwood Classics Hometown T-Shirt - Gray",
-        "precio": 34.99,
-        "detalles": ["Material: 100% Cotton.", "Screen print graphics","V-neck.", "Machine wash, tumble dry low."],
-        "descripcion": "You're an avid Milwaukee Bucks fan and love to flaunt it. Show the Milwaukee Bucks your support by grabbing this Hometown T-Shirt from Mitchell & Ness. It features bold Milwaukee Bucks graphics, so no one will be able to question where your allegiance lies every time you rock this sweet gear.",
-        "fotoPrincipal":"../recursos/productos/N1.jpeg",
-        "miniaturas": ["../recursos/productos/N1.jpeg","../recursos/productos/N2.jpeg","../recursos/productos/N3.jpeg"],
-        "linea":"Men",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-
-    {
-        "nombre": "Men's Portland Trail Blazers Fanatics Branded Cream True Classics French Terry Pullover Hoodie",
-        "precio": 69.99,
-        "detalles": ["Material: 81% Cotton/19% Polyester.", "Midweight hoodie suitable for moderate temperatures.","Hood with drawstring"],
-        "descripcion": "Embrace your Portland Trail Blazers fandom with this True Classics French Terry hoodie from Fanatics Branded. Its graphics will show that you only support the top squad in the league.",
-        "fotoPrincipal":"../recursos/productos/O1.jpeg",
-        "miniaturas": ["../recursos/productos/O1.jpeg","../recursos/productos/O2.jpeg","../recursos/productos/O3.jpeg"],
-        "linea":"Men",
-        "departamento":"Hoodies & Sweatshirts",
-        "rango":"Over $60"
-    },
-
-    {
-        "nombre": "Youth Portland Trail Blazers Damian Lillard Nike Black Name & Number T-Shirt",
-        "precio": 29.99,
-        "detalles": [ "Material: 100% Cotton.", "Screen print graphics","Short sleeve.", "Machine wash, tumble dry low."],
-        "descripcion": "Gear up your young fan for an exciting NBA season and score some major Portland Trail Blazers style points with this sweet Nike Stephen Curry Name and Number T-Shirt. The team graphics on the front add some Portland Trail Blazers flair while Damian Lillard's name and number ensure your kid is the #1 fan.",
-        "fotoPrincipal":"../recursos/productos/P1.jpeg",
-        "miniaturas": ["../recursos/productos/P1.jpeg","../recursos/productos/P2.jpeg","../recursos/productos/P3.jpeg"],
-        "linea":"Kids",
-        "departamento":"T-shirts",
-        "rango":"$20 - $40"
-    } ,
-
-    {
-        "nombre": "Youth Golden State Warriors Stephen Curry Fanatics Branded Royal Fast Break Replica Jersey - Icon Edition",
-        "precio": 49.99,
-        "detalles": [ "Material: 100% Recycled Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "Help your kid represent his team's on-court look with this Golden State Warriors Fast Break Replica jersey from Fanatics Branded. It boasts sterling graphics and a classic look that will showcase his NBA fandom.",
-        "fotoPrincipal":"../recursos/productos/Q1.jpeg",
-        "miniaturas": ["../recursos/productos/Q1.jpeg","../recursos/productos/Q2.jpeg","../recursos/productos/Q3.jpeg"],
-        "linea":"Kids",
-        "departamento":"Jerseys",
-        "rango":"$40 - $60"
-    },
-
-    {
-        "nombre": "Youth Milwaukee Bucks Giannis Antetokounmpo Fanatics Branded Black Fast Break Replica Jersey - Statement Edition",
-        "precio": 49.99,
-        "detalles": [ "Material: 100% Recycled Polyester.", "Dri-FIT ® technology wicks away moisture.","Sleeveless.", "Lightweight, breathable fabric with a smooth feel."],
-        "descripcion": "Help your kid represent his team's on-court look with this Milwaukee Bucks Fast Break Replica jersey from Fanatics Branded. It boasts sterling graphics and a classic look that will showcase his NBA fandom.",
-        "fotoPrincipal":"../recursos/productos/R1.jpeg",
-        "miniaturas": ["../recursos/productos/R1.jpeg","../recursos/productos/R2.jpeg","../recursos/productos/R3.jpeg"],
-        "linea":"Kids",
-        "departamento":"Jerseys",
-        "rango":"$40 - $60"
-    },
-
-    {
-        "nombre": "Youth Golden State Warriors Fanatics Branded Royal X-Ray Pullover Hoodie",
-        "precio": 44.99,
-        "detalles": ["Material: 81% Cotton/19% Polyester.", "Midweight hoodie suitable for moderate temperatures.","Hood with drawstring"],
-        "descripcion": "Let your young fan celebrate his fandom with this Golden State Warriors X-Ray hoodie. It features Golden State Warriors graphics on the front. This stylish Fanatics Branded hoodie will let him represent the Golden State Warriors everywhere he goes!",
-        "fotoPrincipal":"../recursos/productos/S1.jpeg",
-        "miniaturas": ["../recursos/productos/S1.jpeg","../recursos/productos/S2.jpeg","../recursos/productos/S3.jpeg"],
-        "linea":"Kids",
-        "departamento":"Hoodies & Sweatshirts",
-        "rango":"$40 - $60"
-    },
-
-    {
-        "nombre": "Youth Boston Celtics Nike Kelly Green Essential Logo Hoodie",
-        "precio": 49.99,
-        "detalles": ["Material: 81% Cotton/19% Polyester.", "Midweight hoodie suitable for moderate temperatures.","Hood with drawstring"],
-        "descripcion": "Your kiddo won't be able to contain their excitement when you gift them this Boston Celtics Essential logo hoodie from Nike. The cold won't stand a chance when your young one has this warm hoodie on.",
-        "fotoPrincipal":"../recursos/productos/T1.jpeg",
-        "miniaturas": ["../recursos/productos/T1.jpeg","../recursos/productos/T2.jpeg","../recursos/productos/T3.jpeg"],
-        "linea":"Kids",
-        "departamento":"Hoodies & Sweatshirts",
-        "rango":"$40 - $60"
-    }
+[{
+    "nombre" : "Milwaukee Bucks Nike 2019 NBA Playoffs Bound Team Mantra Pullover Hoodie – Black",
+"precio" : 69.99,
+"detalles" : [ 
+    "Material: 81% Cotton/19% Polyester.", 
+    "Midweight hoodie suitable for moderate temperatures.", 
+    "Hood with drawstring", 
+    "Fleece lining"
+],
+"descripcion" : "Show the Milwaukee Bucks your support in the 2019 NBA Playoffs with this Team Mantra Pullover Hoodie from Nike. This sweet gear is sure to get you pumped up for the postseason tournament! It features bold graphics that put your Milwaukee Bucks fandom front and center, letting everyone know where your allegiance lies.",
+"fotoPrincipal" : "../recursos/productos/A1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/A1.jpeg", 
+    "../recursos/productos/A2.jpeg", 
+    "../recursos/productos/A3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "Hoodies & Sweatshirts",
+"rango" : "Over $60"
+},
 
 
+{
+    "nombre" : "Women's Portland Trail Blazers Nike Red Practice Performance T-Shirt",
+"precio" : 34.99,
+"detalles" : [ 
+    "Material: 65% Cotton/35% Polyester.", 
+    "Slim Fit: Fits close to the body.", 
+    "Designed with a tighter fit in shoulders, chest and waist.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "Gear up for an exciting NBA season and score some major Portland Trail Blazers style points when you rock this fabulous Nike Practice Dri-FIT T-Shirt. The authentic team graphics add some Portland Trail Blazers flair to this trendy, moisture-wicking top, ensuring you're the #1 fan in every room you enter.",
+"fotoPrincipal" : "../recursos/productos/B1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/B1.jpeg", 
+    "../recursos/productos/B2.jpeg", 
+    "../recursos/productos/B3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+{
+    "nombre" : "Orlando Magic Fanatics Branded Youth 2019 NBA Playoffs Bound Tip Off Dunk T-Shirt – Royal",
+"precio" : 21.99,
+"detalles" : [ 
+    "Material: 100% Cotton.", 
+    "Screen print graphics", 
+    "Short sleeve.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "As a major Orlando Magic fan, your kiddo never misses out on the action. Help your young fan show their team support in the 2019 NBA Playoffs with this Orlando Magic Tip Off Dunk T-Shirt from Fanatics Branded. This gear features bold graphics that will put your youngster's fandom front and center.",
+"fotoPrincipal" : "../recursos/productos/C1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/C1.jpeg", 
+    "../recursos/productos/C2.jpeg", 
+    "../recursos/productos/C3.jpeg"
+],
+"linea" : "Kids",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+{
+    "nombre" : "Men's Los Angeles Lakers LeBron James Nike Gold 2018/19 Swingman Jersey",
+"precio" : 109.9,
+"detalles" : [ 
+    "Material: 100% Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "Be the first to rep the Los Angeles Lakers' new iconic look with this LeBron James 2018/19 Swingman Jersey - Icon Edition from Nike. The new design will be unveiled by the Los Angeles Lakers soon. Stay tuned.",
+"fotoPrincipal" : "../recursos/productos/D1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/D1.jpeg", 
+    "../recursos/productos/D2.jpeg", 
+    "../recursos/productos/D3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "Jerseys",
+"rango" : "Over $60"
+},
+
+{
+    "nombre" : "Milwaukee Bucks Fanatics Branded Women's High Class Pullover Hoodie – Hunter Green",
+"precio" : 64.99,
+"detalles" : [ 
+    "Material: 80% Cotton/20% Polyester.", 
+    "Midweight hoodie suitable for moderate temperatures.", 
+    "Hood with drawstring.", 
+    "Fleece lining"
+],
+"descripcion" : "Staying warm when the temperature starts to drop is one thing, but you're also looking for a way to celebrate your beloved Milwaukee Bucks at the same time. This exceptional High Class pullover hoodie is just the thing you've been yearning for. Not only will you easily fend off the chilly air in this bold top, but it's also decorated with top-of-the-line Milwaukee Bucks graphics to make your loyalty clear.",
+"fotoPrincipal" : "../recursos/productos/E1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/E1.jpeg", 
+    "../recursos/productos/E2.jpeg", 
+    "../recursos/productos/E3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "Hoodies & Sweatshirts",
+"rango" : "Over $60"
+},
+
+{
+    "nombre" : "Women's Golden State Warriors White More Chill Layered Pullover Funnel Neck Hoodie",
+"precio" : 59.99,
+"detalles" : [ 
+    "Material: 95% Polyester/5% Spandex – Body; 60% Cotton/40% Polyester – Sleeve.", 
+    "Lightweight hoodie suitable for mild temperatures.", 
+    "Funnel neck hoodie with drawstring.", 
+    "Fleece lining"
+],
+"descripcion" : "Ensure you'll have the best Golden State Warriors-inspired outfit on game day by choosing this classic More Chill Layered pullover funnel neck hoodie. This will quickly become your new favorite way to pay homage to the Golden State Warriors!",
+"fotoPrincipal" : "../recursos/productos/F1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/F1.jpeg", 
+    "../recursos/productos/F2.jpeg", 
+    "../recursos/productos/F3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "Hoodies & Sweatshirts",
+"rango" : "$40 - $60"
+},
+
+{
+    "nombre" : "Women's Golden State Warriors New Era Royal/Gold Contrast Insert V-Neck T-Shirt",
+"precio" : 34.99,
+"detalles" : [ 
+    "Material: 100% Polyester.", 
+    "Screen print graphics", 
+    "V-neck.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "Express your unmatched enthusiasm for the Golden State Warriors by rocking this Contrast Insert V-neck tee from New Era on game day. Its trendy design and eye-catching graphics will help you be the standout wherever you go!",
+"fotoPrincipal" : "../recursos/productos/G1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/G1.jpeg", 
+    "../recursos/productos/G2.jpeg", 
+    "../recursos/productos/G3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+{
+    "nombre" : "Women's Philadelphia 76ers Nike Blue NBA Playoffs Mantra Legend Dri-FIT Cotton T-Shirt",
+"precio" : 34.99,
+"detalles" : [ 
+    "Material: 100% Cotton.", 
+    "Screen print graphics", 
+    "V-neck.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "Get pumped up and ready for the NBA Playoffs when you grab this Philadelphia 76ers Mantra Legend Dri-FIT Cotton T-Shirt from Nike. The bold Philadelphia 76ers graphics will ensure you're the sharpest dressed fan in the whole arena.",
+"fotoPrincipal" : "../recursos/productos/H1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/H1.jpeg", 
+    "../recursos/productos/H2.jpeg", 
+    "../recursos/productos/H3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+{
+    "nombre" : "Women's Portland Trail Blazers Damian Lillard Nike Black Swingman Jersey - Icon Edition",
+"precio" : 109.9,
+"detalles" : [ 
+    "Material: 100% Recycled Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "It'll be a slam dunk for your fandom when you get this Damian Lillard Portland Trail Blazers Icon Edition Swingman jersey from Nike. The Dri-FIT technology built into this jersey will wick moisture away from your body, so you'll stay comfortable.",
+"fotoPrincipal" : "../recursos/productos/I1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/I1.jpeg", 
+    "../recursos/productos/I2.jpeg", 
+    "../recursos/productos/I3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "Jerseys",
+"rango" : "Over $60"
+},
+
+
+{
+    "nombre" : "Women's Milwaukee Bucks Giannis Antetokounmpo Nike Green Swingman Jersey",
+"precio" : 109.9,
+"detalles" : [ 
+    "Material: 100% Recycled Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "Represent your team's distinct on-court look with this Milwaukee Bucks Swingman jersey from Nike. It boasts Milwaukee Bucks graphics and classic trims along with Dri-FIT technology for added comfort.",
+"fotoPrincipal" : "../recursos/productos/J1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/J1.jpeg", 
+    "../recursos/productos/J2.jpeg", 
+    "../recursos/productos/J3.jpeg"
+],
+"linea" : "Women",
+"departamento" : "Jerseys",
+"rango" : "Over $60"
+},
+
+
+{
+    "nombre" : "Men's Golden State Warriors Stephen Curry Nike Navy City Edition Swingman Jersey",
+"precio" : 109.9,
+"detalles" : [ 
+    "Material: 100% Recycled Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "Represent your team's distinct on-court look with this Golden State Warriors Stephen Curry Swingman jersey from Nike. It boasts Golden State Warriors graphics and classic trims along with Dri-FIT technology for added comfort. Also featured is NikeConnect technology, which unlocks exclusive content including highlights, special offers and more epic fan experiences on game day.",
+"fotoPrincipal" : "../recursos/productos/K1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/K1.jpeg", 
+    "../recursos/productos/K2.jpeg", 
+    "../recursos/productos/K3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "Jerseys",
+"rango" : "Over $60"
+},
+
+
+{
+    "nombre" : "Men's Chicago Bulls Scottie Pippen Mitchell & Ness Black 1997-98 Hardwood Classics",
+"precio" : 129.9,
+"detalles" : [ 
+    "Material: 100% Recycled Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "Sport a little throwback spirit in this Scottie Pippen Chicago Bulls 1997-98 Hardwood Classics Swingman jersey from Mitchell & Ness! There's no better way to prove your dedication than with this sweet look.",
+"fotoPrincipal" : "../recursos/productos/L1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/L1.jpeg", 
+    "../recursos/productos/L2.jpeg", 
+    "../recursos/productos/L3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "Jerseys",
+"rango" : "Over $60"
+},
+
+
+{
+    "nombre" : "Portland Trail Blazers Mitchell & Ness Hardwood Classics Hometown T-Shirt - Red",
+"precio" : 34.99,
+"detalles" : [ 
+    "Material: 100% Cotton.", 
+    "Screen print graphics", 
+    "V-neck.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "You're an avid Portland Trail Blazers fan and love to flaunt it. Show the Portland Trail Blazers your support by grabbing this Hometown T-Shirt from Mitchell & Ness. It features bold Portland Trail Blazers graphics, so no one will be able to question where your allegiance lies every time you rock this sweet gear.",
+"fotoPrincipal" : "../recursos/productos/M1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/M1.jpeg", 
+    "../recursos/productos/M2.jpeg", 
+    "../recursos/productos/M3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+
+{
+    "nombre" : "Milwaukee Bucks Mitchell & Ness Hardwood Classics Hometown T-Shirt - Gray",
+"precio" : 34.99,
+"detalles" : [ 
+    "Material: 100% Cotton.", 
+    "Screen print graphics", 
+    "V-neck.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "You're an avid Milwaukee Bucks fan and love to flaunt it. Show the Milwaukee Bucks your support by grabbing this Hometown T-Shirt from Mitchell & Ness. It features bold Milwaukee Bucks graphics, so no one will be able to question where your allegiance lies every time you rock this sweet gear.",
+"fotoPrincipal" : "../recursos/productos/N1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/N1.jpeg", 
+    "../recursos/productos/N2.jpeg", 
+    "../recursos/productos/N3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+
+{
+    "nombre" : "Men's Portland Trail Blazers Fanatics Branded Cream French Terry Pullover Hoodie",
+"precio" : 69.99,
+"detalles" : [ 
+    "Material: 81% Cotton/19% Polyester.", 
+    "Midweight hoodie suitable for moderate temperatures.", 
+    "Hood with drawstring", 
+    "Fleece lining"
+],
+"descripcion" : "Embrace your Portland Trail Blazers fandom with this True Classics French Terry hoodie from Fanatics Branded. Its graphics will show that you only support the top squad in the league.",
+"fotoPrincipal" : "../recursos/productos/O1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/O1.jpeg", 
+    "../recursos/productos/O2.jpeg", 
+    "../recursos/productos/O3.jpeg"
+],
+"linea" : "Men",
+"departamento" : "Hoodies & Sweatshirts",
+"rango" : "Over $60"
+},
+
+
+{
+    "nombre" : "Youth Portland Trail Blazers Damian Lillard Nike Black Name & Number T-Shirt",
+"precio" : 29.99,
+"detalles" : [ 
+    "Material: 100% Cotton.", 
+    "Screen print graphics", 
+    "Short sleeve.", 
+    "Machine wash, tumble dry low."
+],
+"descripcion" : "Gear up your young fan for an exciting NBA season and score some major Portland Trail Blazers style points with this sweet Nike Stephen Curry Name and Number T-Shirt. The team graphics on the front add some Portland Trail Blazers flair while Damian Lillard's name and number ensure your kid is the #1 fan.",
+"fotoPrincipal" : "../recursos/productos/P1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/P1.jpeg", 
+    "../recursos/productos/P2.jpeg", 
+    "../recursos/productos/P3.jpeg"
+],
+"linea" : "Kids",
+"departamento" : "T-shirts",
+"rango" : "$20 - $40"
+},
+
+
+{
+    "nombre" : "Youth Golden State Warriors Stephen Curry Fanatics Branded Royal Fast Break Replica Jersey",
+"precio" : 49.99,
+"detalles" : [ 
+    "Material: 100% Recycled Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "Help your kid represent his team's on-court look with this Golden State Warriors Fast Break Replica jersey from Fanatics Branded. It boasts sterling graphics and a classic look that will showcase his NBA fandom.",
+"fotoPrincipal" : "../recursos/productos/Q1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/Q1.jpeg", 
+    "../recursos/productos/Q2.jpeg", 
+    "../recursos/productos/Q3.jpeg"
+],
+"linea" : "Kids",
+"departamento" : "Jerseys",
+"rango" : "$40 - $60"
+},
+
+
+{
+    "nombre" : "Youth Milwaukee Bucks Giannis Antetokounmpo Fanatics Branded Black Fast Break Replica Jersey",
+"precio" : 49.99,
+"detalles" : [ 
+    "Material: 100% Recycled Polyester.", 
+    "Dri-FIT ® technology wicks away moisture.", 
+    "Sleeveless.", 
+    "Lightweight, breathable fabric with a smooth feel."
+],
+"descripcion" : "Help your kid represent his team's on-court look with this Milwaukee Bucks Fast Break Replica jersey from Fanatics Branded. It boasts sterling graphics and a classic look that will showcase his NBA fandom.",
+"fotoPrincipal" : "../recursos/productos/R1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/R1.jpeg", 
+    "../recursos/productos/R2.jpeg", 
+    "../recursos/productos/R3.jpeg"
+],
+"linea" : "Kids",
+"departamento" : "Jerseys",
+"rango" : "$40 - $60"
+},
+
+
+{
+    "nombre" : "Youth Golden State Warriors Fanatics Branded Royal X-Ray Pullover Hoodie",
+"precio" : 44.99,
+"detalles" : [ 
+    "Material: 81% Cotton/19% Polyester.", 
+    "Midweight hoodie suitable for moderate temperatures.", 
+    "Hood with drawstring", 
+    "Fleece lining"
+],
+"descripcion" : "Let your young fan celebrate his fandom with this Golden State Warriors X-Ray hoodie. It features Golden State Warriors graphics on the front. This stylish Fanatics Branded hoodie will let him represent the Golden State Warriors everywhere he goes!",
+"fotoPrincipal" : "../recursos/productos/S1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/S1.jpeg", 
+    "../recursos/productos/S2.jpeg", 
+    "../recursos/productos/S3.jpeg"
+],
+"linea" : "Kids",
+"departamento" : "Hoodies & Sweatshirts",
+"rango" : "$40 - $60"
+},
+
+
+{
+    "nombre" : "Youth Boston Celtics Nike Kelly Green Essential Logo Hoodie",
+"precio" : 49.99,
+"detalles" : [ 
+    "Material: 81% Cotton/19% Polyester.", 
+    "Midweight hoodie suitable for moderate temperatures.", 
+    "Hood with drawstring", 
+    "Fleece lining"
+],
+"descripcion" : "Your kiddo won't be able to contain their excitement when you gift them this Boston Celtics Essential logo hoodie from Nike. The cold won't stand a chance when your young one has this warm hoodie on.",
+"fotoPrincipal" : "../recursos/productos/T1.jpeg",
+"miniaturas" : [ 
+    "../recursos/productos/T1.jpeg", 
+    "../recursos/productos/T2.jpeg", 
+    "../recursos/productos/T3.jpeg"
+],
+"linea" : "Kids",
+"departamento" : "Hoodies & Sweatshirts",
+"rango" : "$40 - $60"
+}
 ]
