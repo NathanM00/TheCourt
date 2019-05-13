@@ -39,9 +39,14 @@ app.get('/',function(req,res){
 //ruta departamento
 app.get('/tienda/:departamento?', function(request, response){
     
-    //console.log(request.query.precio);
 
     var query = {};
+    if(request.query.linea){
+        query.linea = request.query.linea;
+    }
+    if(request.query.rango){
+        query.rango = request.query.rango;
+    }
     if(request.params.departamento){
         query.departamento = request.params.departamento;
     }
@@ -57,39 +62,21 @@ app.get('/tienda/:departamento?', function(request, response){
             precio: request.query.precio,
             esDNone: request.params.departamento == null,
             esDAlguno: request.params.departamento != null,
+            esLNone: request.query.linea == null,
+            esLAlguno: request.query.linea != null,
+
+            esRNone: request.query.rango == null,
+            esRAlguno: request.query.rango != null,
+            esMin: request.query.rango == "$20 - $40",
+            esMed: request.query.rango == "$40 - $60",
+            esMax: request.query.rango == "Over $60",
+
+            esMen: request.query.linea == "Men",
+            esWomen: request.query.linea == "Women",
+            esKid: request.query.linea == "Kids",
             esTshirt: request.params.departamento == "T-shirts",
             esJersey: request.params.departamento == "Jerseys",
             esHoodie: request.params.departamento == "Hoodies & Sweatshirts",
-        };
-        response.render('tienda', contexto);
-    });
-    
-});
-
-//ruta linea
-app.get('/tienda/:linea?', function(request, response){
-    
-    //console.log(request.query.precio);
-
-    var query = {};
-    if(request.params.linea){
-        query.linea = request.params.linea;
-    }
-
-    var collection = db.collection('productos');
-
-    collection.find(query).toArray(function(err, docs) {
-        assert.equal(err, null);
-        
-        var contexto = {
-            productos: docs,
-            linea: request.params.linea,
-            precio: request.query.precio,
-            esLNone: request.params.linea == null,
-            esLAlguno: request.params.linea != null,
-            esMen: request.params.linea == "Men",
-            esWomen: request.params.linea == "Women",
-            esKid: request.params.linea == "Kids",
         };
         response.render('tienda', contexto);
     });
@@ -110,7 +97,28 @@ app.get('/tienda/producto/:nombre', function(req, res){
         });
 });
 
-// Escuchar desde puerto 3000
-app.listen(3000, function(){
-    console.log('Servidor en el puerto 3000')
+app.post('/login', function (request, params){
+
+    var pedido ={
+            correo: request.body.correo,
+            contra: request.body.contra,
+            fecha: new Date(),
+    }
+
+    var collection =db.collection('ventas');
+
+    collection.insertOne(pedido, function(err){
+        assert.equal(err, null);
+        console.log("pedido guardado");
+        var contexto = {
+                mensaje:'pedido guardado',
+        };
+        res.render('???', contexto);
+    });
+
+});
+
+// Escuchar desde puerto 5000
+app.listen(5000, function(){
+    console.log('Servidor en el puerto 5000')
 });

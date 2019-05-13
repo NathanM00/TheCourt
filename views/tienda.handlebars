@@ -6,10 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-        <link rel="stylesheet" href="../../styles/pushbar.css">
+    <link rel="stylesheet" href="../../styles/pushbar.css">
     <link rel="stylesheet" href="../styles/sass.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <title>The Court Magazine</title>
+    <title>The Court Magazine | Shop</title>
   </head>
 
 <body class="fondo__claro">
@@ -36,7 +37,7 @@
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Women</a></li>
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Jerseys</a></li>
-                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">T-shirts</a></li>
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">More</a></li>
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Hoodies</a></li>
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Sales</a></li>
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Kids</a></li>
@@ -89,7 +90,7 @@
             <div class="tienda__dropdown">
                             <button class="tienda__dropbtn  {{#if esLAlguno}}tienda__dropbtn-activado  {{/if}}"> 
                              {{#if esLNone}}
-                                Department 
+                                Shop For
                             {{/if}}                                   
                             {{#if esMen}}
                                 Men
@@ -103,33 +104,60 @@
                             </button>
                                 <div class="tienda__dropdown-content" >
                                      {{#if esLNone}}
-                                        <a href="/tienda/Men">Men</a>
-                                        <a href="/tienda/Women">Women</a>
-                                        <a href="/tienda/Kids">Kids</a>
+                                        <a href="/tienda?linea=Men">Men</a>
+                                        <a href="/tienda?linea=Women">Women</a>
+                                        <a href="/tienda?linea=Kids">Kids</a>
                                      {{/if}}
                                       {{#if esMen}}
-                                        <a href="/tienda/Women">Women</a>
-                                        <a href="/tienda/Kids">Kids</a>
+                                        <a href="/tienda?linea=Women">Women</a>
+                                        <a href="/tienda?linea=Kids">Kids</a>
                                      {{/if}}
                                     {{#if esWomen}}
-                                        <a href="/tienda/Men">Men</a>
-                                        <a href="/tienda/Kids">Kids</a>
+                                        <a href="/tienda?linea=Men">Men</a>
+                                        <a href="/tienda?linea=Kids">Kids</a>
                                      {{/if}}
                                     {{#if esKid}}
-                                        <a href="/tienda/Men">Men</a>
-                                        <a href="/tienda/Women">Women</a>
+                                        <a href="/tienda?linea=Men">Men</a>
+                                        <a href="/tienda?linea=Women">Women</a>
+                                     {{/if}}
+                                </div>
+            </div>
+            <div class="tienda__dropdown">
+                            <button class="tienda__dropbtn  {{#if esRAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                             {{#if esRNone}}
+                                    Price Range
+                            {{/if}}                                   
+                            {{#if esMin}}
+                                    $20 - $40
+                            {{/if}}
+                            {{#if esMed}}
+                                $40 - $60
+                            {{/if}}
+                            {{#if esMax}}
+                                Over $60
+                            {{/if}}
+                            </button>
+                                <div class="tienda__dropdown-content" >
+                                     {{#if esRNone}}
+                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                        <a href="/tienda?rango=Over $60">Over $60</a>
+                                     {{/if}}
+                                      {{#if esMin}}
+                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                        <a href="/tienda?rango=Over $60">Over $60</a>
+                                     {{/if}}
+                                    {{#if esMed}}
+                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                        <a href="/tienda?rango=Over $60">Over $60</a>
+                                     {{/if}}
+                                    {{#if esMax}}
+                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
                                      {{/if}}
                                 </div>
             </div>
 
-            <div class="tienda__dropdown">
-                            <button class="tienda__dropbtn">Price Range</button>
-                                <div class="tienda__dropdown-content">
-                                    <a href="#">$20 - $40</a>
-                                    <a href="#">$40 - $60</a>
-                                    <a href="#">Over $60</a>
-                                </div>
-            </div>
                <div class="tienda__dropdown">
                     <a href="/tienda"><button class="tienda__dropbtn tienda__dropbtn-activado">None</button></a>
             </div>
@@ -138,16 +166,131 @@
         <section class="contPrincipal__principal tienda__principal" >
 
             <div class="tienda__superior">
-                <p class="tienda__cantidad">ITEMS</p>
+                <p class="tienda__cantidad">2019 Season</p>
+                <p class="tienda__cantidad" style="color: #838383";>{{productos.length}} ITEMS</p>
+                <div class="tienda__dropdown2">
+                        <button class="tienda__dropbtn2  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                             {{#if esDNone}}
+                                Filters 
+                            {{/if}} 
+                            {{#if esJersey}}
+                                Jerseys
+                            {{/if}}
+                            {{#if esTshirt}}
+                                T-Shirts
+                            {{/if}}
+                            {{#if esHoodie}}
+                                Hoodies
+                            {{/if}}
+                            {{#if esMen}}
+                                Men
+                            {{/if}}
+                            {{#if esWomen}}
+                                Women
+                            {{/if}}
+                            {{#if esKid}}
+                                Kids
+                            {{/if}}
+                            {{#if esMin}}
+                                    $20 - $40
+                            {{/if}}
+                            {{#if esMed}}
+                                $40 - $60
+                            {{/if}}
+                            {{#if esMax}}
+                                Over $60
+                            {{/if}}
+                        </button>
+                        <div class="tienda__dropdown2-content" >
+                            <div class="tienda__dropdown3">
+                                    <button class="tienda__dropbtn3  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                                                Department 
+                                    </button>
+                                <div class="tienda__dropdown3-content" >
+                                     {{#if esDNone}}
+                                        <a href="/tienda/Jerseys">Jerseys</a>
+                                        <a href="/tienda/T-shirts">T-Shirts</a>
+                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                     {{/if}}
+                                      {{#if esJersey}}
+                                        <a href="/tienda/T-shirts">T-Shirts</a>
+                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                     {{/if}}
+                                    {{#if esTshirt}}
+                                        <a href="/tienda/Jerseys">Jerseys</a>
+                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                     {{/if}}
+                                    {{#if esHoodie}}
+                                        <a href="/tienda/Jerseys">Jerseys</a>
+                                        <a href="/tienda/T-shirts">T-Shirts</a>
+                                     {{/if}}
+                                </div>
+                            </div>
+                            <div class="tienda__dropdown3">
+                            <button class="tienda__dropbtn3  {{#if esLAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                                Shop For
+                            </button>
+                                <div class="tienda__dropdown3-content" >
+                                     {{#if esLNone}}
+                                        <a href="/tienda?linea=Men">Men</a>
+                                        <a href="/tienda?linea=Women">Women</a>
+                                        <a href="/tienda?linea=Kids">Kids</a>
+                                     {{/if}}
+                                      {{#if esMen}}
+                                        <a href="/tienda?linea=Women">Women</a>
+                                        <a href="/tienda?linea=Kids">Kids</a>
+                                     {{/if}}
+                                    {{#if esWomen}}
+                                        <a href="/tienda?linea=Men">Men</a>
+                                        <a href="/tienda?linea=Kids">Kids</a>
+                                     {{/if}}
+                                    {{#if esKid}}
+                                        <a href="/tienda?linea=Men">Men</a>
+                                        <a href="/tienda?linea=Women">Women</a>
+                                     {{/if}}
+                                </div>
+                            </div>
+                            <div class="tienda__dropdown3">
+                                            <button class="tienda__dropbtn3  {{#if esRAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                                                    Price Range
+                                            </button>
+                                                <div class="tienda__dropdown3-content" >
+                                                    {{#if esRNone}}
+                                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                                        <a href="/tienda?rango=Over $60">Over $60</a>
+                                                    {{/if}}
+                                                    {{#if esMin}}
+                                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                                        <a href="/tienda?rango=Over $60">Over $60</a>
+                                                    {{/if}}
+                                                    {{#if esMed}}
+                                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                                        <a href="/tienda?rango=Over $60">Over $60</a>
+                                                    {{/if}}
+                                                    {{#if esMax}}
+                                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                                    {{/if}}
+                                                </div>
+                            </div>
+                             <div class="tienda__dropdown3">
+                                 <a href="/tienda" style="padding:0;"><button class="tienda__dropbtn tienda__dropbtn-activado">None</button></a>
+                             </div>
+                        </div>
+
+                </div>    
                 <img src="../recursos/promo.png" alt="No carga esto">
             </div>
                 <ul class="tienda__productos">
                     {{#each productos}}
                         <li class="tienda__item">
                             <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;">
-                                <img src="{{fotoPrincipal}}" class="item__fotoP" alt="">
+                                <img href="" src="{{fotoPrincipal}}" class="item__fotoP" alt="">
                                 <p class="item__precio">${{precio}}</p>
+                                <h3 class="item__nombre2">{{nombre}}<p class="item__precio2">${{precio}}</p></h3>                             
                             </a>
+                            
                             <button class="tienda__agregar">ADD TO CART</button>
                             <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;"></a> 
                                 <h3 class="item__nombre">{{nombre}}</h3>
@@ -156,9 +299,12 @@
                     {{/each}}
                 </ul>
         </section>
-  <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__carro" style="width: 350px;">
+
+
+  <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
+      <div class="pushbar__carro">
         <div class="pushbar__botonIs">
-                <button data-pushbar-close class="pushbar__boton"> <i class="fa fa-close"></i></button>
+                <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
         </div>
         <div class="pushbar__titular">
                 <h2 class="pushbar__titulo">YOUR CART</h2>
@@ -169,16 +315,66 @@
 
             </ul>
         </div>
-        <div class="pushbar__total">
-            <p class="pushbar__cartotal">Cart Total</p>
-            <p class="pushbar__cartotalnum">a</p>
+        <div class="totales">
+            <div class="pushbar__totalItems">
+                <p class="pushbar__cartotal">Cart Total</p>
+                <p class="pushbar__cartotalnum">$0</p>            
+            </div>
+                <div class="pushbar__totalMoney">
+                <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart</p>
+            </div>
         </div>
         <div class="pushbar__despacho">
-                        <button class="pushbar__pay"></button>
-                        <button class="pushbar__checkout">CHECKOUT</button>
+            <button class="pushbar__checkout-boton">CHECKOUT</button>
       </div>
-  </div>
 
+        </div>
+
+
+      <div class="pushbar__checkout">
+        <div class="pushbar__botonEs">
+                <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
+                <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+        </div>
+        <div class="pushbar__titular">
+                <h2 class="pushbar__titulo">CHECKOUT</h2>
+                <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
+        </div>
+        <div class="pushbar__formulario">
+            <h3 class="pushbar__formulario-sub">
+                Contact information
+            </h3>
+            <input name="nombre" type="text" placeholder="Name" class="pushbar__formulario-input formulario__nombre">
+            <input name="apellido" type="text" placeholder="Last Name" class="pushbar__formulario-input formulario__apellido">
+            <input name="correo" type="text" placeholder="Email" class="pushbar__formulario-input formulario__correo">
+                <h3 class="pushbar__formulario-sub">
+                Shipping information
+            </h3>
+            <input name="direccion" type="text" placeholder="Street Adress" class="pushbar__formulario-input formulario__direccion">
+            <input name="ciudad" type="text" placeholder="City" class="pushbar__formulario-input formulario__ciudad">
+
+        </div>
+        <div class="totales">
+            <div class="pushbar__totalItems">
+                <p class="pushbar__cartotal">Items</p>
+                <p class="pushbar__check-parnum typo__rojo">$0</p>            
+            </div>
+            <div class="pushbar__totalItems">
+                <p class="pushbar__cartotal">Shipping</p>
+                <p class="pushbar__cartotal typo__rojo">$0</p>            
+            </div>
+            <div class="pushbar__totalItems">
+                <p class="pushbar__cartotal">Total</p>
+                <p class="pushbar__check-totalnum typo__rojo">$0</p>            
+            </div>
+                <div class="pushbar__totalMoney">
+                <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span> Items in your Cart</p>
+            </div>
+        </div>
+        <div class="pushbar__despacho">
+            <button class="pushbar__checkout-boton">SEND</button>
+        </div>
+     </div>
     </div>
        <script src="../scripts/javas1.js"></script>
        <script src="../scripts/pushbar.js"></script>
