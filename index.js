@@ -53,7 +53,7 @@ app.get('/tienda/:departamento?', function(request, response){
 
     var collection = db.collection('productos');
 
-    collection.find(query, {sort:['precio']} ).toArray(function(err, docs) {
+    collection.find(query, {sort:[['precio','descending']] } ).toArray(function(err, docs) {
         assert.equal(err, null);
         
         var contexto = {
