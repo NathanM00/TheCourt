@@ -782,6 +782,18 @@ body{
         color:white;
         border: none;
         border-radius: 5px;
+
+        &2{
+                background: #ca0b18;
+                width: 70%;
+                align-self: center;
+                height: 100%;
+                font-size: 15px;
+                color:white;
+                border: none;
+                border-radius: 5px;
+            
+        }
     }
     &__datos{
         display: none;
@@ -1593,6 +1605,9 @@ body{
                     height: 40px;
                 }
         }
+        &__indicador{
+             position: absolute;
+        }
         &__logo{
             width: 150px;
             flex-basis: 150px;
@@ -1612,9 +1627,7 @@ body{
                 display: none;
             }
         }
-        &__indicador{
-            position: fixed;
-        }
+
     }
     .nav{
         &__lista{
@@ -1857,7 +1870,6 @@ body{
             overflow: scroll;
         }
         &__datos{
-            height: 200px;
             flex-basis: 200px;
         }
         &__paddingTop{
@@ -1867,13 +1879,33 @@ body{
         }
         &__tamano{
             color: #3f3f3f;
-            font-size: 15px;
+            font-size: 20px;
         }
-        &__precio{
-            font-size: 15px;
+        &__tallas{
+                border: 1px solid #838383;
+                border-radius: 5px;
+        }
+        &__numero{
+            border: 1px solid #838383;
+            border-radius: 5px;
+            
+            }
+        &__tamanos{
+            height: 5%;
+        }
+        &__cantidades{
+            height: 5%;
+        }
+        &__precio2{
+            font-size: 20px;
+            color: #ca0b18;
         }
         &__mitad{
             width: 90%;
+        }
+        &__cantidad{
+            font-size: 20px;
+            color: #3f3f3f;
         }
         &__fotoP{
             width: 260px;

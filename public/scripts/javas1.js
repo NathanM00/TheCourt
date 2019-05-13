@@ -142,6 +142,8 @@ function paginaCargada(){
       botones.forEach(recorrerBotones);
 
       var botonProductoDetalle = document.querySelector('.producto__agregar');
+      var botonProductoDetalle2 = document.querySelector('.producto__agregar2');
+
       function agregarAlCarritoDetalle(){
           var nombre = document.querySelector('.producto__nombre').innerText;
           var precio = document.querySelector('.producto__precio').innerText;
@@ -159,6 +161,24 @@ function paginaCargada(){
 
       if(botonProductoDetalle != null){
           botonProductoDetalle.addEventListener('click', agregarAlCarritoDetalle);
+      }
+
+      function agregarAlCarritoDetalleMobil(){
+        var nombre = document.querySelector('.producto__nombre').innerText;
+        var precio = document.querySelector('.producto__precio2').innerText;
+        var imagen = document.querySelector('.producto__fotoP').src;
+        var producto = {
+            nombre: nombre,
+            precio: precio,
+            imagen: imagen,
+       };
+
+        listaProductos.push(producto);
+        actualizarCarrito();  
+        localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+      }
+      if(botonProductoDetalle2 != null){
+        botonProductoDetalle2.addEventListener('click', agregarAlCarritoDetalleMobil);
       }
 
       var fotoMostrada = document.querySelector('.producto__fotoP');
@@ -199,6 +219,12 @@ function paginaCargada(){
         vistaCheckout.style.display = 'none';
       }
       atrasCheckout.addEventListener('click', ocultarCheckout);
+      
+      var atrasMobil = document.querySelector('.producto__boton-atras');
+      function volverTienda(){
+          window.location.href="http://localHost:5000/tienda";
+      }
+      atrasMobil.addEventListener('click', volverTienda);
 }
 
 window.addEventListener('load', paginaCargada);
