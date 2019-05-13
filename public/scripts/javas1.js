@@ -222,9 +222,23 @@ function paginaCargada(){
       
       var atrasMobil = document.querySelector('.producto__boton-atras');
       function volverTienda(){
-          window.location.href="http://localHost:5000/tienda";
+         window.location.href="http://localHost:5000/tienda/producto/";
       }
       atrasMobil.addEventListener('click', volverTienda);
+
+      var formulario = document.querySelector('.pushbar__formulario');
+      function hacerPedido(){
+        //evento.preventDefault();
+          console.log("funciona");
+
+          var input = document.querySelector('.formulario__productos');
+          input.value = localStorage.getItem('listaProductos');
+          console.log(localStorage.getItem('listaProductos'));
+
+          localStorage.removeItem('listaProductos')
+      }
+      formulario.addEventListener('submit', hacerPedido);
+
 }
 
 window.addEventListener('load', paginaCargada);

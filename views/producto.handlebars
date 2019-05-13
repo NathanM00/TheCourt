@@ -129,81 +129,92 @@
             </div>
 
         </section>
-  <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
-      <div class="pushbar__carro">
-        <div class="pushbar__botonIs">
-                <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
-        </div>
-        <div class="pushbar__titular">
-                <h2 class="pushbar__titulo">YOUR CART</h2>
-                <div class="pushbar__carrito"></div>
-        </div>
-        <div class="pushbar__items">
-            <ul class="pushbar__lista">
 
-            </ul>
-        </div>
-        <div class="totales">
-            <div class="pushbar__totalItems">
-                <p class="pushbar__cartotal">Cart Total</p>
-                <p class="pushbar__cartotalnum">$0</p>            
-            </div>
-                <div class="pushbar__totalMoney">
-                <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart</p>
-            </div>
-        </div>
-        <div class="pushbar__despacho">
-            <button class="pushbar__checkout-boton">CHECKOUT</button>
-      </div>
+        <div class="producto__boton-atras" style="display: none"></div>
+        <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
+            <div class="pushbar__carro">
+                <div class="pushbar__botonIs">
+                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                </div>
+                <div class="pushbar__titular">
+                        <h2 class="pushbar__titulo">YOUR CART</h2>
+                        <div class="pushbar__carrito"></div>
+                </div>
+                <div class="pushbar__items">
+                    <ul class="pushbar__lista">
 
-        </div>
+                    </ul>
+                </div>
+                <div class="totales">
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Cart Total</p>
+                        <p class="pushbar__cartotalnum">$0</p>            
+                    </div>
+                        <div class="pushbar__totalMoney">
+                        <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart</p>
+                    </div>
+                </div>
+                <div class="pushbar__despacho">
+                    <button class="pushbar__checkout-boton">CHECKOUT</button>
+            </div>
 
+                </div>
 
-      <div class="pushbar__checkout">
-        <div class="pushbar__botonEs">
-                <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
-                <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
-        </div>
-        <div class="pushbar__titular">
-                <h2 class="pushbar__titulo">CHECKOUT</h2>
-                <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
-        </div>
-        <div class="pushbar__formulario">
-            <h3 class="pushbar__formulario-sub">
-                Contact information
-            </h3>
-            <input name="nombre" type="text" placeholder="Name" class="pushbar__formulario-input formulario__nombre">
-            <input name="apellido" type="text" placeholder="Last Name" class="pushbar__formulario-input formulario__apellido">
-            <input name="correo" type="text" placeholder="Email" class="pushbar__formulario-input formulario__correo">
-                <h3 class="pushbar__formulario-sub">
-                Shipping information
-            </h3>
-            <input name="direccion" type="text" placeholder="Street Adress" class="pushbar__formulario-input formulario__direccion">
-            <input name="ciudad" type="text" placeholder="City" class="pushbar__formulario-input formulario__ciudad">
+            <div class="pushbar__checkout">
+                <div class="pushbar__botonEs">
+                        <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
+                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                </div>
+                <div class="pushbar__titular">
+                        <h2 class="pushbar__titulo">CHECKOUT</h2>
+                        <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
+                </div>
 
-        </div>
-        <div class="totales">
-            <div class="pushbar__totalItems">
-                <p class="pushbar__cartotal">Items</p>
-                <p class="pushbar__check-parnum typo__rojo">$0</p>            
+                <form action="/login" method="POST" class="pushbar__formulario">
+                    <h3 class="pushbar__formulario-sub">
+                        Contact information
+                    </h3>
+                    <input name="nombre" type="text" placeholder="Full Name" class="pushbar__formulario-input ">
+                    <input name="correo" type="email" placeholder="Email" class="pushbar__formulario-input ">
+                        <h3 class="pushbar__formulario-sub">
+                        Shipping information
+                    </h3>
+                    <input name="direccion" type="text" placeholder="Street Adress" class="pushbar__formulario-input">
+                    <input name="ciudad" type="text" placeholder="City" class="pushbar__formulario-input ">
+                                <h3 class="pushbar__formulario-sub">
+                        Billing information
+                    </h3>
+                    <input name="tarjeta" type="number" placeholder="CreditCar Number" class="pushbar__formulario-input">
+                    <input name="contrasena" type="number" placeholder="CVV" class="pushbar__formulario-input" style="width:25%;">
+                    <input name="expiracion" type="month" placeholder="Exp Date" class="pushbar__formulario-input" style="width:62%;">
+                    <input type="hidden" name="productos" class="formulario__productos" value="" id="">
+
+                <div class="totales">
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Items</p>
+                        <p class="pushbar__check-parnum typo__rojo">$0</p>            
+                    </div>
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Shipping</p>
+                        <p class="pushbar__cartotal typo__rojo">$0</p>            
+                    </div>
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Total</p>
+                        <p class="pushbar__check-totalnum typo__rojo" >$0</p>            
+                    </div>
+                        <div class="pushbar__totalMoney">
+                        <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span> Items in your Cart</p>
+                    </div>
+                </div>
+                <div class="pushbar__despacho">
+                    <button class="pushbar__checkout-boton">SEND</button>
+                </div>
+            </form >
+
             </div>
-            <div class="pushbar__totalItems">
-                <p class="pushbar__cartotal">Shipping</p>
-                <p class="pushbar__cartotal typo__rojo">$0</p>            
+
             </div>
-            <div class="pushbar__totalItems">
-                <p class="pushbar__cartotal">Total</p>
-                <p class="pushbar__check-totalnum typo__rojo">$0</p>            
-            </div>
-                <div class="pushbar__totalMoney">
-                <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span> Items in your Cart</p>
-            </div>
-        </div>
-        <div class="pushbar__despacho">
-            <button class="pushbar__checkout-boton">SEND</button>
-        </div>
-     </div>
-    </div>
+
        <script src="../../scripts/javas1.js"></script>
        <script src="../../scripts/pushbar.js"></script>
        <script type="text/javascript">

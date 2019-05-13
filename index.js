@@ -25,7 +25,7 @@ var app = express();
 
 //Establecer la carpeta public como estatica
 app.use(express.static('public'));
-
+app.use(express.urlencoded({ extended: true }));
 //Registro de handlebars
 app.engine('handlebars',exphbs());
 //Establecer handlebars como el motor de render
@@ -53,7 +53,7 @@ app.get('/tienda/:departamento?', function(request, response){
 
     var collection = db.collection('productos');
 
-    collection.find(query).toArray(function(err, docs) {
+    collection.find(query, {sort:['precio']} ).toArray(function(err, docs) {
         assert.equal(err, null);
         
         var contexto = {
@@ -100,24 +100,27 @@ app.get('/tienda/producto/:nombre', function(req, res){
         });
 });
 
-app.post('/login', function (request, params){
+app.post('/login', function (request, response){
 
     var pedido ={
             correo: request.body.correo,
-            contra: request.body.contra,
+            nombre: request.body.nombre,
+            direccion: request.body.direccion,
+            ciudad: request.body.ciudad,
+            tarjeta: request.body.tarjeta,
+            expiracion: request.body.expiracion,
+            contrasena: request.body.contrasena,
             fecha: new Date(),
-    }
+            pedidos: JSON.parse(request.body.productos)
+    };
 
-    var collection =db.collection('ventas');
-
+    var collection = db.collection('ventas');
     collection.insertOne(pedido, function(err){
         assert.equal(err, null);
-        console.log("pedido guardado");
-        var contexto = {
-                mensaje:'pedido guardado',
-        };
-        res.render('???', contexto);
+
+        console.log('pedido guardado');
     });
+    response.redirect('/tienda');
 
 });
 

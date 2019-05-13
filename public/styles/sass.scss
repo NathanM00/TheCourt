@@ -280,7 +280,7 @@ body{
             background: #ca0b18;
             width: 100%;
             flex-basis: 100%;
-            height: 45%;
+            height: 50px;
             font-size: 15px;
             color:white;
             border: none;
@@ -364,19 +364,19 @@ body{
     &__formulario{
         border-bottom: 1px solid #838383;
         margin: 0 1em;
-        height: 50%;
         &-input{
             width: 95%;
-            height: 10%;
+            height: 40px;
             border-radius: 8px;
             padding-left: 1em;
             border: 1px solid #838383;
-            margin: 0.5em;
+            margin: 0 0.5em 0.5em 0.5em;
         }
         &-sub{
             color: #3f3f3f;
             padding-left: 1em;
             font-size: 18px;
+            margin-top: 0;
         }
     }
 }
