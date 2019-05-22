@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!--hola-->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="../../styles/pushbar.css">
+    <link rel="stylesheet" href="../styles/sass.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>The Court Magazine | Shop</title>
+  </head>
+
+<body class="fondo__claro">
+
+    <header class="encabezado-tienda">
+
+        <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
+
+        <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
+            <button class="encabezado__lupa" ><i class="fa fa-search"></i></button>
+
+        <div class="encabezado__logs encabezado__pc">
+            <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
+            <div data-pushbar-target="elCarro"  class="encabezado__carrito"></div>
+           <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span></div>
+        </div>
+            
+    </header>
+        <header class="encabezado-tienda2">
+        <nav class="encabezado__pc">
+            <ul class="nav__lista nav__pad">
+                <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Men" class="typo__oscuro">Men</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Women" class="typo__oscuro">Women</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?linea=Kids" class="typo__oscuro">Kids</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Jerseys" class="typo__oscuro">Jerseys</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?rango=$20 - $40" class="typo__oscuro">Sales</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/T-shirts" class="typo__oscuro">T-Shirts</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda?rango=Over $60" class="typo__oscuro">Heat</a></li>
+             </ul>
+        </nav>
+        </header>
+
+    <div class="contPrincipal fondo__tienda">
+
+        <aside class="contPrincipal__lateral juego__lateral">
+
+        </aside>
+
+        <section class="contPrincipal__principal juego__principal" >
+
+          
+        </section>
+
+          <aside class="contPrincipal__lateral juego__lateral">
+
+        </aside>
+
+
+        <div class="producto__boton-atras" style="display: none"></div>
+        <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
+            <div class="pushbar__carro">
+                <div class="pushbar__botonIs">
+                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                </div>
+                <div class="pushbar__titular">
+                        <h2 class="pushbar__titulo">YOUR CART</h2>
+                        <div class="pushbar__carrito"></div>
+                </div>
+                <div class="pushbar__items">
+                    <ul class="pushbar__lista">
+
+                    </ul>
+                </div>
+                <div class="totales">
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Cart Total</p>
+                        <p class="pushbar__cartotalnum">$0</p>            
+                    </div>
+                        <div class="pushbar__totalMoney">
+                        <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart</p>
+                    </div>
+                </div>
+                <div class="pushbar__despacho">
+                    <button class="pushbar__checkout-boton">CHECKOUT</button>
+            </div>
+
+                </div>
+
+            <div class="pushbar__checkout">
+                <div class="pushbar__botonEs">
+                        <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
+                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                </div>
+                <div class="pushbar__titular">
+                        <h2 class="pushbar__titulo">CHECKOUT</h2>
+                        <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
+                </div>
+
+                <form action="/login" method="POST" class="pushbar__formulario">
+                    <h3 class="pushbar__formulario-sub">
+                        Contact information
+                    </h3>
+                    <input name="nombre" type="text" placeholder="Full Name" class="pushbar__formulario-input ">
+                    <input name="correo" type="email" placeholder="Email" class="pushbar__formulario-input ">
+                        <h3 class="pushbar__formulario-sub">
+                        Shipping information
+                    </h3>
+                    <input name="direccion" type="text" placeholder="Street Adress" class="pushbar__formulario-input">
+                    <input name="ciudad" type="text" placeholder="City" class="pushbar__formulario-input ">
+                                <h3 class="pushbar__formulario-sub">
+                        Billing information
+                    </h3>
+                    <input name="tarjeta" type="number" placeholder="CreditCar Number" class="pushbar__formulario-input">
+                    <input name="contrasena" type="number" placeholder="CVV" class="pushbar__formulario-input" style="width:25%;">
+                    <input name="expiracion" type="month" placeholder="Exp Date" class="pushbar__formulario-input" style="width:62%;">
+                    <input type="hidden" name="productos" class="formulario__productos" value="" id="">
+
+                <div class="totales">
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Items</p>
+                        <p class="pushbar__check-parnum typo__rojo">$0</p>            
+                    </div>
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Shipping</p>
+                        <p class="pushbar__cartotal typo__rojo">$0</p>            
+                    </div>
+                    <div class="pushbar__totalItems">
+                        <p class="pushbar__cartotal">Total</p>
+                        <p class="pushbar__check-totalnum typo__rojo">$0</p>            
+                    </div>
+                        <div class="pushbar__totalMoney">
+                        <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span> Items in your Cart</p>
+                    </div>
+                </div>
+                <div class="pushbar__despacho">
+                    <button class="pushbar__checkout-boton">SEND</button>
+                </div>
+            </form >
+
+            </div>
+
+            </div>
+
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+       <script src="../../scripts/javas1.js"></script>
+       <script src="../../scripts/pushbar.js"></script>
+       <script src="/scripts/animacion.js"></script>
+
+       <script type="text/javascript">
+            var pushbar = new Pushbar({
+                    blur:true,
+                });
+            </script>
+
+</body>
+
+</html>

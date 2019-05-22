@@ -174,7 +174,9 @@ body{
         flex-direction: column;
         height: 99%;
         width: 100%;
-        overflow: scroll;
+        overflow-y: scroll;
+       margin-left: 20px;
+
         & li {
             height: 35%;
             margin-bottom: 2em;
@@ -271,7 +273,7 @@ body{
         height: 60%;
         margin: 0 1em 0.5em 1em;
         border-bottom: 1px solid #838383;
-        overflow: scroll;
+        overflow: hidden;
     }
     &__checkout{
         height: 100%;
@@ -611,6 +613,42 @@ body{
     }
 
 }
+.juego{
+    &__principal{
+        box-shadow: 10px 8px 19px -9px rgba(48, 48, 48, 1);
+        background: white;
+        width: 55%; flex-basis: 55%;
+        height: 95%;
+    }
+    &__lateral{
+        box-shadow: 10px 8px 19px -9px rgba(48, 48, 48, 0.808);
+        background: #141414;
+        justify-content:flex-start;
+        width: 20%;
+        flex-basis: 20%;
+        height: 95%;
+        align-items: center;
+        &-titular{
+            width: 100%;
+            flex-basis: 8%;
+            display: flex;
+            flex-direction: row;
+            margin: 1em;
+            justify-content: baseline;
+            align-items: center;
+            & img{
+                width: 30%;
+                height: 50%;
+                margin-right: 1em;
+            }
+            & p{
+                font-size: 2em;
+                color:white;
+                margin: 0;
+            }
+        }
+    }
+}
 .tienda{
     &__principal{
         box-shadow: 10px 8px 19px -9px rgba(48, 48, 48, 1);
@@ -671,12 +709,17 @@ body{
         border-bottom: 1px solid #838383;
         justify-content: space-between;
         align-items: center;
-        & img{
+        & a{
             width: 70%;
             margin-right: 1em;
             flex-basis: 70%;
             height: 80%;
         }
+        & img{
+            width: 100%;
+            height: 100%;
+        }
+        
     }
     &__productos{
         display: flex;
@@ -1647,10 +1690,15 @@ body{
         &__superior{
             flex-wrap: wrap;
             
-            & img{
+            & a{
                 flex-basis: 100%;
                 margin: 0;
-                height: 50px;
+                height: 60px;
+                }
+
+                & img{
+                    width: 100%;
+                    height: 100%;
                 }
         }
         &__dropbtn2 {
@@ -1678,7 +1726,7 @@ body{
           &__dropdown2 {
             width: 30%;
             display: inline-block;
-            margin: 1em 1em 1em 0;
+            margin: 0.5em 1em 0.5em 0;
             border: 1px solid #838383;
             border-radius: 5px;
             &2{
