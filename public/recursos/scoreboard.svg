@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 23.0.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:#FFFFFF;}
+</style>
+<g>
+	<path class="st0" d="M497,0H15C6.7,0,0,6.7,0,15v361c0,8.3,6.7,15,15,15h106v45c0,8.3,6.7,15,15,15h75v31h-45c-8.3,0-15,6.7-15,15
+		s6.7,15,15,15h180c8.3,0,15-6.7,15-15s-6.7-15-15-15h-45v-31h75c8.3,0,15-6.7,15-15v-45h106c8.3,0,15-6.7,15-15V15
+		C512,6.7,505.3,0,497,0z M482,121H271V30h211V121z M241,30v91H30V30H241z M271,482h-30v-31h30V482z M361,421H151v-30h210V421z
+		 M30,361V151h452v210H30z"/>
+	<circle class="st0" cx="316" cy="76" r="15"/>
+	<circle class="st0" cx="376" cy="76" r="15"/>
+	<circle class="st0" cx="436" cy="76" r="15"/>
+	<circle class="st0" cx="196" cy="76" r="15"/>
+	<circle class="st0" cx="136" cy="76" r="15"/>
+	<circle class="st0" cx="256" cy="226" r="15"/>
+	<circle class="st0" cx="256" cy="286" r="15"/>
+	<circle class="st0" cx="76" cy="76" r="15"/>
+	<path class="st0" d="M196,181H76c-8.3,0-15,6.7-15,15v120c0,8.3,6.7,15,15,15h120c8.3,0,15-6.7,15-15V196
+		C211,187.7,204.3,181,196,181z M91,211h30v90H91V211z M181,301h-30v-90h30V301z"/>
+	<path class="st0" d="M436,181H316c-8.3,0-15,6.7-15,15v120c0,8.3,6.7,15,15,15h120c8.3,0,15-6.7,15-15V196
+		C451,187.7,444.3,181,436,181z M331,211h30v90h-30V211z M421,301h-30v-90h30V301z"/>
+</g>
+</svg>
