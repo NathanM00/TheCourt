@@ -239,6 +239,16 @@ function paginaCargada(){
       }
       formulario.addEventListener('submit', hacerPedido);
 
+      var puntajeJuego = document.querySelector('.juego__lateral-puntaje');
+      var tirosJuego = document.querySelector('.juego__lateral-tiros');
+      var balonJuego = document.querySelector('.juego__balon');
+      var potencia =0 ;
+      function lanzarBalon(){
+
+      }
+      balonJuego.addEventListener('click', lanzarBalon);
+
+
 }
 
 window.addEventListener('load', paginaCargada);
