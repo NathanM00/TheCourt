@@ -243,10 +243,32 @@ function paginaCargada(){
       var tirosJuego = document.querySelector('.juego__lateral-tiros');
       var balonJuego = document.querySelector('.juego__balon');
       var potencia =0 ;
-      function lanzarBalon(){
 
+      function sleep(ms) {
+        return new Promise(resolve => setTimeout(resolve, ms));
       }
-      balonJuego.addEventListener('click', lanzarBalon);
+
+      function cesta(){
+        lanzarBalon();
+        async function lanzarBalon(){
+          TweenMax.to(balonJuego, 1, {y:-450});
+          TweenMax.to(balonJuego, 1, {scale:0.6});
+          await sleep(800);          
+          caidaBalon();
+        }
+        function caidaBalon(){
+        TweenMax.to(balonJuego, 3, {y:450});
+        }
+      }
+      
+      function falloArriba(){
+        
+      }
+      function falloAbajo(){
+        
+      }
+   
+      balonJuego.addEventListener('click', cesta);
 
 
 }
