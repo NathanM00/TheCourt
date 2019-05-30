@@ -12,19 +12,39 @@ const client = new MongoClient(url);
 
 var db = null;
 
-client.connect(function(err) {
+/*client.connect(function(err) {
     assert.equal(null, err);
 
      db = client.db(dbName);
 
     //client.close();
-  });  
+  });*/
 
 //Crear app de express
 var app = express();
 
 //Establecer la carpeta public como estatica
 app.use(express.static('public'));
+
+MongoClient.connect('mongodb+srv://cluster0-u4659.mongodb.net/tienda',
+
+  {
+      auth: {
+          user: 'Jate_99',
+          password: 'Jate8400_69'
+      }
+  },
+  function(err, client){
+      if(err) throw err;
+
+      db = client.db('tienda');
+
+      app.listen(process.env.PORT || 5000);
+      console.log('Servidor en el puerto 5000')
+  }
+
+);
+
 app.use(express.urlencoded({ extended: true }));
 //Registro de handlebars
 app.engine('handlebars',exphbs());
@@ -125,6 +145,6 @@ app.post('/login', function (request, response){
 });
 
 // Escuchar desde puerto 5000
-app.listen(5000, function(){
+/*app.listen(5000, function(){
     console.log('Servidor en el puerto 5000')
-});
+});*/
