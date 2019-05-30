@@ -12,6 +12,8 @@ const client = new MongoClient(url);
 
 var db = null;
 
+
+
 /*client.connect(function(err) {
     assert.equal(null, err);
 
