@@ -249,16 +249,25 @@ function paginaCargada(){
       }
 
       function cesta(){
-        lanzarBalon();
+
+        async function reboteBalon(){
+          await sleep(800);
+          TweenMax.to(balonJuego, 0.3, {y:-100});
+        //  await sleep(300);
+          //TweenMax.to(balonJuego, 0.5, {y:0});
+
+        }
+
         async function lanzarBalon(){
-          TweenMax.to(balonJuego, 1, {y:-450});
-          TweenMax.to(balonJuego, 1, {scale:0.6});
-          await sleep(800);          
-          caidaBalon();
+          TweenMax.to(balonJuego, 0.8, {y:-515});
+          TweenMax.to(balonJuego, 0.8, {scale:0.6});
+          await sleep(600);
+          TweenMax.to(balonJuego, 1.2, {y:0});
+          reboteBalon();
         }
-        function caidaBalon(){
-        TweenMax.to(balonJuego, 3, {y:450});
-        }
+
+        lanzarBalon();
+
       }
       
       function falloArriba(){

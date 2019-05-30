@@ -625,6 +625,10 @@ body{
         width: 45%; flex-basis: 45%;
         align-items: center;
         height: 95%;
+        background-size: 100% 20%;
+        background-position: bottom;
+        background-repeat: no-repeat;
+        background-image: url('../recursos/sombra.svg');
     }
     &__balon{
         height: 15%;
