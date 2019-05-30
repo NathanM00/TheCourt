@@ -31,7 +31,7 @@ MongoClient.connect('mongodb+srv://cluster0-u4659.mongodb.net/tienda',
   {
       auth: {
           user: 'Jate_99',
-          password: 'Jate8400_69'
+          password: 'Jate840069'
       }
   },
   function(err, client){
