@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>The Court Magazine | Shop</title>
-  </head>
+</head>
 
 <body class="fondo__claro">
 
@@ -20,16 +20,17 @@
         <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
 
         <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
-            <button class="encabezado__lupa" ><i class="fa fa-search"></i></button>
+        <button class="encabezado__lupa"><i class="fa fa-search"></i></button>
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
             <div data-pushbar-target="elCarro" class="encabezado__carrito"></div>
-            <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span></div>
+            <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span>
+            </div>
         </div>
-            
+
     </header>
-        <header class="encabezado-tienda2">
+    <header class="encabezado-tienda2">
         <nav class="encabezado__pc">
             <ul class="nav__lista nav__pad">
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
@@ -39,78 +40,80 @@
                 <li class="nav__item nav__item2"> <a href="/tienda/Jerseys" class="typo__oscuro">Jerseys</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?rango=$20 - $40" class="typo__oscuro">Sales</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda/T-shirts" class="typo__oscuro">T-Shirts</a></li>
-                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts"
+                        class="typo__oscuro">Hoodies</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?rango=Over $60" class="typo__oscuro">Heat</a></li>
-             </ul>
+            </ul>
         </nav>
-        </header>
+    </header>
 
     <div class="contPrincipal fondo__tienda">
 
         <aside class="contPrincipal__lateral producto__lateral">
-                <p class="producto__nombre">{{producto.nombre}}</p>
-                <p  class="producto__tamano">Price:</p>
-                <p class="producto__precio"> ${{producto.precio}}</p>
-                <p class="producto__tamano">Size:</p>
-                <div class="producto__tamanos">
-                        <div class="producto__tallas"><p>S</p></div>
-                        <div class="producto__tallas"><p>M</p></div>
-                        <div class="producto__tallas"><p>L</p></div>
-                        <div class="producto__tallas"><p>XL</p></div>
+            <p class="producto__nombre">{{producto.nombre}}</p>
+            <p class="producto__tamano">Price:</p>
+            <p class="producto__precio"> ${{producto.precio}}</p>
+            <p class="producto__tamano">Size:</p>
+            <div class="producto__tamanos">
+                <div class="producto__tallas">
+                    <p>S</p>
                 </div>
-                <p class="producto__cantidad">Quantity:</p>
-                <div class="producto__cantidades">
-                        <div class="producto__numero"><p>1</p></div>                    
-                        <button class="producto__agregar">ADD TO CAR</button>
+                <div class="producto__tallas">
+                    <p>M</p>
                 </div>
+                <div class="producto__tallas">
+                    <p>L</p>
+                </div>
+                <div class="producto__tallas">
+                    <p>XL</p>
+                </div>
+            </div>
+            <p class="producto__cantidad">Quantity:</p>
+            <div class="producto__cantidades">
+                <div class="producto__numero">
+                    <p>1</p>
+                </div>
+                <button class="producto__agregar">ADD TO CAR</button>
+            </div>
 
         </aside>
 
-        <section class="contPrincipal__principal producto__principal" >
+        <section class="contPrincipal__principal producto__principal">
 
             <div class="producto__mitad producto__absoluto">
                 <button class="producto__boton-atras"> <i class="fa fa-arrow-left"></i></button>
-              <img class="producto__fotoP" src="../{{producto.fotoPrincipal}}" alt="">
-                          <div class="producto__miniaturas">
-                                <img class="producto__fotoM producto__fotoM-primera" src="../{{producto.miniaturas.[0]}}" alt="">
-                                <img class="producto__fotoM" src="../{{producto.miniaturas.[1]}}" alt="">
-                                <img class="producto__fotoM" src="../{{producto.miniaturas.[2]}}" alt="">
-                          </div>
-                 <div class="producto__datos">
+                <img class="producto__fotoP" src="../{{producto.fotoPrincipal}}" alt="">
+                <div class="producto__miniaturas">
+                    <img class="producto__fotoM producto__fotoM-primera" src="../{{producto.miniaturas.[0]}}" alt="">
+                    <img class="producto__fotoM" src="../{{producto.miniaturas.[1]}}" alt="">
+                    <img class="producto__fotoM" src="../{{producto.miniaturas.[2]}}" alt="">
+                </div>
+                <div class="producto__datos">
                     <p class="producto__nombre">{{producto.nombre}}</p>
-                    <p  class="producto__tamano">Price:</p>
+                    <p class="producto__tamano">Price:</p>
                     <p class="producto__precio2"> ${{producto.precio}}</p>
                     <p class="producto__tamano">Size:</p>
                     <div class="producto__tamanos">
-                            <div class="producto__tallas"><p>S</p></div>
-                            <div class="producto__tallas"><p>M</p></div>
-                            <div class="producto__tallas"><p>L</p></div>
-                            <div class="producto__tallas"><p>XL</p></div>
+                        <div class="producto__tallas">
+                            <p>S</p>
+                        </div>
+                        <div class="producto__tallas">
+                            <p>M</p>
+                        </div>
+                        <div class="producto__tallas">
+                            <p>L</p>
+                        </div>
+                        <div class="producto__tallas">
+                            <p>XL</p>
+                        </div>
                     </div>
                     <p class="producto__cantidad">Quantity:</p>
                     <div class="producto__cantidades">
-                            <div class="producto__numero"><p>1</p></div>                    
-                            <button class="producto__agregar2">ADD TO CAR</button>
+                        <div class="producto__numero">
+                            <p>1</p>
+                        </div>
+                        <button class="producto__agregar2">ADD TO CAR</button>
                     </div>
-                    <div class="producto__desc">
-                                <h3>Description</h3>
-                                <p>{{producto.descripcion}}</p>
-                            </div>
-
-                            <div class="producto__details">
-                                <h3>Details</h3>
-                                <ul>
-                                    <li><span>{{producto.detalles.[1]}}</span></li>
-                                    <li><span>{{producto.detalles.[2]}}</span></li>
-                                    <li><span>{{producto.detalles.[3]}}</span></li>
-                                    <li><span>{{producto.detalles.[0]}}</span></li>
-                                </ul>
-                    
-                </div>
-                </div>
-            </div>
-
-            <div class="producto__mitad producto__info">
                     <div class="producto__desc">
                         <h3>Description</h3>
                         <p>{{producto.descripcion}}</p>
@@ -124,6 +127,25 @@
                             <li><span>{{producto.detalles.[3]}}</span></li>
                             <li><span>{{producto.detalles.[0]}}</span></li>
                         </ul>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="producto__mitad producto__info">
+                <div class="producto__desc">
+                    <h3>Description</h3>
+                    <p>{{producto.descripcion}}</p>
+                </div>
+
+                <div class="producto__details">
+                    <h3>Details</h3>
+                    <ul>
+                        <li><span>{{producto.detalles.[1]}}</span></li>
+                        <li><span>{{producto.detalles.[2]}}</span></li>
+                        <li><span>{{producto.detalles.[3]}}</span></li>
+                        <li><span>{{producto.detalles.[0]}}</span></li>
+                    </ul>
                 </div>
 
             </div>
@@ -134,11 +156,11 @@
         <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
             <div class="pushbar__carro">
                 <div class="pushbar__botonIs">
-                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                    <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
                 </div>
                 <div class="pushbar__titular">
-                        <h2 class="pushbar__titulo">YOUR CART</h2>
-                        <div class="pushbar__carrito"></div>
+                    <h2 class="pushbar__titulo">YOUR CART</h2>
+                    <div class="pushbar__carrito"></div>
                 </div>
                 <div class="pushbar__items">
                     <ul class="pushbar__lista">
@@ -148,26 +170,27 @@
                 <div class="totales">
                     <div class="pushbar__totalItems">
                         <p class="pushbar__cartotal">Cart Total</p>
-                        <p class="pushbar__cartotalnum">$0</p>            
+                        <p class="pushbar__cartotalnum">$0</p>
                     </div>
-                        <div class="pushbar__totalMoney">
-                        <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart</p>
+                    <div class="pushbar__totalMoney">
+                        <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart
+                        </p>
                     </div>
                 </div>
                 <div class="pushbar__despacho">
                     <button class="pushbar__checkout-boton">CHECKOUT</button>
-            </div>
-
                 </div>
+
+            </div>
 
             <div class="pushbar__checkout">
                 <div class="pushbar__botonEs">
-                        <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
-                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                    <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
+                    <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
                 </div>
                 <div class="pushbar__titular">
-                        <h2 class="pushbar__titulo">CHECKOUT</h2>
-                        <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
+                    <h2 class="pushbar__titulo">CHECKOUT</h2>
+                    <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
                 </div>
 
                 <form action="/login" method="POST" class="pushbar__formulario">
@@ -176,52 +199,60 @@
                     </h3>
                     <input name="nombre" type="text" placeholder="Full Name" class="pushbar__formulario-input ">
                     <input name="correo" type="email" placeholder="Email" class="pushbar__formulario-input ">
-                        <h3 class="pushbar__formulario-sub">
+                    <h3 class="pushbar__formulario-sub">
                         Shipping information
                     </h3>
                     <input name="direccion" type="text" placeholder="Street Adress" class="pushbar__formulario-input">
                     <input name="ciudad" type="text" placeholder="City" class="pushbar__formulario-input ">
-                                <h3 class="pushbar__formulario-sub">
+                    <h3 class="pushbar__formulario-sub">
                         Billing information
                     </h3>
-                    <input name="tarjeta" type="number" placeholder="CreditCar Number" class="pushbar__formulario-input">
-                    <input name="contrasena" type="number" placeholder="CVV" class="pushbar__formulario-input" style="width:25%;">
-                    <input name="expiracion" type="month" placeholder="Exp Date" class="pushbar__formulario-input" style="width:62%;">
+                    <input name="tarjeta" type="number" placeholder="CreditCar Number"
+                        class="pushbar__formulario-input">
+                    <input name="contrasena" type="number" placeholder="CVV" class="pushbar__formulario-input"
+                        style="width:25%;">
+                    <input name="expiracion" type="month" placeholder="Exp Date" class="pushbar__formulario-input"
+                        style="width:62%;">
                     <input type="hidden" name="productos" class="formulario__productos" value="" id="">
 
-                <div class="totales">
-                    <div class="pushbar__totalItems">
-                        <p class="pushbar__cartotal">Items</p>
-                        <p class="pushbar__check-parnum typo__rojo">$0</p>            
-                    </div>
-                    <div class="pushbar__totalItems">
-                        <p class="pushbar__cartotal">Shipping</p>
-                        <p class="pushbar__cartotal typo__rojo">$0</p>            
-                    </div>
-                    <div class="pushbar__totalItems">
-                        <p class="pushbar__cartotal">Total</p>
-                        <p class="pushbar__check-totalnum typo__rojo" >$0</p>            
-                    </div>
+                    <div class="totales">
+                        <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Items</p>
+                            <p class="pushbar__check-parnum typo__rojo">$0</p>
+                        </div>
+                        <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Shipping</p>
+                            <p class="pushbar__cartotal typo__rojo">$0</p>
+                        </div>
+                        <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Total</p>
+                            <p class="pushbar__check-totalnum typo__rojo">$0</p>
+                        </div>
                         <div class="pushbar__totalMoney">
-                        <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span> Items in your Cart</p>
+                            <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span>
+                                Items in your Cart</p>
+                        </div>
                     </div>
-                </div>
-                <div class="pushbar__despacho">
-                    <button class="pushbar__checkout-boton">SEND</button>
-                </div>
-            </form >
+                    <div class="pushbar__despacho">
+                        <button class="pushbar__checkout-boton">SEND</button>
+                    </div>
+                </form>
 
             </div>
 
-            </div>
+        </div>
 
-       <script src="../../scripts/javas1.js"></script>
-       <script src="../../scripts/pushbar.js"></script>
-       <script type="text/javascript">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+        <script src="../../scripts/javas1.js"></script>
+        <script src="../../scripts/pushbar.js"></script>
+        <script src="/scripts/animacion.js"></script>
+        <script src="/scripts/carrito.js"></script>
+
+        <script type="text/javascript">
             var pushbar = new Pushbar({
-                    blur:true,
-                });
-            </script>
+                blur: true,
+            });
+        </script>
 </body>
 
 </html>

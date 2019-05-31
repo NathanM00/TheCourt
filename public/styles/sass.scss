@@ -355,6 +355,7 @@ body{
         width: 40px;
         background-repeat: no-repeat;
         background-size: contain;
+        //transform: perspective(2000px);
     }
     &__carro{
         background: white;
@@ -693,6 +694,18 @@ body{
     }
 }
 .tienda{
+    //----------botonAnimado---------------
+    &__btnJuego{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__juegobtnimg{
+        transform: perspective(2000px);
+    }
+    //--------------------------------------
+
     &__principal{
         box-shadow: 10px 8px 19px -9px rgba(48, 48, 48, 1);
         background: white;
@@ -917,24 +930,29 @@ body{
             color: #3f3f3f; 
           }
     }
+
     &__desc{
         width: 90%;
         border-bottom:1px solid #838383;
     }
+
     &__tamano{
         font-size: 25px;
         color: white;
     }
+
     &__tamanos{
         display: flex;
         height: 7%;
         justify-content: space-evenly;
         flex-wrap: wrap;
     }
+
     &__cantidad{
         font-size: 25px;
         color: white;
     }
+
     &__mitad{
         color: #3f3f3f;
         display:flex;
@@ -952,6 +970,7 @@ body{
             font-size: 25px;
         }
     }
+
     &__numero{
         background: white;
         width: 20%;
@@ -964,6 +983,7 @@ body{
         }
         text-align: center;
     }
+
     &__tallas{
         background: white;
         width: 20%;
@@ -981,6 +1001,7 @@ body{
             color: white;
         }
     }
+
     &__miniaturas{
         width: 100%;
         flex-basis: 15%;
@@ -989,13 +1010,17 @@ body{
         justify-content: center;
         align-items: center;
     }
+
     &__fotoP{
         width: 90%;
+        transform: perspective(2000px);
     }
+
     &__nombre{
         color: #FFFFFF;
         font-size: 25px;
     }
+
     &__precio{
         color: #ca0b18;
         font-size: 25px;
@@ -1874,7 +1899,7 @@ body{
             border-bottom-left-radius: 0;
             border-bottom-right-radius: 0;
             color: white;
-            background-color: #3f3f3f;
+            background-color: #3f3f3f
           }
     
         &__lateral{
@@ -1898,6 +1923,7 @@ body{
         &__agregar{
             margin-left: 55%;
             height: 40px;
+            transform: perspective(2000px);
         }
         &__cantidad{
             font-size: 15px;
@@ -1908,6 +1934,7 @@ body{
             width: 50%;
             height: 70%;
             margin-bottom: 0;
+            transform: perspective(2000px);
         }
         &__precio{
             display: none;
@@ -2001,6 +2028,7 @@ body{
         &__fotoP{
             width: 260px;
             margin-top: 1em;
+            transform: perspective(2000px);
         }
         &__miniaturas{
             height: 100px;

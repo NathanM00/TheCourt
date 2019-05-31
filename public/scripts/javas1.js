@@ -1,283 +1,300 @@
-function paginaCargada(){
+function paginaCargada() {
 
   var rango = document.querySelector('.rangoprecio');
 
 
-      var listaProductos = [];
-      var carritoNum = document.querySelector('.encabezado__contador');
-      var carritoInd = document.querySelector('.encabezado__indicador');
-      var totalCarrito = document.querySelector('.pushbar__cartotalnum');
-      var totalChekout = document.querySelector('.pushbar__check-totalnum');
-      var parcialChekout = document.querySelector('.pushbar__check-parnum');
-      var totalItems = document.querySelector('.pushbar__cartotalcanti');
-      var totalItemsCheck = document.querySelector('.pushbar__checktotalcanti');
+  var listaProductos = [];
+  var carritoNum = document.querySelector('.encabezado__contador');
+  var carritoInd = document.querySelector('.encabezado__indicador');
+  var totalCarrito = document.querySelector('.pushbar__cartotalnum');
+  var totalChekout = document.querySelector('.pushbar__check-totalnum');
+  var parcialChekout = document.querySelector('.pushbar__check-parnum');
+  var totalItems = document.querySelector('.pushbar__cartotalcanti');
+  var totalItemsCheck = document.querySelector('.pushbar__checktotalcanti');
 
-      var listaCarrito = document.querySelector('.pushbar__lista');
+  var listaCarrito = document.querySelector('.pushbar__lista');
 
-      if(localStorage.getItem('listaProductos') != null){
-        listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
+  if (localStorage.getItem('listaProductos') != null) {
+    listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
+  }
+
+  function actualizarCarrito() {
+    var suma = 0;
+    var valor = 0;
+    carritoNum.innerHTML = listaProductos.length;
+    totalItems.innerHTML = listaProductos.length;
+    totalItemsCheck.innerHTML = listaProductos.length;
+    if (listaProductos.length >= 1) {
+      carritoInd.style.display = "inline-block";
     }
 
-      function actualizarCarrito(){
-        var suma = 0;
-        var valor = 0;
-        carritoNum.innerHTML = listaProductos.length;
-        totalItems.innerHTML = listaProductos.length;
-        totalItemsCheck.innerHTML = listaProductos.length;
-        if(listaProductos.length>=1){
-          carritoInd.style.display=  "inline-block";
-        }
-        
-        if(listaCarrito!=null){
-          listaCarrito.innerHTML="";
+    if (listaCarrito != null) {
+      listaCarrito.innerHTML = "";
+    }
+
+    listaProductos.forEach(function (producto, index) {
+
+      var itemNuevo = document.createElement('li');
+      var contNuevo = document.createElement('div');
+
+      var imgNuevo = document.createElement('img');
+
+      var restoNuevo = document.createElement('div');
+      var nombreNuevo = document.createElement('p');
+      var precioNuevo = document.createElement('p');
+      var variablesNuevo = document.createElement('div');
+      var cantidadNuevo = document.createElement('div');
+      var quanNuevo = document.createElement('p');
+      var cuadroCNuevo = document.createElement('div');
+      var tamanoNuevo = document.createElement('div');
+      var sizeNuevo = document.createElement('p');
+      var cuadroTNuevo = document.createElement('div');
+
+      var eliminarNuevo = document.createElement('button');
+      var eliminarNuevoIcono = document.createElement('i');
+
+      if (listaCarrito != null) {
+
+        listaCarrito.appendChild(itemNuevo);
+        itemNuevo.appendChild(contNuevo);
+        contNuevo.appendChild(imgNuevo);
+        contNuevo.appendChild(restoNuevo);
+        restoNuevo.appendChild(nombreNuevo);
+        restoNuevo.appendChild(precioNuevo);
+        restoNuevo.appendChild(variablesNuevo);
+        variablesNuevo.appendChild(cantidadNuevo);
+        cantidadNuevo.appendChild(quanNuevo);
+        cantidadNuevo.appendChild(cuadroCNuevo);
+        variablesNuevo.appendChild(tamanoNuevo);
+        tamanoNuevo.appendChild(sizeNuevo);
+        tamanoNuevo.appendChild(cuadroTNuevo);
+        contNuevo.appendChild(eliminarNuevo);
+        eliminarNuevo.appendChild(eliminarNuevoIcono);
       }
 
-      listaProductos.forEach(function (producto, index) {
+      contNuevo.className = 'pushbar__producto-item';
+      imgNuevo.className = 'pushbar__producto-img';
+      restoNuevo.className = 'pushbar__producto-resto';
+      nombreNuevo.className = 'pushbar__producto-nombre';
+      precioNuevo.className = 'pushbar__producto-precio';
+      variablesNuevo.className = 'pushbar__producto-variables';
+      cantidadNuevo.className = 'pushbar__producto-cantidad';
+      cuadroCNuevo.className = 'pushbar__producto-cuadro';
+      tamanoNuevo.className = 'pushbar__producto-tamano';
+      cuadroTNuevo.className = 'pushbar__producto-cuadro';
+      eliminarNuevo.className = 'pushbar__producto-eliminar';
+      eliminarNuevoIcono.className = 'fa fa-close';
 
-        var itemNuevo = document.createElement('li');
-          var contNuevo = document.createElement('div');
+      imgNuevo.src = producto.imagen;
+      nombreNuevo.innerHTML = producto.nombre;
+      precioNuevo.innerHTML = producto.precio;
+      quanNuevo.innerHTML = "Quantity";
+      cuadroCNuevo.innerHTML = "1";
+      sizeNuevo.innerHTML = "Size";
+      cuadroTNuevo.innerHTML = "M";
 
-            var imgNuevo = document.createElement('img');
+      var temp = new String();
+      for (let i = 1; i < producto.precio.length; i++) {
+        temp += producto.precio[i];
+      }
+      suma += parseFloat(temp);
+      valor = suma.toFixed(2);
 
-            var restoNuevo = document.createElement('div');
-                var nombreNuevo = document.createElement('p');
-                var precioNuevo = document.createElement('p');
-                var variablesNuevo = document.createElement('div');
-                    var cantidadNuevo = document.createElement('div');
-                        var quanNuevo = document.createElement('p');
-                        var cuadroCNuevo = document.createElement('div');
-                    var tamanoNuevo = document.createElement('div');
-                        var sizeNuevo = document.createElement('p');
-                        var cuadroTNuevo = document.createElement('div');
+      eliminarNuevo.addEventListener('click', function () {
 
-            var eliminarNuevo = document.createElement('button');
-                var eliminarNuevoIcono = document.createElement('i');
-
-              if (listaCarrito != null) {
-
-                listaCarrito.appendChild(itemNuevo);
-                itemNuevo.appendChild(contNuevo);
-                  contNuevo.appendChild(imgNuevo);
-                  contNuevo.appendChild(restoNuevo);
-                     restoNuevo.appendChild(nombreNuevo);
-                     restoNuevo.appendChild(precioNuevo);
-                     restoNuevo.appendChild(variablesNuevo);
-                        variablesNuevo.appendChild(cantidadNuevo);
-                            cantidadNuevo.appendChild(quanNuevo);
-                            cantidadNuevo.appendChild(cuadroCNuevo);
-                        variablesNuevo.appendChild(tamanoNuevo);
-                            tamanoNuevo.appendChild(sizeNuevo);
-                            tamanoNuevo.appendChild(cuadroTNuevo);
-                  contNuevo.appendChild(eliminarNuevo);
-                     eliminarNuevo.appendChild(eliminarNuevoIcono);
-            }
-
-            contNuevo.className = 'pushbar__producto-item';
-            imgNuevo.className = 'pushbar__producto-img';
-            restoNuevo.className = 'pushbar__producto-resto';
-              nombreNuevo.className = 'pushbar__producto-nombre';
-              precioNuevo.className = 'pushbar__producto-precio';
-              variablesNuevo.className = 'pushbar__producto-variables';
-                cantidadNuevo.className = 'pushbar__producto-cantidad';
-                    cuadroCNuevo.className = 'pushbar__producto-cuadro';
-                tamanoNuevo.className = 'pushbar__producto-tamano';
-                    cuadroTNuevo.className = 'pushbar__producto-cuadro';
-            eliminarNuevo.className = 'pushbar__producto-eliminar';
-              eliminarNuevoIcono.className = 'fa fa-close';
-
-            imgNuevo.src= producto.imagen;
-            nombreNuevo.innerHTML = producto.nombre;
-            precioNuevo.innerHTML = producto.precio;
-            quanNuevo.innerHTML = "Quantity";
-            cuadroCNuevo.innerHTML = "1";
-            sizeNuevo.innerHTML = "Size";
-            cuadroTNuevo.innerHTML = "M";
-
-            var temp = new String();
-            for (let i = 1; i < producto.precio.length; i++) {
-                temp += producto.precio[i];
-            }
-            suma += parseFloat(temp);
-             valor = suma.toFixed(2);
-
-            eliminarNuevo.addEventListener('click', function () {
-                
-              listaProductos.splice(index, 1);
-              itemNuevo.remove();
-              localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
-              actualizarCarrito();
-          });
-
+        listaProductos.splice(index, 1);
+        itemNuevo.remove();
+        localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+        actualizarCarrito();
       });
 
-      if (totalCarrito != null) {
-        totalCarrito.innerHTML = "$" + valor;  
-        totalChekout.innerHTML = "$" + valor;  
-        parcialChekout.innerHTML = "$" + valor;
+    });
+
+    if (totalCarrito != null) {
+      totalCarrito.innerHTML = "$" + valor;
+      totalChekout.innerHTML = "$" + valor;
+      parcialChekout.innerHTML = "$" + valor;
     }
 
-      }
-      
-      actualizarCarrito();
+  }
 
-   var botones = document.querySelectorAll('.tienda__agregar');
-      function recorrerBotones(boton){
-          function agregarAlCarrito(){
-              var padre = boton.parentNode;
-              var nombre = padre.querySelector('.item__nombre').innerText;
-              var precio = padre.querySelector('.item__precio').innerText;
-              var imagen = padre.querySelector('.item__fotoP').src;
-              var producto = {
-                  nombre: nombre,
-                  precio: precio,
-                  imagen: imagen,
-              };
-              
-              listaProductos.push(producto);
-              actualizarCarrito();
-              localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
-            }
-          boton.addEventListener('click', agregarAlCarrito);
-      }
-      botones.forEach(recorrerBotones);
+  actualizarCarrito();
 
-      var botonProductoDetalle = document.querySelector('.producto__agregar');
-      var botonProductoDetalle2 = document.querySelector('.producto__agregar2');
+  var bolita = this.document.querySelector('.encabezado__indicador');
 
-      function agregarAlCarritoDetalle(){
-          var nombre = document.querySelector('.producto__nombre').innerText;
-          var precio = document.querySelector('.producto__precio').innerText;
-          var imagen = document.querySelector('.producto__fotoP').src;
-          var producto = {
-              nombre: nombre,
-              precio: precio,
-              imagen: imagen,
-         };
+  async function reboteBalon() {
+    await sleep(500);
+    TweenMax.to(bolita, 0.3, { y: -10 });
+    /*await sleep(300);
+    TweenMax.to(balonJuego, 0.5, {y:0});*/
+  }
 
-          listaProductos.push(producto);
-          actualizarCarrito();  
-          localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
-        }
+  function hoverTitulo() {
+    TweenLite.to(bolita, 1.5, { ease: Bounce.easeOut, y: 30 });
 
-      if(botonProductoDetalle != null){
-          botonProductoDetalle.addEventListener('click', agregarAlCarritoDetalle);
-      }
+  }
+  //titulo.addEventListener('mouseenter', hoverTitulo);
 
-      function agregarAlCarritoDetalleMobil(){
-        var nombre = document.querySelector('.producto__nombre').innerText;
-        var precio = document.querySelector('.producto__precio2').innerText;
-        var imagen = document.querySelector('.producto__fotoP').src;
-        var producto = {
-            nombre: nombre,
-            precio: precio,
-            imagen: imagen,
-       };
-
-        listaProductos.push(producto);
-        actualizarCarrito();  
-        localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
-      }
-      if(botonProductoDetalle2 != null){
-        botonProductoDetalle2.addEventListener('click', agregarAlCarritoDetalleMobil);
-      }
-
-      var fotoMostrada = document.querySelector('.producto__fotoP');
-
-      var fotoMinis = document.querySelectorAll('.producto__fotoM');
-     function recorrerFotos(foto){
-          function cambiarFoto(){
-            fotoMostrada.src = foto.src;
-            foto.addEventListener('click', cambiarFoto)
-
-                fotoMinis.forEach(function cambiarBorde(lafoto){
-                        if(lafoto.src == fotoMostrada.src ){
-                            lafoto.style.border= '1px solid';
-                        } else{
-                            lafoto.style.border= 'none';
-                        }
-                });
-          }
-          foto.addEventListener('click', cambiarFoto);
+  var botones = document.querySelectorAll('.tienda__agregar');
+  function recorrerBotones(boton) {
+    function agregarAlCarrito() {
+      var padre = boton.parentNode;
+      var nombre = padre.querySelector('.item__nombre').innerText;
+      var precio = padre.querySelector('.item__precio').innerText;
+      var imagen = padre.querySelector('.item__fotoP').src;
+      var producto = {
+        nombre: nombre,
+        precio: precio,
+        imagen: imagen,
       };
 
-      if(botonProductoDetalle != null){
-        fotoMinis.forEach(recorrerFotos);
-      }
+      listaProductos.push(producto);
+      actualizarCarrito();
+      //hoverTitulo();
+      reboteBalon();
+      localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+    }
+    boton.addEventListener('click', agregarAlCarrito);
+  }
+  botones.forEach(recorrerBotones);
 
-      var vistaCarrito = document.querySelector('.pushbar__carro');
-      var vistaCheckout = document.querySelector('.pushbar__checkout');
-      var botonCheckout = document.querySelector('.pushbar__checkout-boton');
-      var atrasCheckout = document.querySelector('.pushbar__boton-atras');
+  var botonProductoDetalle = document.querySelector('.producto__agregar');
+  var botonProductoDetalle2 = document.querySelector('.producto__agregar2');
 
-      function verCheckout(){
-        vistaCarrito.style.display = 'none';
-        vistaCheckout.style.display = 'block';
-      }
-      botonCheckout.addEventListener('click', verCheckout);
-      function ocultarCheckout(){
-        vistaCarrito.style.display = 'block';
-        vistaCheckout.style.display = 'none';
-      }
-      atrasCheckout.addEventListener('click', ocultarCheckout);
-      
-      var atrasMobil = document.querySelector('.producto__boton-atras');
-      function volverTienda(){
-         window.location.href="http://localHost:5000/tienda/producto/";
-      }
-      atrasMobil.addEventListener('click', volverTienda);
+  function agregarAlCarritoDetalle() {
+    var nombre = document.querySelector('.producto__nombre').innerText;
+    var precio = document.querySelector('.producto__precio').innerText;
+    var imagen = document.querySelector('.producto__fotoP').src;
+    var producto = {
+      nombre: nombre,
+      precio: precio,
+      imagen: imagen,
+    };
 
-      var formulario = document.querySelector('.pushbar__formulario');
-      function hacerPedido(){
-        //evento.preventDefault();
-          console.log("funciona");
+    listaProductos.push(producto);
+    actualizarCarrito();
+    localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+  }
 
-          var input = document.querySelector('.formulario__productos');
-          input.value = localStorage.getItem('listaProductos');
-          console.log(localStorage.getItem('listaProductos'));
+  if (botonProductoDetalle != null) {
+    botonProductoDetalle.addEventListener('click', agregarAlCarritoDetalle);
+  }
 
-          localStorage.removeItem('listaProductos')
-      }
-      formulario.addEventListener('submit', hacerPedido);
+  function agregarAlCarritoDetalleMobil() {
+    var nombre = document.querySelector('.producto__nombre').innerText;
+    var precio = document.querySelector('.producto__precio2').innerText;
+    var imagen = document.querySelector('.producto__fotoP').src;
+    var producto = {
+      nombre: nombre,
+      precio: precio,
+      imagen: imagen,
+    };
 
-      var puntajeJuego = document.querySelector('.juego__lateral-puntaje');
-      var tirosJuego = document.querySelector('.juego__lateral-tiros');
-      var balonJuego = document.querySelector('.juego__balon');
-      var potencia =0 ;
+    listaProductos.push(producto);
+    actualizarCarrito();
+    localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
+  }
+  if (botonProductoDetalle2 != null) {
+    botonProductoDetalle2.addEventListener('click', agregarAlCarritoDetalleMobil);
+  }
 
-      function sleep(ms) {
-        return new Promise(resolve => setTimeout(resolve, ms));
-      }
+  var fotoMostrada = document.querySelector('.producto__fotoP');
 
-      function cesta(){
+  var fotoMinis = document.querySelectorAll('.producto__fotoM');
+  function recorrerFotos(foto) {
+    function cambiarFoto() {
+      fotoMostrada.src = foto.src;
+      foto.addEventListener('click', cambiarFoto)
 
-        async function reboteBalon(){
-          await sleep(800);
-          TweenMax.to(balonJuego, 0.3, {y:-100});
-        //  await sleep(300);
-          //TweenMax.to(balonJuego, 0.5, {y:0});
-
+      fotoMinis.forEach(function cambiarBorde(lafoto) {
+        if (lafoto.src == fotoMostrada.src) {
+          lafoto.style.border = '1px solid';
+        } else {
+          lafoto.style.border = 'none';
         }
+      });
+    }
+    foto.addEventListener('click', cambiarFoto);
+  };
 
-        async function lanzarBalon(){
-          TweenMax.to(balonJuego, 0.8, {y:-515});
-          TweenMax.to(balonJuego, 0.8, {scale:0.6});
-          await sleep(600);
-          TweenMax.to(balonJuego, 1.2, {y:0});
-          reboteBalon();
-        }
+  if (botonProductoDetalle != null) {
+    fotoMinis.forEach(recorrerFotos);
+  }
 
-        lanzarBalon();
+  var vistaCarrito = document.querySelector('.pushbar__carro');
+  var vistaCheckout = document.querySelector('.pushbar__checkout');
+  var botonCheckout = document.querySelector('.pushbar__checkout-boton');
+  var atrasCheckout = document.querySelector('.pushbar__boton-atras');
 
-      }
-      
-      function falloArriba(){
-        
-      }
-      function falloAbajo(){
-        
-      }
-   
-      balonJuego.addEventListener('click', cesta);
+  function verCheckout() {
+    vistaCarrito.style.display = 'none';
+    vistaCheckout.style.display = 'block';
+  }
+  botonCheckout.addEventListener('click', verCheckout);
+  function ocultarCheckout() {
+    vistaCarrito.style.display = 'block';
+    vistaCheckout.style.display = 'none';
+  }
+  atrasCheckout.addEventListener('click', ocultarCheckout);
+
+  var atrasMobil = document.querySelector('.producto__boton-atras');
+  function volverTienda() {
+    window.location.href = "http://localHost:5000/tienda/producto/";
+  }
+  atrasMobil.addEventListener('click', volverTienda);
+
+  var formulario = document.querySelector('.pushbar__formulario');
+  function hacerPedido() {
+    //evento.preventDefault();
+    console.log("funciona");
+
+    var input = document.querySelector('.formulario__productos');
+    input.value = localStorage.getItem('listaProductos');
+    console.log(localStorage.getItem('listaProductos'));
+
+    localStorage.removeItem('listaProductos')
+  }
+  formulario.addEventListener('submit', hacerPedido);
+
+  var puntajeJuego = document.querySelector('.juego__lateral-puntaje');
+  var tirosJuego = document.querySelector('.juego__lateral-tiros');
+  var balonJuego = document.querySelector('.juego__balon');
+  var potencia = 0;
+
+  function sleep(ms) {
+    return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  function cesta() {
+
+    async function reboteBalon() {
+      await sleep(800);
+      TweenMax.to(balonJuego, 0.3, { y: -100 });
+      //  await sleep(300);
+      //TweenMax.to(balonJuego, 0.5, {y:0});
+
+    }
+
+    async function lanzarBalon() {
+      TweenMax.to(balonJuego, 0.8, { y: -515 });
+      TweenMax.to(balonJuego, 0.8, { scale: 0.6 });
+      await sleep(600);
+      TweenMax.to(balonJuego, 1.2, { y: 0 });
+      reboteBalon();
+    }
+
+    lanzarBalon();
+
+  }
+
+  function falloArriba() {
+
+  }
+  function falloAbajo() {
+
+  }
+
+  balonJuego.addEventListener('click', cesta);
 
 
 }

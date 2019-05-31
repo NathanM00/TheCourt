@@ -6,19 +6,19 @@ var MongoClient = require('mongodb').MongoClient;
 var assert = require('assert');
 
 const url = 'mongodb://localhost:27017';
-const dbName = 'Taller2';
+const dbName = 'tienda';
 
 const client = new MongoClient(url);
 
 var db = null;
 
-/*client.connect(function(err) {
+client.connect(function(err) {
     assert.equal(null, err);
 
      db = client.db(dbName);
 
     //client.close();
-  });*/
+  });
 
 //Crear app de express
 var app = express();
@@ -26,7 +26,7 @@ var app = express();
 //Establecer la carpeta public como estatica
 app.use(express.static('public'));
 
-MongoClient.connect('mongodb+srv://cluster0-u4659.mongodb.net/tienda',
+/*MongoClient.connect('mongodb+srv://cluster0-u4659.mongodb.net/tienda',
 
   {
       auth: {
@@ -43,7 +43,7 @@ MongoClient.connect('mongodb+srv://cluster0-u4659.mongodb.net/tienda',
       console.log('Servidor en el puerto 5000')
   }
 
-);
+);*/
 
 app.use(express.urlencoded({ extended: true }));
 //Registro de handlebars
@@ -145,6 +145,6 @@ app.post('/login', function (request, response){
 });
 
 // Escuchar desde puerto 5000
-/*app.listen(5000, function(){
+app.listen(5000, function(){
     console.log('Servidor en el puerto 5000')
-});*/
+});
