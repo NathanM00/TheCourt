@@ -40,7 +40,7 @@ MongoClient.connect('mongodb+srv://cluster0-u4659.mongodb.net/tienda',
       db = client.db('tienda');
 
       app.listen(process.env.PORT || 5000);
-      console.log('Servidor en el puerto 5000')
+      console.log('Servidor encendido')
   }
 
 );

@@ -37,7 +37,7 @@
                 <li class="nav__item nav__item2"> <a href="/tienda?linea=Men" class="typo__oscuro">Men</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?linea=Women" class="typo__oscuro">Women</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?linea=Kids" class="typo__oscuro">Kids</a></li>
-                <li class="nav__item nav__item2"> <a href="/tienda/Jerseys" class="typo__oscuro">Jerseys</a></li>
+                <li class="nav__item nav__item2"> <a href="./juego.html" style="border: 1px solid rgb(241, 16, 16)" class="typo__oscuro">New Game</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?rango=$20 - $40" class="typo__oscuro">Sales</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda/T-shirts" class="typo__oscuro">T-Shirts</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts" class="typo__oscuro">Hoodies</a></li>
@@ -54,20 +54,35 @@
                 <p>Instructions</p>
             </div>
             <div class="juego__lateral-instruc">
-                <p>Click on the ball to throw it.
-                    <br>
-                    <br>
-                    The strength of the throw consist on the power bar on the right.
-                    <br>
-                    If you manage to get at least<span class="typo__rojo"> 6 points</span> in <span class="typo__rojo">5 throws</span> you will recibe a <span class="typo__rojo">20% discount code </span>in the shop.
-                </p>
+                   <p>Click on the ball to throw it. </p>
+                
+                    <p>The  <span class="typo__rojo">strength of your throws</span> is based on the level of energy shown in <span class="typo__rojo">the powerbar</span>.</p>  
+
+                    <p>Dont throw with neither too much nor too little strength, always aim for the <span style="color: #FFC50D">Golden Shot</span>.</p>
+
+                    <img src="../recursos/potencia.svg" alt="">
+                  
+                   <p> If you manage to get at least<span class="typo__rojo"> 6 points</span> in <span class="typo__rojo">5 throws</span> you will recibe a <span class="typo__rojo">20% discount code </span>in the shop.
+                  </p>
             </div>
         </aside>
 
         <section class="contPrincipal__principal juego__principal" >
+
+           
             <img src="../recursos/tablero.svg" alt="No carga el tablero" class="juego__tablero">
+
+            <div class="juego__medidor">
+                <div class="juego__fuerza"></div>
+            </div>
             
             <img src="../recursos/pelota.svg" alt="No carga el balon" class="juego__balon">
+            <div class="juego__iniciar">
+                    <p>START</p>
+                </div>
+                <div class="juego__completado">
+                        <p></p>
+                    </div>
         </section>
 
           <aside class="contPrincipal__lateral juego__lateral">
@@ -79,6 +94,10 @@
                     <p class="juego__lateral-tiros typo__rojo">Shots left: 5</p>
         </aside>
 
+        <audio loop src="./recursos/audios/spacejam.mp3" id="spacejamAudio"></audio>
+        <audio src="./recursos/audios/cesta.mp3" id="cestaAudio"></audio>
+        <audio src="./recursos/audios/tablero.mp3" id="tableroAudio"></audio>
+        <audio  src="./recursos/audios/rebote.mp3" id="reboteAudio"></audio>
 
         <div class="producto__boton-atras" style="display: none"></div>
         <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
@@ -148,6 +167,10 @@
                         <p class="pushbar__cartotal">Shipping</p>
                         <p class="pushbar__cartotal typo__rojo">$0</p>            
                     </div>
+                    <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Game Discount</p>
+                            <p class="pushbar__cartotal typo__rojo">0%</p>            
+                        </div>
                     <div class="pushbar__totalItems">
                         <p class="pushbar__cartotal">Total</p>
                         <p class="pushbar__check-totalnum typo__rojo">$0</p>            

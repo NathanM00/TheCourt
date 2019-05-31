@@ -819,8 +819,8 @@ body {
 }
 
 .juego__balon {
-  height: 15%;
-  width: 15%;
+  height: 20%;
+  width: 20%;
 }
 
 .juego__tablero {
@@ -828,6 +828,84 @@ body {
   width: 100%;
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
+}
+
+.juego__medidor {
+  height: 300px;
+  -ms-flex-preferred-size: 300px;
+      flex-basis: 300px;
+  position: absolute;
+  background: #000000;
+  margin-left: 18%;
+  margin-top: 50px;
+  width: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.juego__fuerza {
+  -ms-flex-preferred-size: 0%;
+      flex-basis: 0%;
+  height: 0%;
+  width: 70%;
+  margin: 10px 0 10px 10px;
+  background: #fec348;
+}
+
+.juego__iniciar {
+  height: 76.5%;
+  -ms-flex-preferred-size: 76.5%;
+      flex-basis: 76.5%;
+  width: 45%;
+  border-radius: 9px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  background: #363636da;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.juego__iniciar p {
+  color: white;
+  font-size: 5em;
+}
+
+.juego__completado {
+  height: 76.5%;
+  -ms-flex-preferred-size: 76.5%;
+      flex-basis: 76.5%;
+  width: 45%;
+  border-radius: 9px;
+  display: none;
+  position: absolute;
+  background: #363636f5;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: justify;
+}
+
+.juego__completado p {
+  color: white;
+  font-size: 3em;
+  padding: 1em;
 }
 
 .juego__lateral {
@@ -870,10 +948,18 @@ body {
   -ms-flex-preferred-size: 80%;
       flex-basis: 80%;
   height: 80%;
-  text-align: justify;
+  text-align: center;
   color: black;
   padding: 0 1em;
   border-radius: 20px;
+}
+
+.juego__lateral-instruc img {
+  width: 30%;
+}
+
+.juego__lateral-instruc p {
+  text-align: justify;
 }
 
 .juego__lateral-titular {
@@ -1675,7 +1761,7 @@ body {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-image: url("../recursos/publicidad.jpg");
+  background-image: url("../recursos/Recurso 18.png");
 }
 
 .slideshow__container {

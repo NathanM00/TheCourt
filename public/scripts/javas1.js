@@ -240,29 +240,64 @@ function paginaCargada(){
       formulario.addEventListener('submit', hacerPedido);
 
       var puntajeJuego = document.querySelector('.juego__lateral-puntaje');
+      var empezarJuego = document.querySelector('.juego__iniciar');
+      var completadoJuego = document.querySelector('.juego__completado');
       var tirosJuego = document.querySelector('.juego__lateral-tiros');
+      var puntaje = 0;
+      var tiros = 5;
+      var potencia;
       var balonJuego = document.querySelector('.juego__balon');
-      var potencia =0 ;
 
+      function terminarPartida(){
+        completadoJuego.style.display = 'flex';
+        if(puntaje >= 6){
+            completadoJuego.innerHTML = '<p>Congrats you made <span style="color: #FFC50D">'+puntaje+'</span> points and with that you won the <span style="color: #FFC50D"> 20% discount in your next buy!!</span></p>'
+        } else {
+          completadoJuego.innerHTML = '<p>Sorry you only made <span style="color: #FFC50D">'+puntaje+'</span> points and we cant give you the discount.<br>But hey cheer up, you can <span style="color: #FFC50D">try again tomorrow!!</span></p>'
+        }
+      }
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));
       }
 
-      function cesta(){
-
-        async function reboteBalon(){
-          await sleep(800);
-          TweenMax.to(balonJuego, 0.3, {y:-100});
-        //  await sleep(300);
-          //TweenMax.to(balonJuego, 0.5, {y:0});
-
+      function lanzamiento(){
+        if(potencia <35){
+          falloAbajo();
+        }else if(potencia >65){
+          falloArriba();
+        } else{
+          cesta();
         }
+      }
+
+      balonJuego.addEventListener('click', lanzamiento);
+
+      async function reboteBalon(){
+        reproducir('rebote');
+        tirosJuego.innerHTML= 'Shots left: '+tiros+'';
+        puntajeJuego.innerHTML= '0'+puntaje+'';
+        TweenMax.to(balonJuego, 0.5, {y:-130});
+        await sleep(340);
+        TweenMax.to(balonJuego, 0.6, {y:-20});
+        await sleep(600);
+        TweenMax.to(balonJuego, 0.1, {scale:0});
+        await sleep(300);
+        TweenMax.to(balonJuego, 0.1, {scale:1});
+        TweenMax.to(balonJuego, 0.1, {y:0});
+      }
+
+      function cesta(){
+        tiros --;
+        puntaje +=2;
 
         async function lanzarBalon(){
-          TweenMax.to(balonJuego, 0.8, {y:-515});
-          TweenMax.to(balonJuego, 0.8, {scale:0.6});
-          await sleep(600);
-          TweenMax.to(balonJuego, 1.2, {y:0});
+          TweenMax.to(balonJuego, 0.8, {y:-545});
+          TweenMax.to(balonJuego, 0.8, {scale:0.4});
+          await sleep(500);
+          reproducir('cesta');
+          await sleep(100);
+          TweenMax.to(balonJuego, 1.1, {y:0});
+          await sleep(800);
           reboteBalon();
         }
 
@@ -271,15 +306,106 @@ function paginaCargada(){
       }
       
       function falloArriba(){
-        
+        tiros --;
+
+        async function lanzarBalon(){
+          TweenMax.to(balonJuego, 0.8, {y:-600});
+          TweenMax.to(balonJuego, 0.8, {scale:0.4});
+          await sleep(400);
+          reproducir('tablero');
+          await sleep(200);
+          TweenMax.to(balonJuego, 1.1, {y:-700});
+          TweenMax.to(balonJuego, 0.8, {scale:0.6});
+          await sleep(800);
+          reboteBalon();
+        }
+
+        lanzarBalon();
       }
+
       function falloAbajo(){
-        
+        tiros --;
+
+        async function lanzarBalon(){
+          TweenMax.to(balonJuego, 0.8, {y:-300});
+          TweenMax.to(balonJuego, 0.8, {scale:0.4});
+          await sleep(600);
+          reboteBalon();
+        }
+
+        lanzarBalon();
       }
-   
-      balonJuego.addEventListener('click', cesta);
 
+      function fuerzaSubir(){
+        reproducir('fondo');
+        empezarJuego.style.display = 'none';
+        var fuerzaJuego = document.querySelector('.juego__fuerza');
+         potencia = 1 ;
+        var intervalo = setInterval(frame, 20);
+        function frame(){
+          if(potencia >=94){
+            clearInterval(intervalo);
+            fuerzaBajar();
+          }else if (tiros == 0) {
+            clearInterval(intervalo);
+              terminarPartida();
+          } else {
+            potencia++;
+            if(potencia >35 && potencia <65){
+              fuerzaJuego.style.background = 'rgb(255,206,30)';
+            } else{
+              fuerzaJuego.style.background = 'rgb(219, 33, 33)';
+            }
+            fuerzaJuego.style.height = potencia+'%';
+            fuerzaJuego.style.flexBasis = potencia+'%';
+          }
+        }
+      }
 
+      function fuerzaBajar(){
+        var fuerzaJuego = document.querySelector('.juego__fuerza');
+         potencia = 94 ;
+        var intervalo = setInterval(frame, 20);
+        function frame(){
+          if(potencia <=0){
+            clearInterval(intervalo);
+            fuerzaSubir();
+          }else if (tiros == 0) {
+            terminarPartida();
+            clearInterval(intervalo);
+        }else {
+            potencia--;
+            if(potencia >35 && potencia <65){
+              fuerzaJuego.style.background = 'rgb(255,206,30)';
+            } else{
+              fuerzaJuego.style.background = 'rgb(219, 33, 33)';
+            }
+            fuerzaJuego.style.height = potencia+'%';
+            fuerzaJuego.style.flexBasis = potencia+'%';
+          }
+        }
+      }
+      empezarJuego.addEventListener('click', fuerzaSubir);
+
+      function reproducir(audio){
+        var musicaFondo = document.getElementById("spacejamAudio");
+        musicaFondo.volume = 0.5;
+        var rebote = document.getElementById("reboteAudio");
+        var cesta = document.getElementById("cestaAudio");
+        var tablero = document.getElementById("tableroAudio");
+
+        if(audio == 'fondo'){
+            musicaFondo.play();
+        } else  if(audio == 'rebote'){
+          rebote.play();
+        } else  if(audio == 'tablero'){
+        tablero.play();
+        } else  if(audio == 'cesta'){
+          cesta.play();
+        }
+
+      }
+    
 }
 
 window.addEventListener('load', paginaCargada);
