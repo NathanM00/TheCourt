@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>The Court Magazine | Shop</title>
-  </head>
+</head>
 
 <body class="fondo__claro">
 
@@ -21,30 +21,33 @@
         <a class="encabezado__logo logo__oscuro-tienda" href="/tienda"></a>
 
         <input placeholder="Search..." type="" name="" id="" class="encabezado__search">
-            <button class="encabezado__lupa" ><i class="fa fa-search"></i></button>
+        <button class="encabezado__lupa"><i class="fa fa-search"></i></button>
 
         <div class="encabezado__logs encabezado__pc">
             <a href="#" class="typo__oscuro" style="font-size:30px;">Log in</a>
-            <div data-pushbar-target="elCarro"  class="encabezado__carrito"></div>
-           <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span></div>
+            <div data-pushbar-target="elCarro" class="encabezado__carrito"></div>
+            <div data-pushbar-target="elCarro" class="encabezado__indicador"><span class="encabezado__contador"></span>
+            </div>
         </div>
-            
+
     </header>
-        <header class="encabezado-tienda2">
+    <header class="encabezado-tienda2">
         <nav class="encabezado__pc">
             <ul class="nav__lista nav__pad">
                 <li class="nav__item nav__item2"> <a href="#" class="typo__oscuro">Shop By team</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?linea=Men" class="typo__oscuro">Men</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?linea=Women" class="typo__oscuro">Women</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?linea=Kids" class="typo__oscuro">Kids</a></li>
-                <li class="nav__item nav__item2"> <a href="../juego.html" style="border: 1px solid rgb(241, 16, 16)" class="typo__oscuro">New Game</a></li>
+                <li class="nav__item nav__item2"> <a href="../juego.html" style="border: 1px solid rgb(241, 16, 16)"
+                        class="typo__oscuro">New Game</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?rango=$20 - $40" class="typo__oscuro">Sales</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda/T-shirts" class="typo__oscuro">T-Shirts</a></li>
-                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts" class="typo__oscuro">Hoodies</a></li>
+                <li class="nav__item nav__item2"> <a href="/tienda/Hoodies & Sweatshirts"
+                        class="typo__oscuro">Hoodies</a></li>
                 <li class="nav__item nav__item2"> <a href="/tienda?rango=Over $60" class="typo__oscuro">Heat</a></li>
-             </ul>
+            </ul>
         </nav>
-        </header>
+    </header>
 
     <div class="contPrincipal fondo__tienda">
 
@@ -54,263 +57,265 @@
                 <p>Filters</p>
             </div>
             <div class="tienda__dropdown">
-                            <button class="tienda__dropbtn  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}"> 
-                             {{#if esDNone}}
-                                Department 
-                            {{/if}}                                   
-                            {{#if esJersey}}
-                                Jerseys
-                            {{/if}}
-                            {{#if esTshirt}}
-                                T-Shirts
-                            {{/if}}
-                            {{#if esHoodie}}
-                                Hoodies & Sweatshirts
-                            {{/if}}
-                            </button>
-                                <div class="tienda__dropdown-content" >
-                                     {{#if esDNone}}
-                                        <a href="/tienda/Jerseys">Jerseys</a>
-                                        <a href="/tienda/T-shirts">T-Shirts</a>
-                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                                     {{/if}}
-                                      {{#if esJersey}}
-                                        <a href="/tienda/T-shirts">T-Shirts</a>
-                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                                     {{/if}}
-                                    {{#if esTshirt}}
-                                        <a href="/tienda/Jerseys">Jerseys</a>
-                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                                     {{/if}}
-                                    {{#if esHoodie}}
-                                        <a href="/tienda/Jerseys">Jerseys</a>
-                                        <a href="/tienda/T-shirts">T-Shirts</a>
-                                     {{/if}}
-                                </div>
+                <button class="tienda__dropbtn  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}">
+                    {{#if esDNone}}
+                    Department
+                    {{/if}}
+                    {{#if esJersey}}
+                    Jerseys
+                    {{/if}}
+                    {{#if esTshirt}}
+                    T-Shirts
+                    {{/if}}
+                    {{#if esHoodie}}
+                    Hoodies & Sweatshirts
+                    {{/if}}
+                </button>
+                <div class="tienda__dropdown-content">
+                    {{#if esDNone}}
+                    <a href="/tienda/Jerseys">Jerseys</a>
+                    <a href="/tienda/T-shirts">T-Shirts</a>
+                    <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                    {{/if}}
+                    {{#if esJersey}}
+                    <a href="/tienda/T-shirts">T-Shirts</a>
+                    <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                    {{/if}}
+                    {{#if esTshirt}}
+                    <a href="/tienda/Jerseys">Jerseys</a>
+                    <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                    {{/if}}
+                    {{#if esHoodie}}
+                    <a href="/tienda/Jerseys">Jerseys</a>
+                    <a href="/tienda/T-shirts">T-Shirts</a>
+                    {{/if}}
+                </div>
             </div>
             <div class="tienda__dropdown">
-                            <button class="tienda__dropbtn  {{#if esLAlguno}}tienda__dropbtn-activado  {{/if}}"> 
-                             {{#if esLNone}}
-                                Shop For
-                            {{/if}}                                   
-                            {{#if esMen}}
-                                Men
-                            {{/if}}
-                            {{#if esWomen}}
-                                Women
-                            {{/if}}
-                            {{#if esKid}}
-                                Kids
-                            {{/if}}
-                            </button>
-                                <div class="tienda__dropdown-content" >
-                                     {{#if esLNone}}
-                                        <a href="/tienda?linea=Men">Men</a>
-                                        <a href="/tienda?linea=Women">Women</a>
-                                        <a href="/tienda?linea=Kids">Kids</a>
-                                     {{/if}}
-                                      {{#if esMen}}
-                                        <a href="/tienda?linea=Women">Women</a>
-                                        <a href="/tienda?linea=Kids">Kids</a>
-                                     {{/if}}
-                                    {{#if esWomen}}
-                                        <a href="/tienda?linea=Men">Men</a>
-                                        <a href="/tienda?linea=Kids">Kids</a>
-                                     {{/if}}
-                                    {{#if esKid}}
-                                        <a href="/tienda?linea=Men">Men</a>
-                                        <a href="/tienda?linea=Women">Women</a>
-                                     {{/if}}
-                                </div>
+                <button class="tienda__dropbtn  {{#if esLAlguno}}tienda__dropbtn-activado  {{/if}}">
+                    {{#if esLNone}}
+                    Shop For
+                    {{/if}}
+                    {{#if esMen}}
+                    Men
+                    {{/if}}
+                    {{#if esWomen}}
+                    Women
+                    {{/if}}
+                    {{#if esKid}}
+                    Kids
+                    {{/if}}
+                </button>
+                <div class="tienda__dropdown-content">
+                    {{#if esLNone}}
+                    <a href="/tienda?linea=Men">Men</a>
+                    <a href="/tienda?linea=Women">Women</a>
+                    <a href="/tienda?linea=Kids">Kids</a>
+                    {{/if}}
+                    {{#if esMen}}
+                    <a href="/tienda?linea=Women">Women</a>
+                    <a href="/tienda?linea=Kids">Kids</a>
+                    {{/if}}
+                    {{#if esWomen}}
+                    <a href="/tienda?linea=Men">Men</a>
+                    <a href="/tienda?linea=Kids">Kids</a>
+                    {{/if}}
+                    {{#if esKid}}
+                    <a href="/tienda?linea=Men">Men</a>
+                    <a href="/tienda?linea=Women">Women</a>
+                    {{/if}}
+                </div>
             </div>
             <div class="tienda__dropdown">
-                            <button class="tienda__dropbtn  {{#if esRAlguno}}tienda__dropbtn-activado  {{/if}}"> 
-                             {{#if esRNone}}
-                                    Price Range
-                            {{/if}}                                   
-                            {{#if esMin}}
-                                    $20 - $40
-                            {{/if}}
-                            {{#if esMed}}
-                                $40 - $60
-                            {{/if}}
-                            {{#if esMax}}
-                                Over $60
-                            {{/if}}
-                            </button>
-                                <div class="tienda__dropdown-content" >
-                                     {{#if esRNone}}
-                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
-                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
-                                        <a href="/tienda?rango=Over $60">Over $60</a>
-                                     {{/if}}
-                                      {{#if esMin}}
-                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
-                                        <a href="/tienda?rango=Over $60">Over $60</a>
-                                     {{/if}}
-                                    {{#if esMed}}
-                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
-                                        <a href="/tienda?rango=Over $60">Over $60</a>
-                                     {{/if}}
-                                    {{#if esMax}}
-                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
-                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
-                                     {{/if}}
-                                </div>
+                <button class="tienda__dropbtn  {{#if esRAlguno}}tienda__dropbtn-activado  {{/if}}">
+                    {{#if esRNone}}
+                    Price Range
+                    {{/if}}
+                    {{#if esMin}}
+                    $20 - $40
+                    {{/if}}
+                    {{#if esMed}}
+                    $40 - $60
+                    {{/if}}
+                    {{#if esMax}}
+                    Over $60
+                    {{/if}}
+                </button>
+                <div class="tienda__dropdown-content">
+                    {{#if esRNone}}
+                    <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                    <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                    <a href="/tienda?rango=Over $60">Over $60</a>
+                    {{/if}}
+                    {{#if esMin}}
+                    <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                    <a href="/tienda?rango=Over $60">Over $60</a>
+                    {{/if}}
+                    {{#if esMed}}
+                    <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                    <a href="/tienda?rango=Over $60">Over $60</a>
+                    {{/if}}
+                    {{#if esMax}}
+                    <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                    <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                    {{/if}}
+                </div>
             </div>
 
-               <div class="tienda__dropdown">
-                    <a href="/tienda"><button class="tienda__dropbtn tienda__dropbtn-activado">None</button></a>
+            <div class="tienda__dropdown">
+                <a href="/tienda"><button class="tienda__dropbtn tienda__dropbtn-activado">None</button></a>
             </div>
         </aside>
 
-        <section class="contPrincipal__principal tienda__principal" >
+        <section class="contPrincipal__principal tienda__principal">
 
             <div class="tienda__superior">
                 <p class="tienda__cantidad">2019 Season</p>
-                <p class="tienda__cantidad" style="color: #838383";>{{productos.length}} ITEMS</p>
+                <p class="tienda__cantidad" style="color: #838383" ;>{{productos.length}} ITEMS</p>
                 <div class="tienda__dropdown2">
-                        <button class="tienda__dropbtn2 "> 
-                             {{#if esNone}}
-                                Filters 
-                            {{/if}} 
-                            {{#if esJersey}}
-                                Jerseys
-                            {{/if}}
-                            {{#if esTshirt}}
-                                T-Shirts
-                            {{/if}}
-                            {{#if esHoodie}}
-                                Hoodies
-                            {{/if}}
-                            {{#if esMen}}
-                                Men
-                            {{/if}}
-                            {{#if esWomen}}
-                                Women
-                            {{/if}}
-                            {{#if esKid}}
-                                Kids
-                            {{/if}}
-                            {{#if esMin}}
-                                    $20 - $40
-                            {{/if}}
-                            {{#if esMed}}
-                                $40 - $60
-                            {{/if}}
-                            {{#if esMax}}
-                                Over $60
-                            {{/if}}
-                        </button>
-                        <div class="tienda__dropdown2-content" >
-                            <div class="tienda__dropdown3">
-                                    <button class="tienda__dropbtn3  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}"> 
-                                                Department 
-                                    </button>
-                                <div class="tienda__dropdown3-content" >
-                                     {{#if esDNone}}
-                                        <a href="/tienda/Jerseys">Jerseys</a>
-                                        <a href="/tienda/T-shirts">T-Shirts</a>
-                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                                     {{/if}}
-                                      {{#if esJersey}}
-                                        <a href="/tienda/T-shirts">T-Shirts</a>
-                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                                     {{/if}}
-                                    {{#if esTshirt}}
-                                        <a href="/tienda/Jerseys">Jerseys</a>
-                                        <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
-                                     {{/if}}
-                                    {{#if esHoodie}}
-                                        <a href="/tienda/Jerseys">Jerseys</a>
-                                        <a href="/tienda/T-shirts">T-Shirts</a>
-                                     {{/if}}
-                                </div>
+                    <button class="tienda__dropbtn2 ">
+                        {{#if esNone}}
+                        Filters
+                        {{/if}}
+                        {{#if esJersey}}
+                        Jerseys
+                        {{/if}}
+                        {{#if esTshirt}}
+                        T-Shirts
+                        {{/if}}
+                        {{#if esHoodie}}
+                        Hoodies
+                        {{/if}}
+                        {{#if esMen}}
+                        Men
+                        {{/if}}
+                        {{#if esWomen}}
+                        Women
+                        {{/if}}
+                        {{#if esKid}}
+                        Kids
+                        {{/if}}
+                        {{#if esMin}}
+                        $20 - $40
+                        {{/if}}
+                        {{#if esMed}}
+                        $40 - $60
+                        {{/if}}
+                        {{#if esMax}}
+                        Over $60
+                        {{/if}}
+                    </button>
+                    <div class="tienda__dropdown2-content">
+                        <div class="tienda__dropdown3">
+                            <button class="tienda__dropbtn3  {{#if esDAlguno}}tienda__dropbtn-activado  {{/if}}">
+                                Department
+                            </button>
+                            <div class="tienda__dropdown3-content">
+                                {{#if esDNone}}
+                                <a href="/tienda/Jerseys">Jerseys</a>
+                                <a href="/tienda/T-shirts">T-Shirts</a>
+                                <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                {{/if}}
+                                {{#if esJersey}}
+                                <a href="/tienda/T-shirts">T-Shirts</a>
+                                <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                {{/if}}
+                                {{#if esTshirt}}
+                                <a href="/tienda/Jerseys">Jerseys</a>
+                                <a href="/tienda/Hoodies & Sweatshirts">Hoodies & Sweatshirts</a>
+                                {{/if}}
+                                {{#if esHoodie}}
+                                <a href="/tienda/Jerseys">Jerseys</a>
+                                <a href="/tienda/T-shirts">T-Shirts</a>
+                                {{/if}}
                             </div>
-                            <div class="tienda__dropdown3">
-                            <button class="tienda__dropbtn3  {{#if esLAlguno}}tienda__dropbtn-activado  {{/if}}"> 
+                        </div>
+                        <div class="tienda__dropdown3">
+                            <button class="tienda__dropbtn3  {{#if esLAlguno}}tienda__dropbtn-activado  {{/if}}">
                                 Shop For
                             </button>
-                                <div class="tienda__dropdown3-content" >
-                                     {{#if esLNone}}
-                                        <a href="/tienda?linea=Men">Men</a>
-                                        <a href="/tienda?linea=Women">Women</a>
-                                        <a href="/tienda?linea=Kids">Kids</a>
-                                     {{/if}}
-                                      {{#if esMen}}
-                                        <a href="/tienda?linea=Women">Women</a>
-                                        <a href="/tienda?linea=Kids">Kids</a>
-                                     {{/if}}
-                                    {{#if esWomen}}
-                                        <a href="/tienda?linea=Men">Men</a>
-                                        <a href="/tienda?linea=Kids">Kids</a>
-                                     {{/if}}
-                                    {{#if esKid}}
-                                        <a href="/tienda?linea=Men">Men</a>
-                                        <a href="/tienda?linea=Women">Women</a>
-                                     {{/if}}
-                                </div>
+                            <div class="tienda__dropdown3-content">
+                                {{#if esLNone}}
+                                <a href="/tienda?linea=Men">Men</a>
+                                <a href="/tienda?linea=Women">Women</a>
+                                <a href="/tienda?linea=Kids">Kids</a>
+                                {{/if}}
+                                {{#if esMen}}
+                                <a href="/tienda?linea=Women">Women</a>
+                                <a href="/tienda?linea=Kids">Kids</a>
+                                {{/if}}
+                                {{#if esWomen}}
+                                <a href="/tienda?linea=Men">Men</a>
+                                <a href="/tienda?linea=Kids">Kids</a>
+                                {{/if}}
+                                {{#if esKid}}
+                                <a href="/tienda?linea=Men">Men</a>
+                                <a href="/tienda?linea=Women">Women</a>
+                                {{/if}}
                             </div>
-                            <div class="tienda__dropdown3">
-                                            <button class="tienda__dropbtn3  {{#if esRAlguno}}tienda__dropbtn-activado  {{/if}}"> 
-                                                    Price Range
-                                            </button>
-                                                <div class="tienda__dropdown3-content" >
-                                                    {{#if esRNone}}
-                                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
-                                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
-                                                        <a href="/tienda?rango=Over $60">Over $60</a>
-                                                    {{/if}}
-                                                    {{#if esMin}}
-                                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
-                                                        <a href="/tienda?rango=Over $60">Over $60</a>
-                                                    {{/if}}
-                                                    {{#if esMed}}
-                                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
-                                                        <a href="/tienda?rango=Over $60">Over $60</a>
-                                                    {{/if}}
-                                                    {{#if esMax}}
-                                                        <a href="/tienda?rango=$20 - $40">$20 - $40</a>
-                                                        <a href="/tienda?rango=$40 - $60">$40 - $60</a>
-                                                    {{/if}}
-                                                </div>
-                            </div>
-                             <div class="tienda__dropdown3">
-                                 <a href="/tienda" style="padding:0;"><button class="tienda__dropbtn tienda__dropbtn-activado">None</button></a>
-                             </div>
                         </div>
+                        <div class="tienda__dropdown3">
+                            <button class="tienda__dropbtn3  {{#if esRAlguno}}tienda__dropbtn-activado  {{/if}}">
+                                Price Range
+                            </button>
+                            <div class="tienda__dropdown3-content">
+                                {{#if esRNone}}
+                                <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                <a href="/tienda?rango=Over $60">Over $60</a>
+                                {{/if}}
+                                {{#if esMin}}
+                                <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                <a href="/tienda?rango=Over $60">Over $60</a>
+                                {{/if}}
+                                {{#if esMed}}
+                                <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                <a href="/tienda?rango=Over $60">Over $60</a>
+                                {{/if}}
+                                {{#if esMax}}
+                                <a href="/tienda?rango=$20 - $40">$20 - $40</a>
+                                <a href="/tienda?rango=$40 - $60">$40 - $60</a>
+                                {{/if}}
+                            </div>
+                        </div>
+                        <div class="tienda__dropdown3">
+                            <a href="/tienda" style="padding:0;"><button
+                                    class="tienda__dropbtn tienda__dropbtn-activado">None</button></a>
+                        </div>
+                    </div>
 
-                </div>   
-                <a href="../juego.html"><img src="../recursos/promo.svg" alt="No carga esto"></a> 
-                
+                </div>
+                <a href="../juego.html"><img src="../recursos/promo.svg" alt="No carga esto"></a>
+
             </div>
-                <ul class="tienda__productos">
-                    {{#each productos}}
-                        <li class="tienda__item">
-                            <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;">
-                                <img href="" src="{{fotoPrincipal}}" class="item__fotoP" alt="">
-                                <p class="item__precio">${{precio}}</p>
-                                <h3 class="item__nombre2">{{nombre}}<p class="item__precio2">${{precio}}</p></h3>                             
-                            </a>
-                            
-                            <button class="tienda__agregar">ADD TO CART</button>
-                            <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;"></a> 
-                                <h3 class="item__nombre">{{nombre}}</h3>
-                            </a>
-                        </li>
-                    {{/each}}
-                </ul>
+            <ul class="tienda__productos">
+                {{#each productos}}
+                <li class="tienda__item">
+                    <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;">
+                        <img href="" src="{{fotoPrincipal}}" class="item__fotoP" alt="">
+                        <p class="item__precio">${{precio}}</p>
+                        <h3 class="item__nombre2">{{nombre}}<p class="item__precio2">${{precio}}</p>
+                        </h3>
+                    </a>
+
+                    <button class="tienda__agregar">ADD TO CART</button>
+                    <a href="/tienda/producto/{{nombre}}" style="text-decoration: none;"></a>
+                    <h3 class="item__nombre">{{nombre}}</h3>
+                    </a>
+                </li>
+                {{/each}}
+            </ul>
         </section>
 
         <div class="producto__boton-atras" style="display: none"></div>
         <div data-pushbar-id="elCarro" class="pushbar from_right pushbar__caja" style="width: 350px;">
             <div class="pushbar__carro">
                 <div class="pushbar__botonIs">
-                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                    <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
                 </div>
                 <div class="pushbar__titular">
-                        <h2 class="pushbar__titulo">YOUR CART</h2>
-                        <div class="pushbar__carrito"></div>
+                    <h2 class="pushbar__titulo">YOUR CART</h2>
+                    <div class="pushbar__carrito"></div>
                 </div>
                 <div class="pushbar__items">
                     <ul class="pushbar__lista">
@@ -320,26 +325,27 @@
                 <div class="totales">
                     <div class="pushbar__totalItems">
                         <p class="pushbar__cartotal">Cart Total</p>
-                        <p class="pushbar__cartotalnum">$0</p>            
+                        <p class="pushbar__cartotalnum">$0</p>
                     </div>
-                        <div class="pushbar__totalMoney">
-                        <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart</p>
+                    <div class="pushbar__totalMoney">
+                        <p class="pushbar__cartotal"> <span class="pushbar__cartotalcanti">0</span> Items in your Cart
+                        </p>
                     </div>
                 </div>
                 <div class="pushbar__despacho">
                     <button class="pushbar__checkout-boton">CHECKOUT</button>
-            </div>
-
                 </div>
+
+            </div>
 
             <div class="pushbar__checkout">
                 <div class="pushbar__botonEs">
-                        <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
-                        <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
+                    <button class="pushbar__boton-atras"> <i class="fa fa-arrow-left"></i></button>
+                    <button data-pushbar-close class="pushbar__boton-cerrar"> <i class="fa fa-close"></i></button>
                 </div>
                 <div class="pushbar__titular">
-                        <h2 class="pushbar__titulo">CHECKOUT</h2>
-                        <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
+                    <h2 class="pushbar__titulo">CHECKOUT</h2>
+                    <div class="fa fa-truck  w3-xxlarge typo__rojo"></div>
                 </div>
 
                 <form action="/login" method="POST" class="pushbar__formulario">
@@ -348,58 +354,67 @@
                     </h3>
                     <input name="nombre" type="text" placeholder="Full Name" class="pushbar__formulario-input ">
                     <input name="correo" type="email" placeholder="Email" class="pushbar__formulario-input ">
-                        <h3 class="pushbar__formulario-sub">
+                    <h3 class="pushbar__formulario-sub">
                         Shipping information
                     </h3>
                     <input name="direccion" type="text" placeholder="Street Adress" class="pushbar__formulario-input">
                     <input name="ciudad" type="text" placeholder="City" class="pushbar__formulario-input ">
-                                <h3 class="pushbar__formulario-sub">
+                    <h3 class="pushbar__formulario-sub">
                         Billing information
                     </h3>
-                    <input name="tarjeta" type="number" placeholder="CreditCar Number" class="pushbar__formulario-input">
-                    <input name="contrasena" type="number" placeholder="CVV" class="pushbar__formulario-input" style="width:25%;">
-                    <input name="expiracion" type="month" placeholder="Exp Date" class="pushbar__formulario-input" style="width:62%;">
+                    <input name="tarjeta" type="number" placeholder="CreditCar Number"
+                        class="pushbar__formulario-input">
+                    <input name="contrasena" type="number" placeholder="CVV" class="pushbar__formulario-input"
+                        style="width:25%;">
+                    <input name="expiracion" type="month" placeholder="Exp Date" class="pushbar__formulario-input"
+                        style="width:62%;">
                     <input type="hidden" name="productos" class="formulario__productos" value="" id="">
 
-                <div class="totales">
-                    <div class="pushbar__totalItems">
-                        <p class="pushbar__cartotal">Items</p>
-                        <p class="pushbar__check-parnum typo__rojo">$0</p>            
-                    </div>
-                    <div class="pushbar__totalItems">
-                        <p class="pushbar__cartotal">Shipping</p>
-                        <p class="pushbar__cartotal typo__rojo">$0</p>            
-                    </div>
+                    <div class="totales">
+                        <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Items</p>
+                            <p class="pushbar__check-parnum typo__rojo">$0</p>
+                        </div>
+                        <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Shipping</p>
+                            <p class="pushbar__cartotal typo__rojo">$0</p>
+                        </div>
                         <div class="pushbar__totalItems">
                             <p class="pushbar__cartotal">Game Discount</p>
-                            <p class="pushbar__check-descnum typo__rojo">0%</p>            
+                            <p class="pushbar__check-descnum typo__rojo">0%</p>
                         </div>
-                    <div class="pushbar__totalItems">
-                        <p class="pushbar__cartotal">Total</p>
-                        <p class="pushbar__check-totalnum typo__rojo">$0</p>            
-                    </div>
+                        <div class="pushbar__totalItems">
+                            <p class="pushbar__cartotal">Total</p>
+                            <p class="pushbar__check-totalnum typo__rojo">$0</p>
+                        </div>
                         <div class="pushbar__totalMoney">
-                        <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span> Items in your Cart</p>
+                            <p class="pushbar__cartotal"> <span class="pushbar__checktotalcanti typo__rojo">0</span>
+                                Items in your Cart</p>
+                        </div>
                     </div>
-                </div>
-                <div class="pushbar__despacho">
-                    <button class="pushbar__checkout-boton">SEND</button>
-                </div>
-            </form >
+                    <div class="pushbar__despacho">
+                        <button class="pushbar__checkout-boton">SEND</button>
+                    </div>
+                </form>
 
             </div>
 
-            </div>
+        </div>
 
-       <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-       <script src="../../scripts/javas1.js"></script>
-       <script src="../../scripts/pushbar.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/easing/EasePack.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/plugins/CSSPlugin.min.js"></script>
+        <script src="../../scripts/javas1.js"></script>
+        <script src="../../scripts/pushbar.js"></script>
+        <script src="/scripts/carritoAnim.js"></script>
+        <script src="/scripts/CustomEase.js"></script>
 
-       <script type="text/javascript">
+        <script type="text/javascript">
             var pushbar = new Pushbar({
-                    blur:true,
-                });
-            </script>
+                blur: true,
+            });
+        </script>
 
 </body>
 

@@ -16,6 +16,7 @@ var assert = require('assert');
 
 const url = 'mongodb://localhost:27017';
 const dbName = 'Taller2';
+//const dbName = 'tienda';
 
 const client = new MongoClient(url);
 
