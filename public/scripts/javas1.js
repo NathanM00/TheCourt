@@ -120,17 +120,10 @@ function paginaCargada() {
 
   actualizarCarrito();
 
-  var bolita = this.document.querySelector('.encabezado__indicador');
-
-  async function reboteBalon() {
-    await sleep(500);
-    TweenMax.to(bolita, 0.3, { y: -10 });
-    /*await sleep(300);
-    TweenMax.to(balonJuego, 0.5, {y:0});*/
-  }
+  var bolitaR = this.document.querySelector('.encabezado__indicador');
 
   function hoverTitulo() {
-    TweenLite.to(bolita, 1.5, { ease: Bounce.easeOut, y: 30 });
+    TweenLite.to(bolitaR, 1.5, { ease: Bounce.easeOut, y: 30 });
 
   }
   //titulo.addEventListener('mouseenter', hoverTitulo);
@@ -150,8 +143,7 @@ function paginaCargada() {
 
       listaProductos.push(producto);
       actualizarCarrito();
-      //hoverTitulo();
-      reboteBalon();
+      hoverTitulo();
       localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
     }
     boton.addEventListener('click', agregarAlCarrito);
