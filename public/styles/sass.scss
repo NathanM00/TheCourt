@@ -1049,6 +1049,7 @@ body{
     }
     &__fotoP{
         width: 90%;
+        transform: perspective(2000px);
     }
     &__nombre{
         color: #FFFFFF;
@@ -1966,6 +1967,7 @@ body{
             width: 50%;
             height: 70%;
             margin-bottom: 0;
+            
         }
         &__precio{
             display: none;
@@ -2058,6 +2060,7 @@ body{
         }
         &__fotoP{
             width: 260px;
+            transform: perspective(2000px);
             margin-top: 1em;
         }
         &__miniaturas{

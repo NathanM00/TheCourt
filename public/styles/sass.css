@@ -1404,6 +1404,8 @@ body {
 
 .producto__fotoP {
   width: 90%;
+  -webkit-transform: perspective(2000px);
+          transform: perspective(2000px);
 }
 
 .producto__nombre {
@@ -2467,6 +2469,8 @@ body {
   }
   .producto__fotoP {
     width: 260px;
+    -webkit-transform: perspective(2000px);
+            transform: perspective(2000px);
     margin-top: 1em;
   }
   .producto__miniaturas {

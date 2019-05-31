@@ -4,6 +4,7 @@ function paginaCargada(){
 
 
       var listaProductos = [];
+      var descuentoJuego = 0;
       var carritoNum = document.querySelector('.encabezado__contador');
       var carritoInd = document.querySelector('.encabezado__indicador');
       var totalCarrito = document.querySelector('.pushbar__cartotalnum');
@@ -17,6 +18,10 @@ function paginaCargada(){
 
       if(localStorage.getItem('listaProductos') != null){
         listaProductos = JSON.parse(localStorage.getItem('listaProductos'));
+    }
+
+    if(localStorage.getItem('descuentoJuego') != null){
+      descuentoJuego = parseInt(localStorage.getItem('descuentoJuego'));
     }
 
       function actualizarCarrito(){
@@ -114,9 +119,9 @@ function paginaCargada(){
       if (totalCarrito != null) {
         parcialChekout.innerHTML = "$" + valor;
         totalCarrito.innerHTML = "$" + valor;  
-        if(puntaje >=6){
+        if(descuentoJuego !=0){
           valor = valor - (0.2*valor);
-          descChekout.innerHTML = '20%';
+          descChekout.innerHTML = descuentoJuego+ '%';
         } else{
           descChekout.innerHTML = '0%';
         }
@@ -126,7 +131,10 @@ function paginaCargada(){
       }
       
       actualizarCarrito();
-
+      function hoverTitulo() {
+        TweenLite.to(carritoInd, 1.5, { ease: Bounce.easeOut, y: 30 });
+    
+      }
    var botones = document.querySelectorAll('.tienda__agregar');
       function recorrerBotones(boton){
           function agregarAlCarrito(){
@@ -142,6 +150,7 @@ function paginaCargada(){
               
               listaProductos.push(producto);
               actualizarCarrito();
+              //hoverTitulo();
               localStorage.setItem('listaProductos', JSON.stringify(listaProductos));
             }
           boton.addEventListener('click', agregarAlCarrito);
@@ -259,7 +268,8 @@ function paginaCargada(){
         completadoJuego.style.display = 'flex';
         if(puntaje >= 6){
             completadoJuego.innerHTML = '<p>Congrats you made <span style="color: #FFC50D">'+puntaje+'</span> points and with that you won the <span style="color: #FFC50D"> 20% discount in your next buy!!</span></p>'
-        } else {
+            localStorage.setItem('descuentoJuego', '20')
+          } else {
           completadoJuego.innerHTML = '<p>Sorry you only made <span style="color: #FFC50D">'+puntaje+'</span> points and we cant give you the discount.<br>But hey cheer up, you can <span style="color: #FFC50D">try again tomorrow!!</span></p>'
         }
         actualizarCarrito();
