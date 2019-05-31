@@ -1,3 +1,12 @@
+/*
+========================
+
+Nathan Manuel S - Javier Trochez E
+
+Programacion Web 2019-1
+
+=========================
+*/
 //Importar librerias
 var express = require('express');
 var exphbs = require('express-handlebars');
