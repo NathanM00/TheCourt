@@ -371,14 +371,14 @@ body {
 
 .pushbar__cartotal {
   display: inline-block;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
 
 .pushbar__cartotalnum {
   color: #ca0b18;
   text-align: center;
   padding: 0;
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
 }
 
 .pushbar__cartotalcanti {
@@ -387,12 +387,17 @@ body {
 }
 
 .pushbar__check-totalnum {
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
   padding: 0;
 }
 
 .pushbar__check-parnum {
-  margin: 0.5em 0;
+  margin: 0 0 0.5em 0;
+  padding: 0;
+}
+
+.pushbar__check-descnum {
+  margin: 0 0 0.5em 0;
   padding: 0;
 }
 
@@ -422,7 +427,7 @@ body {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 0 1em;
+  margin: 0 0.6em;
 }
 
 .pushbar__totalMoney {
@@ -943,7 +948,7 @@ body {
 }
 
 .juego__lateral-instruc {
-  font-size: 1.3em;
+  font-size: 1.1em;
   background: #f8f8f8;
   width: 90%;
   -ms-flex-preferred-size: 80%;

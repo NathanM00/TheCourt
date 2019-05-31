@@ -9,6 +9,7 @@ function paginaCargada(){
       var totalCarrito = document.querySelector('.pushbar__cartotalnum');
       var totalChekout = document.querySelector('.pushbar__check-totalnum');
       var parcialChekout = document.querySelector('.pushbar__check-parnum');
+      var descChekout = document.querySelector('.pushbar__check-descnum');
       var totalItems = document.querySelector('.pushbar__cartotalcanti');
       var totalItemsCheck = document.querySelector('.pushbar__checktotalcanti');
 
@@ -111,9 +112,15 @@ function paginaCargada(){
       });
 
       if (totalCarrito != null) {
-        totalCarrito.innerHTML = "$" + valor;  
-        totalChekout.innerHTML = "$" + valor;  
         parcialChekout.innerHTML = "$" + valor;
+        totalCarrito.innerHTML = "$" + valor;  
+        if(puntaje >=6){
+          valor = valor - (0.2*valor);
+          descChekout.innerHTML = '20%';
+        } else{
+          descChekout.innerHTML = '0%';
+        }
+        totalChekout.innerHTML = "$" + valor;  
     }
 
       }
@@ -255,6 +262,8 @@ function paginaCargada(){
         } else {
           completadoJuego.innerHTML = '<p>Sorry you only made <span style="color: #FFC50D">'+puntaje+'</span> points and we cant give you the discount.<br>But hey cheer up, you can <span style="color: #FFC50D">try again tomorrow!!</span></p>'
         }
+        actualizarCarrito();
+
       }
       function sleep(ms) {
         return new Promise(resolve => setTimeout(resolve, ms));

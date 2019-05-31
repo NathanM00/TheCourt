@@ -297,12 +297,12 @@ body{
     }
     &__cartotal{
         display: inline-block;
-        margin:   0.5em 0;
+        margin:  0 0 0.5em 0 ;
         &num{
             color: #ca0b18;
             text-align: center;
             padding: 0;
-            margin:  0.5em 0;
+            margin:  0 0 0.5em 0 ;
         }
         &canti{
             color: #ca0b18;
@@ -311,11 +311,15 @@ body{
     }
     &__check{
         &-totalnum{
-            margin: 0.5em 0;
+            margin:  0 0 0.5em 0 ;
             padding: 0;
         }
         &-parnum{
-            margin: 0.5em 0;
+            margin:  0 0 0.5em 0 ;
+            padding: 0;
+        }
+        &-descnum{
+            margin:  0 0 0.5em 0 ;
             padding: 0;
         }
     }
@@ -333,7 +337,7 @@ body{
         height: 8%;
         display: flex;
         justify-content: space-evenly;
-        margin: 0 1em;
+        margin: 0 0.6em;
     }
     &__totalMoney{
         font-size: 20px;
@@ -710,7 +714,7 @@ body{
             margin: 0 1em;
         }
         &-instruc{
-            font-size: 1.3em;
+            font-size: 1.1em;
             background: rgb(248, 248, 248);
             width: 90%;
             flex-basis: 80%;
